@@ -1,8 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
-/*** Body ***/
+/***Body***/
 body {
     font-family: 'Roboto Mono', monospace;
-        };
+        }
+
+/***Logo***/
+.logo {
+width: 11rem;
+height: 10rem;
+padding-top:0;
+}
+
 
 /***Headings***/
+header {
+padding-top:0;
+margin-left:40%;
+margin-top:1rem;
+display:inline-block;
+vertical-align: top;
+
+}
+/***Dashboard***/
+.dashboard {
+    font-size: 0.95rem;
+}
