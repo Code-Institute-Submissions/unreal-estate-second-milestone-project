@@ -24,5 +24,31 @@ vertical-align: top;
 }
 /***Dashboard***/
 .dashboard {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    width: 30%;
+    height: 35%;
+    
+}
+
+.rules{
+    border: solid 0.2em black;
+    padding: 1rem;
+    
+}
+
+.level {
+    text-align: center;
+
+}
+
+.level-title{
+    
+}
+
+.level-buttons{
+    margin-top:1.2rem;
+}
+
+button{
+    padding-right: 1rem;
 }
