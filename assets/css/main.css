@@ -11,6 +11,7 @@ body {
 #container {
    min-height:100%;
    position:relative;
+   text-align: center;
 }
 
 /***Logo***/
@@ -18,8 +19,6 @@ body {
 width: 11rem;
 height: 10rem;
 padding-top:0;
-margin-left:29%;
-
 }
 
 
@@ -42,7 +41,10 @@ h1{
     height: 35%;
     background-color:#649B92;
     color: rgb(32, 30, 28);
-    
+    position:inherit;
+    box-sizing:border-box;
+    border: 0.2rem solid #68A376;
+        
 }
 
 .rules{
@@ -56,9 +58,6 @@ h1{
 
 }
 
-.level-title{
-    
-}
 
 .level-buttons{
     margin-top:1.2rem;
