@@ -32,13 +32,21 @@
              <select id="diffSelect">
                 <option value="15">Easy</option>
                 <option value="20">Medium</option>
-                <option value="35">Insane</option>
+                <option value="30">Hard</option>
+                <option value="42">Insane</option>
              </select>
             </div>
         </div>
-    </div>
+   </div>
     <!-- game -->
-    <div> </div>
+<div>
+    <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+    <div id="view">
+        <div id="mazeContainer">
+          <canvas id="mazeCanvas" class="border" height="110" width="110"></canvas>
+        </div>
+    </div>
+</div>
     <!-- footer with contact form and social media buttons -->
     <footer>
             <div class="icons">
@@ -49,7 +57,12 @@
                 &copy; Krisztina Szabó
             </div>
     </footer>
-</body>
 </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
 
 </html>
