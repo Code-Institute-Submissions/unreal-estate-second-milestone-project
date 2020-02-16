@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- favicon files -->
+    <!-- favicon files -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-<!-- page title -->
+    <!-- page title -->
     <title> Unreal Estate </title>
     <!-- meta data -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Unreal Estate - Help the slug to be a snail">
-<!--style-->
+    <!--style-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
-<div id="container">
-    <!--logo, name, levels, instructions -->
-    <div class="dashboard">
-        <img class="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
-        <header class="col-8 my-3 p-1">
-            <h1> Unreal Estate </h1>
-        </header>
-        <div class="rules">
-            <p> How to play:</p>
-            <p> Help the snug to become a snail!
-                <br> Find the way out of the labyrinth, so he can go home. The fewer steps you solve the puzzle, the higher your score.</p>
-        </div>
-        <div class="level">
-            <h2> Difficulty</h2>
-            <div class="custom-select">
-             <select id="diffSelect">
-                <option value="15">Easy</option>
-                <option value="20">Medium</option>
-                <option value="30">Hard</option>
-                <option value="42">Insane</option>
-             </select>
-            </div>
-        </div>
-    
-   </div>
-    <!-- game -->
-<div>
-<body onload="startGame()">
-<div id="Message-Container">
-            <div id="message">
-                <h1>Congratulations!</h1>
-                <p>You helped our friend to find his way to home.</p>
-                <p id="moves"></p>
-                <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Yaaay!" />
-            </div>
-</div>
- <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
 
-        <div id="view">
-            <div id="mazeContainer">
-                <canvas id="mazeCanvas" class="border" height="110" width="110"></canvas>
-            </div>
-</div>
-</div>
-    <!-- footer with contact form and social media buttons -->
-    <footer>
-         <div class="icons">
-                <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
-                <a class="far fa-envelope" title="Feedback"></a>
-         </div>
-        <div class="credits">
-               <span> &copy; Krisztina Szabó</span>
+<body>
+    <div id="container">
+            <!--logo, name, levels, instructions -->
+            <div id="dashboard">
+                <img id="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
+               <div class="row" id="name">
+                <h1 class="col-12 col-md-6 col-lg-4"> Unreal Estate </h1>
+                </div>
+
+                <h3> How to play:</h3>
+                    <p class="row"> Help the snug to become a snail!
+                        <br class="col-12 col-md-6 col-lg-4"> Find the way out of the labyrinth, so he can go home. The fewer steps you solve the puzzle, the higher your score.</p>
+                <h2 class="col-12 col-md-6"> Difficulty</h2>
+                <div class="form-group">
+                <label for="sel1">Choose the level</label>
+                <select class="form-control" id="sel1">                
+                        <option value="15">Easy</option>
+                        <option value="20">Medium</option>
+                        <option value="30">Hard</option>
+                        <option value="42">Insane</option>
+                </select>
+                </div>
+            
         </div>
-    </footer>
-</div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
+        
+
+        <!-- game -->
+        <div>
+
+            <body onload="startGame()">
+                <div id="Message-Container">
+                    <div id="message">
+                        <h1>Congratulations!</h1>
+                        <p>You helped our friend to find his way to home.</p>
+                        <p id="moves"></p>
+                        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Yaaay!" />
+                    </div>
+                </div>
+                <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+
+                <div id="view">
+                    <div id="mazeContainer">
+                        <canvas id="mazeCanvas" class="border" height="110" width="110"></canvas>
+                    </div>
+                </div>
+        </div>
+        <!-- footer with contact form and social media buttons -->
+        <footer class="container-fluid">
+            <div class="row" id="icons">
+                <a class="col fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
+                <a class=" col far fa-envelope" title="Feedback"></a>
+            </div>
+            <div class="row" id="credits">
+                <span class="col"> &copy; Krisztina Szabó</span>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
 
 </html>

@@ -15,7 +15,7 @@ body {
 }
 
 /***Logo***/
-.logo {
+#logo {
 width: 11rem;
 height: 10rem;
 padding-top:0;
@@ -23,7 +23,7 @@ padding-top:0;
 
 
 /***Headings***/
-header {
+h1 {
 padding-top:0;
 justify-content: center;
 margin-top:1rem;
@@ -35,7 +35,7 @@ h1{
     text-align: center;
 }
 /***Dashboard***/
-.dashboard {
+#dashboard {
     font-size: 0.85rem;
     width: 30%;
     height: 35%;
