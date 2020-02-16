@@ -1,4 +1,3 @@
-
 //Calling a function to start the game:
 function startGame() {
   myGameArea.start();
