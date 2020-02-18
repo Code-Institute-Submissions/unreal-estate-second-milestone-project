@@ -19,6 +19,8 @@ body {
 width: 11rem;
 height: 10rem;
 padding-top:0;
+margin: 5%;
+position: relative;
 }
 
 
@@ -42,7 +44,7 @@ h1{
     background-color:#649B92;
     color: rgb(32, 30, 28);
     position:inherit;
-    box-sizing:border-box;
+    box-sizing:content-box;
     border: 0.2rem solid #68A376;
         
 }
@@ -96,3 +98,4 @@ footer {
 .fab {
 color: black;
 }
+
