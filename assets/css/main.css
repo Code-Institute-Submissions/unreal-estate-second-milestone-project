@@ -43,7 +43,7 @@ h1{
     height: 35%;
     background-color:#649B92;
     color: rgb(32, 30, 28);
-    position:inherit;
+    position:relative;
     box-sizing:content-box;
     border: 0.2rem solid #68A376;
         
@@ -72,9 +72,6 @@ button{
 canvas {
     border: 1px solid #d3d3d3;
     background-color: #a3c59b;
-    position:fixed;
-    top:50px;
-    right: 20%;
     align-items: center;
     justify-content: center;
     
