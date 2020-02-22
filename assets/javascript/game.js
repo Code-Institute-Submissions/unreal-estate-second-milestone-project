@@ -1,12 +1,9 @@
 // Initalizing the canvas, drawing context added, filling the array with zeros
-var document;
 var maze;
+var grid;
 var canvas;
 var context;
-function grid() {
-    var canvas = document.getElementById("canvas");
-    context = canvas.getContext("2d");
-    var maze = [
+var maze = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
@@ -18,30 +15,39 @@ function grid() {
     [0, 0, 0, 0, 0, 0, 0, 0, 1, 2],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
-    
+function newFunction() {
+    "use strict";
+    newFunction();
+    grid();
+
+}
+
+var document;
+function grid() {
+    "use strict";
+    var canvas = document.getElementById("canvas");
+}
+context = canvas.getContext("2d"); 
 var blockSize = 40;
-for (var= 0; y<maze.length; y++)
+for (var y= 0; y<maze.length; y++)
 {
     for(var x=0; x<maze[y].length; x++)
         if(maze[y][x] ===1 )
     {
         ctx.fillStyle ="red";
         ctx.fillRect(x*50, y*50, 50,50);
+        ctx.stroke();
     }
     else if(maze [y][x] === -1)
     {
         ctx.fillStyle ="blue";
         ctx.fillRect(x*50, y*50, 50,50);
+        ctx.stroke();
     }
 }
 
       
 
-// Creating the maze, holding the data
-var board = new Array(); 
-    function maze() {
-        init();           
-        explorePath(1,1); }
 
 // Directions with arrows
 
@@ -56,6 +62,5 @@ switch (event.key){
     break;
     case "Down":
     break;
-};
+}
 });
-
