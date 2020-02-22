@@ -80,7 +80,8 @@ canvas {
 
 #slug{
     position: absolute;
-    background: url(slug.png) no-repeat;
+    background-image: url("../images/slug.jpg");
+    background-repeat: no-repeat;
     height: 300px;
     width: 300px;
 }
