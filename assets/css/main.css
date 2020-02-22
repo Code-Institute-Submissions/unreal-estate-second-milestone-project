@@ -78,6 +78,14 @@ canvas {
 }
 
 
+#slug{
+    position: absolute;
+    background: url(slug.png) no-repeat;
+    height: 300px;
+    width: 300px;
+}
+
+
 
 
 /***Footer***/
