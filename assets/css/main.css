@@ -83,6 +83,20 @@ canvas {
     
 }
 
+#mazeContainer{
+display: inline-block;
+}
+
+#mazeCanvas{
+    display: block;
+    margin:0;
+}
+#messageContainer{
+    visibility: hidden;
+    display: block;
+    position: fixed;
+    z-index: 1;
+}
 
 
 
