@@ -74,16 +74,13 @@ canvas {
     background-color: #a3c59b;
     align-items: center;
     justify-content: center;
+    position: relative;
     
 }
 
 
 #slug{
-    position: absolute;
-    background-image: url("../images/slug.jpg");
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 300px;
+    
 }
 
 

@@ -2,10 +2,12 @@
 var maze;
 var grid;
 var context;
-var context;
-
+window.onload = function() {
 var canvas = document.getElementById("canvas");
 context = canvas.getContext("2d"); 
+var img = document.getElementById("slug");
+context.drawImage(img, 10, 10);
+}
 // zero=wall, one=road, two = endpoint
 var maze = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -51,22 +53,7 @@ for (var y= 0; y<maze.length; y++)
     }
 }
 
-      
 
 
 // Directions with arrows
-
-node.addEventListener('keydown', function(event) {
-const key = event.key; 
-switch (event.key){
-    case "Left":
-    break;
-    case "Up":
-    break;
-    case "Right":
-    break;
-    case "Down":
-    break;
-}
-});
 

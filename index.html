@@ -46,16 +46,24 @@
                 </div>
 
             </div>
+            <input id="startMazeBtn" type="button" class="btn-info" onclick="makeMaze()" value="Let's go!"/>
         </div>
 
         <!-- game -->
-        <div onload="grid()" bgcolor="green">
-        <canvas id="canvas" width="550" height="550" tabindex="0">
-            If you see this text, your browser does not support HTML5 Canvas.
-        </canvas>
+        <div id="maze">
+            <div id="mazeContainer">
+                <canvas id="mazeCanvas" class="border" height="510" width="510"></canvas>
+            </div>
+        <div id="message-container">
+        <div id="finished">
+                <h1>Congratulations!</h1>
+                <p> Our friend is happy now.</p>
+                <p id="moves"></p>
+                <input id="okBtn" type="button" onclick="toggleVisablity('message-container')" value="Ok!" />
+        </div>
         <script src="assets/javascript/game.js"></script>
         </div>
-        <div id="slug"></div>
+        
 
         <!-- footer with contact form and social media buttons -->
         <footer>
