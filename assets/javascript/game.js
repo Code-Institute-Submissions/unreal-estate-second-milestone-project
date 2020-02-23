@@ -1,3 +1,4 @@
+// Mazegame basics inspired by Pickle Rick Maze Game (https://codepen.io/TheCodeDepository/pen/jKBaoN), modified
 // Initalizing the canvas, drawing context added
 var mazeCanvas;
 var grid;
@@ -8,12 +9,14 @@ var difficulty;
 var cellSize;
 var context;
 var canvas;
+var document;
 var viewCanvas;
+var window;
 var canvas = document.getElementById('mazeCanvas');
 var context = canvas.getContext('2d');
-window.onload = function() {
+window.onload = function () {
 // Canvas properites
-
+    "use strict";
     let viewWidth = $("#view").width();
     let viewHeight = $("#view").height();
     if (viewHeight < viewWidth) {
@@ -48,7 +51,7 @@ window.onresize = function () {
         context.canvas.width = viewWidth - (viewWidth / 100);
         context.canvas.height = viewWidth - (viewWidth / 100);
     }
-    cellSize = viewCanvas.width / difficulty;
+    cellSize = viewWidth / difficulty;
     if (player != null) {
         draw.redrawMaze(cellSize);
         player.redrawPlayer(cellSize);
