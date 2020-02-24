@@ -79,19 +79,14 @@ canvas {
 }
 
 
-#slug{
-    
-}
 
-
-}
 
 
 
 /***Footer***/
 
 footer { 
-    background: #B5AA99;
+    background: rgb(179, 171, 160);
     position:absolute;
     bottom:0;
     width:100%;
@@ -99,8 +94,6 @@ footer {
     text-align: center;
     
 }
-
 .fab {
 color: black;
 }
-

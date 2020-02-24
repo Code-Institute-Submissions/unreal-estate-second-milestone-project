@@ -1,8 +1,6 @@
-// Initalizing the canvas, drawing context added, filling the array with zeros
+//Initalizing the canvas, drawing context added, filling the array with zeros
 var maze;
 var grid;
-var ctx;
-var context;
 var context;
 
 var canvas = document.getElementById("canvas");
@@ -53,6 +51,18 @@ for (var y= 0; y<maze.length; y++)
         context.stroke();
     }
 }
-
       
 // Directions with arrows
+node.addEventListener('keydown', function(event) {
+const key = event.key; 
+switch (event.key){
+    case "Left":
+    break;
+    case "Up":
+    break;
+    case "Right":
+    break;
+    case "Down":
+    break;
+}
+});
