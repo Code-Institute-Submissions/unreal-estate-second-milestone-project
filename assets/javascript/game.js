@@ -1,4 +1,4 @@
-//Initalizing the canvas, drawing context added, filling the array with zeros
+//Initalizing the canvas, drawing context added
 var canvas = document.getElementById("mazecanvas");
 var context = canvas.getContext("2d");
 var currRectX = 425;
@@ -18,7 +18,7 @@ function drawMazeAndRectangle(rectX, rectY) {
         context.fillStyle = '#00FF00';
         context.fill();
     };
-    mazeImg.src = "../images/maze.png";
+    mazeImg.src = "../images/maze.gif";
 }
 function drawRectangle(x, y, style) {
     makeWhite(currRectX, currRectY, 15, 15);
@@ -30,4 +30,5 @@ function drawRectangle(x, y, style) {
     context.fillStyle = style;
     context.fill();
 }
+
 drawMazeAndRectangle(425, 3);
