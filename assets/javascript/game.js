@@ -18,7 +18,7 @@ function drawMazeAndRectangle(rectX, rectY) {
         context.fillStyle = '#00FF00';
         context.fill();
     };
-    mazeImg.src = "../images/maze.gif";
+    mazeImg.src = "../assets/images/maze.gif";
 }
 function drawRectangle(x, y, style) {
     makeWhite(currRectX, currRectY, 15, 15);
@@ -30,5 +30,11 @@ function drawRectangle(x, y, style) {
     context.fillStyle = style;
     context.fill();
 }
-
+function makeWhite(x, y, w, h) {
+    context.beginPath();
+    context.rect(x, y, w, h);
+    context.closePath();
+    context.fillStyle = "white";
+    context.fill();
+}
 drawMazeAndRectangle(425, 3);
