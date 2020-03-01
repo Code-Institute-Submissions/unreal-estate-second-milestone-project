@@ -1,7 +1,8 @@
 //Initalizing the canvas, drawing context added
 var canvas = document.getElementById("mazecanvas");
 var context = canvas.getContext("2d");
-
+var x;
+var y;
 var currRectX = 425;
 var currRectY = 3;
 var mazeWidth = 556;
@@ -24,10 +25,9 @@ var canvasHeight = 522;
         
     };
     mazeImg.src = "../assets/images/maze.png";
-    
-    
-
-
-
-    
-
+var playerImg = new Image();
+playerImg.onload = function () {
+        context.drawImage(playerImg, x, y);     
+}
+ playerImg.src ="../assets/images/player.png";
+      
