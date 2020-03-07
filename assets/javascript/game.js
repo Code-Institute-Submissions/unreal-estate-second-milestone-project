@@ -1,6 +1,5 @@
 //Initalizing the canvas, drawing context added
 var canvas = document.getElementById("canvas");
-var context = newFunction();
 var x;
 var y;
 var currRectX = 425;
@@ -12,15 +11,13 @@ var imageWidth = 210;
 var imageHeight = 210;
 var canvasWidth = 522;
 var canvasHeight = 522;
-
-
-
+var context;
 var myGamePiece;
-
 function newFunction() {
-    return getContext("2d");
+    var canvas = document.getElementById("canvas");
+    const context = canvas.getContext('2d');
+    return context;
 }
-
 function startGame() {
     myGamePiece = new component(30, 30, "../assets/images/player.png", 10, 120, "image");
     myGameArea.start();
@@ -103,7 +100,7 @@ function clearmove() {
 var mazeImg = new Image();
 var playerImg = new Image();
 
- mazeImg.onload = function () {
+mazeImg.onload = function () {
 context.drawImage(mazeImg, 0, 0, imageWidth, imageHeight, 0, 0, canvasWidth, canvasHeight);         
 context.beginPath();
 context.arc(542, 122, 7, 0, 2 * Math.PI, false);
@@ -112,5 +109,5 @@ context.fillStyle = '#00FF00';
 context.fill();
                
         
-  };
+};
   mazeImg.src = "../assets/images/maze.png";
