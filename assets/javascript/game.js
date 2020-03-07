@@ -1,5 +1,4 @@
 //Initalizing the canvas, drawing context added
-var canvas = document.getElementById("canvas");
 var x;
 var y;
 var currRectX = 425;
@@ -107,7 +106,7 @@ context.arc(542, 122, 7, 0, 2 * Math.PI, false);
 context.closePath();
 context.fillStyle = '#00FF00';
 context.fill();
-               
+ mazeImg.src = "../assets/images/maze.png";              
         
 };
-  mazeImg.src = "../assets/images/maze.png";
+  
