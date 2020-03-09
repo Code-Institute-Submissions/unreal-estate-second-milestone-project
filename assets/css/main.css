@@ -69,16 +69,11 @@ button{
     padding-right: 1rem;
 }
 /***Game area***/
-canvas {
-    border: 1px solid #d3d3d3;
-    background-color: #a3c59b;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 20px;
-    
-}
 
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
 
 
 
