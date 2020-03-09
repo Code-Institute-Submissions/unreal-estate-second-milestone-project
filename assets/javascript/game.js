@@ -72,6 +72,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
+    console.log("Updating")
     myGameArea.clear();
     myGamePiece.newPos();
     myGamePiece.update();
@@ -86,15 +87,17 @@ var mazeImg = new Image();
 var playerImg = new Image();
 
 mazeImg.onload = function() {
+    mazeImg.src = "../assets/images/maze.png";
     context.drawImage(mazeImg, 0, 0, imageWidth, imageHeight, 0, 0, canvasWidth, canvasHeight);
     context.beginPath();
     context.arc(542, 122, 7, 0, 2 * Math.PI, false);
     context.closePath();
     context.fillStyle = '#00FF00';
     context.fill();
-    mazeImg.src = "../assets/images/maze.png";
+    
 
 };
+
 function moveup() {
     myGamePiece.speedY = -1;
 }
