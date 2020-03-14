@@ -84,7 +84,6 @@ function updateGameArea() {
 }
 
 function move(dir) {
-    myGamePiece.image.src = "../assets/images/snail.png";
     if (dir == "up") {myGamePiece.speedY = -1; }
     if (dir == "down") {myGamePiece.speedY = 1; }
     if (dir == "left") {myGamePiece.speedX = -1; }
