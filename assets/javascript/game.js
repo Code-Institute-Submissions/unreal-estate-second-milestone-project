@@ -1,6 +1,9 @@
 var myGamePiece;
 var myBackground;
-
+var imageWidth = 414;
+var imageHeight = 254;
+var canvasWidth = 522;
+var canvasHeight = 522;
 
 window.onload = function () {
     startGame();
@@ -16,7 +19,7 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 480;
+        this.canvas.width = 656;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
