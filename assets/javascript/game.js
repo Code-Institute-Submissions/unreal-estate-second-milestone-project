@@ -5,6 +5,7 @@ var imageHeight = 254;
 var canvasWidth = 522;
 var canvasHeight = 522;
 
+
 window.onload = function () {
     startGame();
 }
@@ -22,6 +23,8 @@ var myGameArea = {
         this.canvas.width = 656;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
+        this.canvas.style.left =20;
+        this.canvas.style.top = 20;
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
