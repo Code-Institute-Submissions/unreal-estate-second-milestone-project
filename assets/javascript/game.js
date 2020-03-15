@@ -85,26 +85,34 @@ function updateGameArea() {
     myGamePiece.newPos();    
     myGamePiece.update();
 }
- movingAllowed = canMoveTo(newX, newY);
-    if (movingAllowed === 1) { //can move
-        myGamePiece(newX, newY, "#0000FF");
-        currRectX = newX;
-        currRectY = newY;
+
+function canMoveTo(destX, destY) {
+    var imgData = context.getImageData(destX, destY, 15, 15);
+    var data = imgData.data;
+    var canMove = 1; 
+    if (destX >= 0 && destX <= mazeWidth - 15 && destY >= 0 && destY <= mazeHeight - 15) { 
+        for (var i = 0; i < 4 * 15 * 15; i += 4) { 
+            if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) { 
+                canMove = 0; 
+                break;
+            }
+            else if (data[i] === 0 && data[i + 1] === 255 && data[i + 2] === 0) { 
+                canMove = 2;
+                break;
+            }
+        }
     }
-    else if (movingAllowed === 2) { //reached the endpoint
-        context.font = "40px Arial";
-        context.fillStyle = "blue";
-        context.textAlign = "center";
-        context.textBaseline = "middle";
-        context.fillText("Congratulations!", canvas.width / 2, canvas.height / 2);
-        window.removeEventListener("move", moveRect, true); //can't move forward
+    else {
+        canMove = 0;
     }
+    return canMove;
+}
 
 
 function move(dir) {
     var newX;
     var newY;
-    var canMove; //direction buttons
+    var canMove //direction buttons
     if (dir == "up") {myGamePiece.speedY = -1; }
     if (dir == "down") {myGamePiece.speedY = 1; }
     if (dir == "left") {myGamePiece.speedX = -1; }
