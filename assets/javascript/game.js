@@ -12,16 +12,16 @@ window.onload = function () {
 
 function startGame() {
     console.log("did anything");
-    myGamePiece = new component(40, 30, "../assets/images/player.png", 600, 230, "image");
-    myBackground = new component(656, 270, "../assets/images/maze.png", 0, 0, "background");
+    myGamePiece = new component(40, 30, "../assets/images/player.png", 600, 457, "image");
+    myBackground = new component(646, 510, "../assets/images/maze.png", 0, 0, "background");
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 656;
-        this.canvas.height = 270;
+        this.canvas.width = 646;
+        this.canvas.height = 510;
         this.context = this.canvas.getContext("2d");
         this.canvas.style.left =20;
         this.canvas.style.top = 20;
