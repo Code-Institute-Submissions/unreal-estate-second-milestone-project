@@ -12,8 +12,8 @@ window.onload = function () {
 
 function startGame() {
     console.log("did anything");
-    myGamePiece = new component(40, 35, "assets/images/player.png", 600, 455, "image");
-    myBackground = new component(646, 510, "assets/images/maze.png", 0, 0, "background");
+    myGamePiece = new component(40, 35, "./assets/images/player.png", 600, 455, "image");
+    myBackground = new component(646, 510, "./assets/images/maze.png", 0, 0, "background");
     myGameArea.start();
 }
 
