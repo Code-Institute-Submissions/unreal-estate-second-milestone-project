@@ -12,7 +12,7 @@ window.onload = function () {
 
 function startGame() {
     console.log("did anything");
-    myGamePiece = new component(30, 30, "../assets/images/player.png", 10, 120, "image");
+    myGamePiece = new component(40, 30, "../assets/images/player.png", 600, 230, "image");
     myBackground = new component(656, 270, "../assets/images/maze.png", 0, 0, "background");
     myGameArea.start();
 }
@@ -85,8 +85,23 @@ function updateGameArea() {
     myGamePiece.newPos();    
     myGamePiece.update();
 }
+ movingAllowed = canMoveTo(newX, newY);
+    if (movingAllowed === 1) { //can move
+        myGamePiece(newX, newY, "#0000FF");
+        currRectX = newX;
+        currRectY = newY;
+    }
+    else if (movingAllowed === 2) { //reached the endpoint
+        context.font = "40px Arial";
+        context.fillStyle = "blue";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.fillText("Congratulations!", canvas.width / 2, canvas.height / 2);
+        window.removeEventListener("move", moveRect, true); //can't move forward
+    }
 
-function move(dir) {
+
+function move(dir) { //direction buttons
     if (dir == "up") {myGamePiece.speedY = -1; }
     if (dir == "down") {myGamePiece.speedY = 1; }
     if (dir == "left") {myGamePiece.speedX = -1; }
