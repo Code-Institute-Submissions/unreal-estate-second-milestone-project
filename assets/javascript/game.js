@@ -12,7 +12,7 @@ window.onload = function () {
 
 function startGame() {
     console.log("did anything");
-    myGamePiece = new component(40, 30, "../assets/images/player.png", 600, 457, "image");
+    myGamePiece = new component(40, 35, "../assets/images/player.png", 600, 455, "image");
     myBackground = new component(646, 510, "../assets/images/maze.png", 0, 0, "background");
     myGameArea.start();
 }
@@ -22,15 +22,15 @@ var myGameArea = {
     start : function() {
         this.canvas.width = 646;
         this.canvas.height = 510;
-        this.context = this.canvas.getContext("2d");
-        this.canvas.style.left =20;
+        this.canvas.style.left = 20;
         this.canvas.style.top = 20;
+        this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         },
     clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height, this.canvas.style.left, this.canvas.style.top );
     },
     stop : function() {
         clearInterval(this.interval);
@@ -101,7 +101,10 @@ function updateGameArea() {
     }
 
 
-function move(dir) { //direction buttons
+function move(dir) {
+    var newX;
+    var newY;
+    var canMove; //direction buttons
     if (dir == "up") {myGamePiece.speedY = -1; }
     if (dir == "down") {myGamePiece.speedY = 1; }
     if (dir == "left") {myGamePiece.speedX = -1; }
