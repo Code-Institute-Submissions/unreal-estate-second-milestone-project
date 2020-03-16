@@ -40,12 +40,13 @@ h1{
 #dashboard {
     font-size: 0.85rem;
     width: 30%;
-    height: 35%;
+    height: 75%;
     background-color:#649B92;
     color: rgb(32, 30, 28);
     position:relative;
     box-sizing:content-box;
     border: 0.2rem solid #68A376;
+    min-height: 100vh;
         
 }
 
@@ -81,7 +82,7 @@ canvas {
 }
 
 .navigation{
-    left: 100px;
+    left: 120px;
     bottom: 150px;
     position: relative;
     
