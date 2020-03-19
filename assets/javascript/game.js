@@ -32,9 +32,7 @@ var myGameArea = {
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height, this.canvas.style.left, this.canvas.style.top );
     },
-    stop : function() {
-        clearInterval(this.interval);
-    }
+    
 }
 
 function component(width, height, color, x, y, type) {
@@ -85,27 +83,45 @@ function updateGameArea() {
     myGamePiece.newPos();    
     myGamePiece.update();
 }
+movingAllowed = canMoveTo(newX, newY);
+    if (movingAllowed === 1) {    
+        currRectX = newX;
+        currRectY = newY;
+    }
+    
 
-function canMoveTo(destX, destY) {
-    var imgData = context.getImageData(destX, destY, 15, 15);
-    var data = imgData.data;
-    var canMove = 1; 
+function canMoveTo(destX, destY) { 
+    console.log("0");
+    var imgData = context.getImageData(destX, destY, 40, 35);
+    console.log("1");
+    var data = imgData.data; console.log("2");
+    var canMove = 1;
+    console.log("3");
     if (destX >= 0 && destX <= mazeWidth - 15 && destY >= 0 && destY <= mazeHeight - 15) { 
-        for (var i = 0; i < 4 * 15 * 15; i += 4) { 
+    console.log("4");
+        for (var i = 0; i < 4 * 40 * 35; i += 4) { console.log("5");
             if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) { 
-                canMove = 0; 
+            console.log("6");
+                canMove = 0;
+                console.log("7");
                 break;
-            }
+                console.log("8");
+            } 
             else if (data[i] === 0 && data[i + 1] === 255 && data[i + 2] === 0) { 
-                canMove = 2;
-                break;
+                console.log("9");
+                canMove = 2; 
+                console.log("10");
+                break; 
+                console.log("11");
             }
         }
     }
     else {
         canMove = 0;
+         console.log("12");
     }
     return canMove;
+    console.log("13");
 }
 
 
