@@ -31,7 +31,7 @@ var myGameArea = {
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height, this.canvas.style.left, this.canvas.style.top );
-    },
+    }
     
 }
 
@@ -83,8 +83,11 @@ function updateGameArea() {
     myGamePiece.newPos();    
     myGamePiece.update();
 }
+let newX;
+let newY;
 movingAllowed = canMoveTo(newX, newY);
-    if (movingAllowed === 1) {    
+    if (movingAllowed === 1) 
+    {    
         currRectX = newX;
         currRectY = newY;
     }
