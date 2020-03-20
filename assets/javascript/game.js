@@ -34,6 +34,7 @@ var myGameArea = {
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height, this.canvas.style.left, this.canvas.style.top );
     }
+     
     
 }
 
@@ -66,6 +67,7 @@ function component(width, height, color, x, y, type) {
             context.fillStyle = color;
             context.fillRect(this.x, this.y, this.width, this.height);
         }
+        
     }
     this.newPos = function() {
         this.x += this.speedX;
@@ -76,6 +78,7 @@ function component(width, height, color, x, y, type) {
             }
         }
     }    
+    
 }
 
 function updateGameArea() {
@@ -89,7 +92,7 @@ function updateGameArea() {
 }
 let newX;
 let newY;
-movingAllowed = canMoveTo(newX, newY);
+movingAllowed = canMoveTo(newX, newY, context);
     if (movingAllowed === 1) 
     {    
         currRectX = newX;
@@ -103,9 +106,7 @@ else if (movingAllowed === 2) {
         
     }
 
-    
-
-function canMoveTo(destX, destY) { 
+function canMoveTo(destX, destY,context) { 
     console.log("0");
     var imgData = context.getImageData(destX, destY, 40, 35);
     console.log("1");
