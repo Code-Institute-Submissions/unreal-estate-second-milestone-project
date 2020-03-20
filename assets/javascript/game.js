@@ -1,10 +1,10 @@
 var myGamePiece;
 var myBackground;
 var myDestination;
-var imageWidth = 414;
-var imageHeight = 254;
-var canvasWidth = 522;
-var canvasHeight = 522;
+var imageWidth = 700;
+var imageHeight = 550;
+var canvasWidth = 700;
+var canvasHeight = 550;
 
 
 window.onload = function () {
@@ -13,17 +13,17 @@ window.onload = function () {
 
 function startGame() {
     console.log("did anything");
-    myGamePiece = new component(40, 35, "./assets/images/player.png", 600, 455, "image");
-    myBackground = new component(646, 510, "./assets/images/maze.png", 0, 0, "background");
-    myDestination = new component(40, 40, "./assets/images/destination.png", 50, 420, "image");
+    myGamePiece = new component(40, 35, "./assets/images/player.png", 655, 495, "image");
+    myBackground = new component(700, 550, "./assets/images/maze.png", 0, 0, "background");
+    myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 646;
-        this.canvas.height = 510;
+        this.canvas.width = 700;
+        this.canvas.height = 550;
         this.canvas.style.left = 20;
         this.canvas.style.top = 20;
         this.context = this.canvas.getContext("2d");
@@ -84,6 +84,8 @@ function updateGameArea() {
     myBackground.update();
     myGamePiece.newPos();    
     myGamePiece.update();
+    myDestination.newPos(); 
+    myDestination.update();
 }
 let newX;
 let newY;
