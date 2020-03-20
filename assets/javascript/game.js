@@ -95,6 +95,14 @@ movingAllowed = canMoveTo(newX, newY);
         currRectX = newX;
         currRectY = newY;
     }
+else if (movingAllowed === 2) { 
+        context.fillStyle = "blue";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.fillText("Congratulations!", canvas.width / 2, canvas.height / 2);
+        
+    }
+
     
 
 function canMoveTo(destX, destY) { 
