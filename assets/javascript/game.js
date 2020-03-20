@@ -114,8 +114,8 @@ function canMoveTo(destX, destY) {
                 break;
                 console.log("8");
             } 
-            else if (data[i] === 0 && data[i + 1] === 255 && data[i + 2] === 0) { 
-                console.log("9");
+            else if (data[i] === 93 && data[i + 1] === 188 && data[i + 2] === 210) { //the colour of the destination
+                 console.log("9");
                 canMove = 2; 
                 console.log("10");
                 break; 
