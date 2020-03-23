@@ -132,8 +132,10 @@ function move(dir) {
     var newY;
     var canMove //direction buttons
     if (dir == "up") {
-        if === 1 canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context);
-        myGamePiece.speedY = -1; }
+        if === 1 {canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context);
+        myGamePiece.speedY = -1
+     }
+    };
     if (dir == "down") {myGamePiece.speedY = 1; }
     if (dir == "left") {myGamePiece.speedX = -1; }
     if (dir == "right") {myGamePiece.speedX = 1; }
