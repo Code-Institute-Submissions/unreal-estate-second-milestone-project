@@ -92,20 +92,6 @@ function updateGameArea() {
 }
 let newX;
 let newY;
-movingAllowed = canMoveTo(newX, newY, context);
-    if (movingAllowed === 1) 
-    {    
-        currRectX = newX;
-        currRectY = newY;
-    }
-else if (movingAllowed === 2) { 
-        context.fillStyle = "blue";
-        context.textAlign = "center";
-        context.textBaseline = "middle";
-        context.fillText("Congratulations!", canvas.width / 2, canvas.height / 2);
-        
-    }
-
 function canMoveTo(destX, destY,context) { 
     console.log("0");
     var imgData = context.getImageData(destX, destY, 40, 35);
@@ -113,7 +99,7 @@ function canMoveTo(destX, destY,context) {
     var data = imgData.data; console.log("2");
     var canMove = 1;
     console.log("3");
-    if (destX >= 0 && destX <= mazeWidth - 15 && destY >= 0 && destY <= mazeHeight - 15) { 
+    if (destX >= 0 && destX <= imageWidth - 15 && destY >= 0 && destY <= imageHeight - 15) { 
     console.log("4");
         for (var i = 0; i < 4 * 40 * 35; i += 4) { console.log("5");
             if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) { 
@@ -145,7 +131,9 @@ function move(dir) {
     var newX;
     var newY;
     var canMove //direction buttons
-    if (dir == "up") {myGamePiece.speedY = -1; }
+    if (dir == "up") {
+        if === 1 canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context);
+        myGamePiece.speedY = -1; }
     if (dir == "down") {myGamePiece.speedY = 1; }
     if (dir == "left") {myGamePiece.speedX = -1; }
     if (dir == "right") {myGamePiece.speedX = 1; }
