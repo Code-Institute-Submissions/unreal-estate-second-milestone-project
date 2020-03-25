@@ -36,7 +36,7 @@ var myGameArea = {
     }
      
     
-}
+};
 
 function component(width, height, color, x, y, type) {
     this.type = type;
@@ -68,7 +68,7 @@ function component(width, height, color, x, y, type) {
             context.fillRect(this.x, this.y, this.width, this.height);
         }
         
-    }
+    };
     this.newPos = function() {
         this.x += this.speedX;
         this.y += this.speedY;
@@ -77,7 +77,7 @@ function component(width, height, color, x, y, type) {
                 this.x = 0;
             }
         }
-    }    
+    };  
     
 }
 
@@ -130,16 +130,20 @@ function canMoveTo(destX, destY,context) {
 function move(dir) {
     var newX;
     var newY;
-    var canMove //direction buttons
+    var canMove; //direction buttons
     if (dir == "up") {
-        if === 1 {canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context);
-        myGamePiece.speedY = -1
-     }
-    };
-    if (dir == "down") {myGamePiece.speedY = 1; }
-    if (dir == "left") {myGamePiece.speedX = -1; }
-    if (dir == "right") {myGamePiece.speedX = 1; }
-}
+        if (1 == canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context));
+        myGamePiece.speedY = -1}        
+    if (dir == "down"){
+        if (1 == canMoveTo(myGamePiece.x, myGamePiece.y+1,myGameArea.contect));
+    } {myGamePiece.speedY = 1; }
+    if (dir == "left"){
+        if (1== canMoveTo(myGamePiece.x-1, myGamePiece.y, myGameArea.context));
+    } {myGamePiece.speedX = -1; }
+    if (dir == "right"){
+        if (1==canMoveTo(myGamePiece.x+1, myGamePiece.y, myGameArea.context));
+    } {myGamePiece.speedX = 1; }
+    }
 
 function clearmove() {
     myGamePiece.image.src = "../assets/images/player.png";
