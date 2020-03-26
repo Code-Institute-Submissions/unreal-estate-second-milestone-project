@@ -1,10 +1,10 @@
 var myGamePiece;
 var myBackground;
 var myDestination;
-var imageWidth = 700;
-var imageHeight = 550;
-var canvasWidth = 700;
-var canvasHeight = 550;
+var imageWidth = 715;
+var imageHeight = 570;
+var canvasWidth = 715;
+var canvasHeight = 570;
 
 
 window.onload = function () {
@@ -13,8 +13,8 @@ window.onload = function () {
 
 function startGame() {
     console.log("did anything");
-    myGamePiece = new component(40, 35, "./assets/images/player.png", 655, 495, "image");
-    myBackground = new component(700, 550, "./assets/images/maze.png", 0, 0, "background");
+    myGamePiece = new component(25, 27, "./assets/images/player.png", 665, 516, "image");
+    myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
     myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
     myGameArea.start();
 }
@@ -22,8 +22,8 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 700;
-        this.canvas.height = 550;
+        this.canvas.width = 715;
+        this.canvas.height = 570;
         this.canvas.style.left = 20;
         this.canvas.style.top = 20;
         this.context = this.canvas.getContext("2d");
