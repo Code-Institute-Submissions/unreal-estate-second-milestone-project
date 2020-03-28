@@ -153,7 +153,6 @@ function clearmove() {
 
 
 //select level
-
 function startEasyLevel(){
      myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
 
