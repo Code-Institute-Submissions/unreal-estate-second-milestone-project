@@ -131,17 +131,17 @@ function move(dir) {
     var newX;
     var newY;
     var canMove; //direction buttons
-    if (dir == "up") {
-        if (1 == canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context));
+    if (dir ==="up") {
+        if (1 === canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context));
         myGamePiece.speedY = -1}        
-    if (dir == "down"){
+    if (dir === "down"){
         if (1 == canMoveTo(myGamePiece.x, myGamePiece.y+1,myGameArea.context));
     } {myGamePiece.speedY = 1; }
-    if (dir == "left"){
-        if (1== canMoveTo(myGamePiece.x-1, myGamePiece.y, myGameArea.context));
+    if (dir === "left"){
+        if (1 == canMoveTo(myGamePiece.x-1, myGamePiece.y, myGameArea.context));
     } {myGamePiece.speedX = -1; }
-    if (dir == "right"){
-        if (1==canMoveTo(myGamePiece.x+1, myGamePiece.y, myGameArea.context));
+    if (dir === "right"){
+        if (1 == canMoveTo(myGamePiece.x+1, myGamePiece.y, myGameArea.context));
     } {myGamePiece.speedX = 1; }
     }
 
