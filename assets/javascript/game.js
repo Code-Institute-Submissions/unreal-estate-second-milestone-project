@@ -13,7 +13,7 @@ window.onload = function () {
 
 function startGame() {
     console.log("did anything");
-    myGamePiece = new component(32, 32, "./assets/images/player.png", 665, 516, "image");
+    myGamePiece = new component(28, 28, "./assets/images/player.png", 665, 516, "image");
     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
     myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
     myGameArea.start();
@@ -153,3 +153,18 @@ function clearmove() {
 
 
 //select level
+
+function startEasyLevel(){
+     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
+
+}
+function startMediumLevel(){
+    myBackground = new component(715, 570, "./assets/images/medium.png", 0, 0, "background"); 
+}
+function startHardLevel(){
+     myBackground = new component(715, 570, "./assets/images/hard.png", 0, 0, "background");
+}
+function startInsaneLevel(){
+     myBackground = new component(715, 570, "./assets/images/insane.png", 0, 0, "background");
+}
+
