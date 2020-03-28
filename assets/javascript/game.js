@@ -135,7 +135,7 @@ function move(dir) {
         if (1 == canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context));
         myGamePiece.speedY = -1}        
     if (dir == "down"){
-        if (1 == canMoveTo(myGamePiece.x, myGamePiece.y+1,myGameArea.contect));
+        if (1 == canMoveTo(myGamePiece.x, myGamePiece.y+1,myGameArea.context));
     } {myGamePiece.speedY = 1; }
     if (dir == "left"){
         if (1== canMoveTo(myGamePiece.x-1, myGamePiece.y, myGameArea.context));
