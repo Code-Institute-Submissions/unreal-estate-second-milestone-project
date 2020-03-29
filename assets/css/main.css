@@ -90,10 +90,11 @@ canvas {
     
 }
 .modal{
+    display: none;
     position: fixed;
     left:50%;
     top: 50%;
-    display: none;
+    
     z-index: 10;
     background-color: rgba(0,0,0,0.4);
 }
