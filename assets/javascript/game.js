@@ -172,13 +172,17 @@ function startInsaneLevel(){
 var modal = document.getElementsByClassName("modal-content");
 var btn = document.getElementById("FeedbackBtn");
 var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
+
+
+function close() {
+  document.getElementByClassName("close");
+  modal.style.display = "none"
 }
-span.onclick = function() {
-  modal.style.display = "none";
+function btn(){
+    document.getElementById("FeedbackBtn");
+    modal.style.display = "block";
+
 }
-btn.addEventListener("click", modal.style.display = "block");
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
