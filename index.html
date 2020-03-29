@@ -59,7 +59,20 @@
          <footer>
             <div class="icons">
                <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
-               <a class="far fa-envelope" title="Feedback"></a>
+               <button data-modal-target= "#modal" class="far fa-envelope" title="Feedback"></button>
+               <div class="modal" id="modal">
+               <button data-close-button class="close">&times;</button>
+                <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+                <label for="email">Email Address</label>
+                 <input type="email" id="email" name="name" placeholder="Your email address..">
+                <label for="feedback">Feedback</label>
+                <textarea id="feedback" name="feedback" placeholder="Write your feedback here">
+                </form>
+               
+               </div>
+               <div class="active" id="overlay"></div>
             </div>
             <div class="credits">
                <span> &copy; Krisztina Szabó</span>
