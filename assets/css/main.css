@@ -93,23 +93,23 @@ canvas {
     position: fixed;
     left:50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(0);
+    display: none;
     z-index: 10;
-    background-color: #649B92;
+    background-color: rgba(0,0,0,0.4);
 }
-.modal.active{
-    transform: translate(-50%, -50%) scale(1);
+.feedbackForm{
+background-color: #649B92;
+width: 70%;
 }
-#overlay{
-    position: fixed;
-    background-color: #005;
-    pointer-events: none;
+.close{
+    color: #68A376;
 }
-#overlay-active{
-pointer-events: all;
-opacity: 1;
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
-
 
 /***Footer***/
 
@@ -122,9 +122,7 @@ footer {
     text-align: center;
     
 }
-.fab {
+.fab
+{
 color: black;
-}
-#dashoard{
-    overflow: scroll;
 }

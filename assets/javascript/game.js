@@ -169,33 +169,17 @@ function startInsaneLevel(){
 }
 
 //Feedback button
-const openModalButton = document.querySelectorAll('[data-modal-target]')
-const closeModalButton = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
+var modal = document.getElementById("modal");
+var btn = document.getElementById("FeedbackBtn");
+var span = document.getElementsByClassName("close")[0];
 
-openModalButton.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
 
-    })
-})
-closeModalButton.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
+btn.addEventListener("click", modal.style.display = "block");
+span.addEventListener("click", modal.style.display = "none");
 
-    })
-})
 
-function openModal(modal) {
-    if (modal == null) return 
-    modal.classlist.add('active')
-    overlay.classlist.add('active')
-}
-
- function closeModal(modal) {
-    if (modal == null) return 
-    modal.classlist.remove('active')
-    overlay.classlist.remove('active')
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
