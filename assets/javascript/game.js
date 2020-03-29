@@ -169,22 +169,15 @@ function startInsaneLevel(){
 }
 
 //Feedback button
-var modal = document.getElementsByClassName("modal-content");
-var btn = document.getElementById("FeedbackBtn");
 var span = document.getElementsByClassName("close")[0];
 
 
-function close() {
-  document.getElementByClassName("close");
-  modal.style.display = "none"
-}
-function btn(){
-    document.getElementById("FeedbackBtn");
-    modal.style.display = "block";
-
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+function sendFeedback() {
+  var x = document.getElementById("modal");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } 
+  else {
+    x.style.display = "none";
   }
 }

@@ -59,8 +59,8 @@
          <footer>
             <div class="icons">
                <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
-               <button id="FeedbackBtn" class="far fa-envelope" title="Feedback"></button>
-               <div class="modal-content" id="modal">
+               <button onclick="sendFeedback()" id="FeedbackBtn"  class="far fa-envelope" title="Feedback"></button>
+               <div class="modal-content" id="modal" style="display:none" >
                 
                 <form class="feedbackForm">
                 <label for="name">Name</label>
