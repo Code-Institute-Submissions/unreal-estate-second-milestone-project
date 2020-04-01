@@ -13,7 +13,7 @@ window.onload = function () {
 
 function startGame() {
     console.log("did anything");
-    myGamePiece = new component(15, 15, "./assets/images/player.png", 665, 516, "image");
+    myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
     myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
     myGameArea.start();
@@ -180,15 +180,21 @@ function startInsaneLevel() {
 }
 
 //Feedback button
-var span = document.getElementsByClassName("close")[0];
 
 
-function sendFeedback() {
-    var x = document.getElementById("modal");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    }
-    else {
-        x.style.display = "none";
-    }
+function submit() {
+   if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('feedback').value == "") {
+alert("This field is required!");}
+else {
+document.getElementsByClassName('feedbackForm').submit();
+alert("Thanks for your feedback!");
+}
+}
+
+function divShow() {
+  document.getElementsByClassName("feedbackForm").style.display = "block";
+}
+
+function divClose() {
+  document.getElementsByClassName("feedbackForm").style.display = "none";
 }
