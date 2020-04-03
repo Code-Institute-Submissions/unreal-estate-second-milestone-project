@@ -89,19 +89,30 @@ canvas {
     position: relative;
     
 }
+
+
+/******Feedback form *****/
+
 .modal{
-    
-    
-    
+    position: fixed;
+    display: none;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    height: 50%;
+    width: 50%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0.4);
 }
-.feedbackForm{
-background-color: #649B92;
- display: none;
-  position: fixed;
-  bottom: 0;
+.modal-content{
+    background-color: #68A376;
+    margin: 50% auto;
+    width: 75%;
 }
+
 .close{
-    color: #68A376;
+    color: rgb(7, 8, 7);
+    float: right;
 }
 .close:hover,
 .close:focus {
