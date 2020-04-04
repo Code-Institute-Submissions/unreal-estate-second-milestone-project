@@ -182,14 +182,7 @@ function startInsaneLevel() {
 //Feedback button
 
 
-//function submit() {
- //  if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('feedback').value == "") {
-//alert("This field is required!");}
-//else {
-//document.getElementsByClassName('feedbackForm').submit();
-//alert("Thanks for your feedback!");
-//}
-//}
+
 
 var modal = document.getElementsByClassName('modal');
 var feedbackBtn = document.getElementById('feedbackBtn');
@@ -207,5 +200,13 @@ function closeModal(){
 function outSide(e){
     if(e.target == modal) {
     modal.style.display = 'none';
+}
+}
+function submit() {
+   if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('feedback').value == "") {
+alert("This field is required!");}
+else {
+document.getElementsByClassName('feedbackForm').submit();
+alert("Thanks for your feedback!");
 }
 }
