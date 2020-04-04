@@ -214,9 +214,11 @@ function sendMail(feedbackForm) {
     .then(
         function(response) {
             alert("Success", response);
+            $('#myModal').modal('hide');
         },
         function(error) {
             alert("Failed", error);
+            $('#myModal').modal('hide');
         }
     );
     return false;
