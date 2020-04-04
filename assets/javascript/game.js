@@ -70,11 +70,11 @@ function component(width, height, color, x, y, type) {
 
     };
     this.newPos = function () {
-        if (1 === canMoveTo(this.x + this.speedX, this.y + this.speedY, myGameArea.context)){
-             this.x += this.speedX;
-        this.y += this.speedY;
-        } 
-        
+        if (1 === canMoveTo(this.x + this.speedX, this.y + this.speedY, myGameArea.context)) {
+            this.x += this.speedX;
+            this.y += this.speedY;
+        }
+
         if (this.type == "background") {
             if (this.x == -(this.width)) {
                 this.x = 0;
@@ -104,15 +104,16 @@ function canMoveTo(destX, destY, context) {
     console.log("3");
     if (destX >= 0 && destX <= imageWidth - 15 && destY >= 0 && destY <= imageHeight - 15) {
         console.log("4");
-        for (var i = 0; i < 4 * 40 * 35; i += 4) { console.log("5");
-            if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) { 
+        for (var i = 0; i < 4 * 40 * 35; i += 4) {
+            console.log("5");
+            if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) {
                 canMove = 0;
                 break;
-            } 
+            }
             else { //the colour of the destination
-                console.log(data[i], data[i+1], data[i+2])
-                canMove = 1; 
-                break; 
+                console.log(data[i], data[i + 1], data[i + 2])
+                canMove = 1;
+                break;
             }
         }
 
@@ -131,35 +132,35 @@ function move(dir) {
     var newX;
     var newY;
     var canMove; //direction buttons
-    if (dir ==="up") {
-        if (1 === canMoveTo(myGamePiece.x, myGamePiece.y-1, myGameArea.context)){
+    if (dir === "up") {
+        if (1 === canMoveTo(myGamePiece.x, myGamePiece.y - 1, myGameArea.context)) {
             myGamePiece.speedY = -1;
-        }  
+        }
     }
-    if (dir === "down"){
-        if (1 == canMoveTo(myGamePiece.x, myGamePiece.y+1,myGameArea.context)){
+    if (dir === "down") {
+        if (1 == canMoveTo(myGamePiece.x, myGamePiece.y + 1, myGameArea.context)) {
             myGamePiece.speedY = 1;
         }
-    } 
-    if (dir === "left"){
-        console.log(canMoveTo(myGamePiece.x-1, myGamePiece.y, myGameArea.context));
-        if (1 == canMoveTo(myGamePiece.x-1, myGamePiece.y, myGameArea.context)){ 
-            myGamePiece.speedX = -1; 
-        }else{
+    }
+    if (dir === "left") {
+        console.log(canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context));
+        if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
+            myGamePiece.speedX = -1;
+        } else {
             console.log("Could not move");
         }
     }
-    if (dir === "right"){
-        if (1 == canMoveTo(myGamePiece.x+1, myGamePiece.y, myGameArea.context)){
-            myGamePiece.speedX = 1; 
+    if (dir === "right") {
+        if (1 == canMoveTo(myGamePiece.x + 1, myGamePiece.y, myGameArea.context)) {
+            myGamePiece.speedX = 1;
         }
     }
 }
 
 function clearmove() {
     myGamePiece.image.src = "../assets/images/player.png";
-    myGamePiece.speedX = 0; 
-    myGamePiece.speedY = 0; 
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;
 }
 
 
@@ -191,44 +192,45 @@ window.addEventListener('click', outSide);
 
 feedbackBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
-function openModal(){
+function openModal() {
     modal.style.display = 'block';
 }
-function closeModal(){
+function closeModal() {
     modal.style.display = 'none';
 }
-function outSide(e){
-    if(e.target == modal) {
-    modal.style.display = 'none';
-}
+function outSide(e) {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
 }
 
 // Submit and send mail with email.js
 function submit() {
-   if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('feedback').value == "") {
-alert("This field is required!");}
-else {
-document.getElementsByClassName('feedbackForm').submit();
-alert("Thanks for your feedback!");
-}
+    if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('feedback').value == "") {
+        alert("This field is required!");
+    }
+    else {
+        document.getElementsByClassName('feedbackForm').submit();
+        alert("Thanks for your feedback!");
+    }
 }
 
-function sendMail(feedbackForm){
-    emailjs.send("gmail", "unreal_estate_form",{
+function sendMail(feedbackForm) {
+    emailjs.send("gmail", "unreal_estate_form", {
         "from_name": feedbackForm.name.value,
-        "from_email":feedbackForm.emailaddress.value,
-        "feedback":feedbackForm.feedback.value
+        "from_email": feedbackForm.emailaddress.value,
+        "feedback": feedbackForm.feedback.value
     })
 
 
-.then(
-        function(response) {
-            alert("Thanks for your feedback", response);
-        },
-        function(error) {
-            alert("FAILED", error);
-        }
-    );
+        .then(
+            function (response) {
+                alert("Thanks for your feedback", response);
+            },
+            function (error) {
+                alert("FAILED", error);
+            }
+        );
     return false;
 }
-    
+
