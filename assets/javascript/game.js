@@ -202,6 +202,8 @@ function outSide(e){
     modal.style.display = 'none';
 }
 }
+
+// Submit and send mail with email.js
 function submit() {
    if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('feedback').value == "") {
 alert("This field is required!");}
@@ -210,3 +212,23 @@ document.getElementsByClassName('feedbackForm').submit();
 alert("Thanks for your feedback!");
 }
 }
+
+function sendMail(feedbackForm){
+    emailjs.send("gmail", "unreal_estate_form",{
+        "from_name": feedbackForm.name.value,
+        "from_email":feedbackForm.emailaddress.value,
+        "feedback":feedbackForm.feedback.value
+    })
+
+
+.then(
+        function(response) {
+            alert("Thanks for your feedback", response);
+        },
+        function(error) {
+            alert("FAILED", error);
+        }
+    );
+    return false;
+}
+    

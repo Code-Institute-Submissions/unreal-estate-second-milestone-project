@@ -15,6 +15,14 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
       <link rel="stylesheet" href="assets/css/main.css">
       <script src="assets/javascript/game.js"></script>
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+      emailjs.init("user_UW97WmP3GsBepuyB8Vffd");
+     })();
+</script>
    </head>
    <body>
       <div id="container">
@@ -66,9 +74,9 @@
                <h2> Send feedback! </h2>
                <span class="close"> &times;</span>
                </div>
-                    <form class="feedbackForm" method="post" name="form" action="#">
+                    <form onsubmit="return sendMail(this);" class="feedbackForm">
                
-                 <h2 class="title"> Give me a feedback </h2>
+                
                   <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name..." >
                 <label for="email">Email Address</label>
