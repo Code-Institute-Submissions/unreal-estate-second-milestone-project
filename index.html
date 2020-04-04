@@ -2,108 +2,109 @@
 <html lang="en">
 
 <head>
-	<!-- favicon files -->
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-	<!-- page title -->
-	<title> Unreal Estate </title>
-	<!-- meta data -->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Unreal Estate - Help the slug to be a snail">
-	<!--style-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<link rel="stylesheet" href="assets/css/main.css">
-	<script src="assets/javascript/game.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
-	</script>
-	<script type="text/javascript">
-		(function(){
-      emailjs.init("user_UW97WmP3GsBepuyB8Vffd");
-     })();
-	</script>
+    <!-- favicon files -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- page title -->
+    <title> Unreal Estate </title>
+    <!-- meta data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Unreal Estate - Help the slug to be a snail">
+    <!--style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_UW97WmP3GsBepuyB8Vffd");
+        })();
+    </script>
 </head>
 
 <body>
-	<div id="container">
-		<!--logo, name, levels, instructions -->
-		<div id="dashboard">
-			<img id="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
-			<div class="row justify-content-center" id="name">
-				<h1 class="col-12 col-md-6 col-lg-4"> Unreal Estate </h1>
-			</div>
-			<div class="rules">
-				<h3> How to play:</h3>
-				<p> Help the slug to become a snail!
-					<br> Find the way out of the labyrinth, so he can go home. The fewer steps you solve the puzzle, the higher your score.
-               </p>
-			</div>
-			<div class="level">
-				<h2> Difficulty</h2>
-				<div class="form-group">
-					<label for="sel1">Choose the level</label>
-					<select name = "levels" class="form-control" id="sel1">
-                     <option onclick="startEasyLevel()" value="Easy Level"> Easy</option>
-                     <option onclick="startMediumLevel()" value="Medium Level"> Medium</option>
-                     <option onclick="startHardLevel()"value="Hard Level"> Hard</option>
-                     <option onclick="startInsaneLevel()" value="Insane Level"> Insane</option>
-                  </select>
-				</div>
-				<input id="startMazeBtn" type="button" class="btn-info" value="Let's go!">
+    <div id="container">
+        <!--logo, name, levels, instructions -->
+        <div id="dashboard">
+            <img id="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
+            <div class="row justify-content-center" id="name">
+                <h1 class="col-12 col-md-6 col-lg-4"> Unreal Estate </h1>
             </div>
-			</div>
-			<!-- game -->
-			<div class="navigation">
-				<button class="btn btn-info" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
-				<br>
-				<br>
-				<button class="btn btn-info" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
-				<button class="btn btn-info" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
-				<br>
-				<br>
-				<button class="btn btn-info" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>
-			</div>
-			<!-- footer with contact form and social media buttons -->
-			<footer>
-				<div class="icons">
-					<a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt"
-						target="_blank" rel="noopener"></a>
-					<button  class="far fa-envelope" id="feedbackBtn" title="Send me feedback!"></button>
-					<div class="modal">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h2> Send feedback! </h2>
-								<span class="close"> &times;</span>
-							</div>
-							<form onsubmit="return sendMail(this);" class="feedbackForm">
+            <div class="rules">
+                <h3> How to play:</h3>
+                <p> Help the slug to become a snail!
+                    <br> Find the way out of the labyrinth, so he can go home. The fewer steps you solve the puzzle, the higher your score.
+                </p>
+            </div>
+            <div class="level">
+                <h2> Difficulty</h2>
+                <div class="form-group">
+                    <label for="sel1">Choose the level</label>
+                    <select name="levels" class="form-control" id="sel1">
+                        <option onclick="startEasyLevel()" value= "Easy Level"> Easy</option>
+                        <option onclick="startMediumLevel()" value= "Medium Level"> Medium</option>
+                        <option onclick="startHardLevel()" value= "Hard Level"> Hard</option>
+                        <option onclick="startInsaneLevel()" value="Insane Level"> Insane</option>
+                    </select>
+                </div>
+                <input id="startMazeBtn" type="button" class="btn-info" value="Let's go!">
+            </div>
+        </div>
+        <!-- game -->
+        <div class="navigation">
+            <button class="btn btn-info" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
+            <br>
+            <br>
+            <button class="btn btn-info" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
+            <button class="btn btn-info" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
+            <br>
+            <br>
+            <button class="btn btn-info" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>
+        </div>
+        <!-- footer with contact form and social media buttons -->
+        <footer>
+            <div class="icons">
+                <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
+                <button class=" far fa-envelope btn" data-toggle="modal" data-target="#myModal" id="feedbackBtn" title="Send me feedback!"></button>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <!-- <div class="modal"> -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title"> Send feedback! </h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form onsubmit="return sendMail(this);" class="feedbackForm">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" placeholder="Your name...">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" placeholder="Your email address...">
+                                    <label for="feedback">Feedback</label>
+                                    <textarea id="feedback" placeholder="Write your feedback here"></textarea>
+                                    <button type="submit" id="submit" data-dismiss="modal">Submit</button>
 
+                                </form>
+                            </div>
+                         </div>
+            
+                    </div>
+                </div>
+            </div>
 
-								<label for="name">Name</label>
-								<input type="text" id="name" name="name" placeholder="Your name..." >
-								<label for="email">Email Address</label>
-								<input type="email" id="email" name="name" placeholder="Your email address...">
-								<label for="feedback">Feedback</label>
-								<textarea id="feedback" name="feedback" placeholder="Write your feedback here"></textarea>
-								<button type="submit" id="submit">Submit</button>
-								<button  onclick="divClose()" type="button" class="close">Close</button>
-							</form>
-						</div>
-					</div>
-
-
-				</div>
-
-
-				<div class="credits">
-					<span> &copy; Krisztina Szabó</span>
-				</div>
-		</div>
-		</footer>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <div class="credits">
+                <span> &copy; Krisztina Szabó</span>
+            </div>
+            
+        </footer>
+        </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

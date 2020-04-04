@@ -96,22 +96,22 @@ function updateGameArea() {
 let newX;
 let newY;
 function canMoveTo(destX, destY, context) {
-    console.log("0");
+    
     var imgData = context.getImageData(destX, destY, 40, 35);
-    console.log("1");
-    var data = imgData.data; console.log("2");
+    
+    var data = imgData.data; 
     var canMove = 1;
-    console.log("3");
+    
     if (destX >= 0 && destX <= imageWidth - 15 && destY >= 0 && destY <= imageHeight - 15) {
-        console.log("4");
+        
         for (var i = 0; i < 4 * 40 * 35; i += 4) {
-            console.log("5");
+            
             if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) {
                 canMove = 0;
                 break;
             }
             else { //the colour of the destination
-                console.log(data[i], data[i + 1], data[i + 2])
+               data[i], data[i + 1], data[i + 2]
                 canMove = 1;
                 break;
             }
@@ -121,10 +121,10 @@ function canMoveTo(destX, destY, context) {
     else {
         console.log("Can not move");
         canMove = 0;
-        console.log("12");
+        
     }
     return canMove;
-    console.log("13");
+    
 }
 
 
@@ -182,10 +182,7 @@ function startInsaneLevel() {
 
 //Feedback button
 
-
-
-
-var modal = document.getElementsByClassName('modal');
+/*var modal = document.getElementsByClassName('modal');
 var feedbackBtn = document.getElementById('feedbackBtn');
 var closeBtn = document.getElementsByClassName('close')[0];
 window.addEventListener('click', outSide);
@@ -203,8 +200,9 @@ function outSide(e) {
         modal.style.display = 'none';
     }
 }
-
+*/
 // Submit and send mail with email.js
+
 function submit() {
     if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('feedback').value == "") {
         alert("This field is required!");
