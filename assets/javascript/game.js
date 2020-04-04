@@ -203,32 +203,21 @@ function outSide(e) {
 */
 // Submit and send mail with email.js
 
-function submit() {
-    if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('feedback').value == "") {
-        alert("This field is required!");
-    }
-    else {
-        document.getElementsByClassName('feedbackForm').submit();
-        alert("Thanks for your feedback!");
-    }
-}
 
 function sendMail(feedbackForm) {
-    emailjs.send("gmail", "unreal_estate_form", {
+    emailjs.init("user_UW97WmP3GsBepuyB8Vffd");
+    emailjs.send("gmail", "unreal_estate", {
         "from_name": feedbackForm.name.value,
-        "from_email": feedbackForm.emailaddress.value,
+        "from_email": feedbackForm.email.value,
         "feedback": feedbackForm.feedback.value
     })
-
-
-        .then(
-            function (response) {
-                alert("Thanks for your feedback", response);
-            },
-            function (error) {
-                alert("FAILED", error);
-            }
-        );
+    .then(
+        function(response) {
+            alert("Success", response);
+        },
+        function(error) {
+            alert("Failed", error);
+        }
+    );
     return false;
 }
-
