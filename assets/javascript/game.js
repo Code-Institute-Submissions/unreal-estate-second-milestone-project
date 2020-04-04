@@ -193,10 +193,19 @@ function startInsaneLevel() {
 
 var modal = document.getElementsByClassName('modal');
 var feedbackBtn = document.getElementById('feedbackBtn');
-var closeBtn = document.getElementsByClassName('close');
+var closeBtn = document.getElementsByClassName('close')[0];
+window.addEventListener('click', outSide);
 
 feedbackBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
 function openModal(){
     modal.style.display = 'block';
-
+}
+function closeModal(){
+    modal.style.display = 'none';
+}
+function outSide(e){
+    if(e.target == modal) {
+    modal.style.display = 'none';
+}
 }
