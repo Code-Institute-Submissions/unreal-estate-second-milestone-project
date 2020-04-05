@@ -181,26 +181,6 @@ function startInsaneLevel() {
 }
 
 //Feedback button
-
-/*var modal = document.getElementsByClassName('modal');
-var feedbackBtn = document.getElementById('feedbackBtn');
-var closeBtn = document.getElementsByClassName('close')[0];
-window.addEventListener('click', outSide);
-
-feedbackBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-function openModal() {
-    modal.style.display = 'block';
-}
-function closeModal() {
-    modal.style.display = 'none';
-}
-function outSide(e) {
-    if (e.target == modal) {
-        modal.style.display = 'none';
-    }
-}
-*/
 // Submit and send mail with email.js
 
 
@@ -213,7 +193,7 @@ function sendMail(feedbackForm) {
     })
     .then(
         function(response) {
-            alert("Success", response);
+            alert("Thanks for your opinion!", response);
             $('#myModal').modal('hide');
         },
         function(error) {
