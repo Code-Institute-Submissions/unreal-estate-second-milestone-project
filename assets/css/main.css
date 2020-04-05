@@ -109,7 +109,10 @@ footer {
 
     display: none;
     
-   
+.modal-header{
+    display:flex;
+    justify-content: center;
+}
 }
 .modal-body{
     align-items: center;
@@ -126,14 +129,7 @@ footer {
     text-align: center;
     justify-content: center;
 }
-.modal-content{
-width: 100%;
-box-sizing:content-box;
-}
-.modal-header{
-    display:flex;
-    justify-content: center;
-}
+
 
 
 .close {
