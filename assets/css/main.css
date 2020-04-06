@@ -57,6 +57,7 @@ h1 {
 	position: relative;
 	box-sizing: content-box;
 	border: 0.2rem solid #68A376;
+    margin-top:1rem;
 }
 
 .rules {
@@ -80,15 +81,17 @@ canvas {
 	border: 1px solid #d3d3d3;
 	background-color: #f1f1f1;
 	position: relative;
-	left: 500px;
-	top: 500px;
+	left: 40%;
+    margin-top:1rem;
 	border: 2px solid #649B92;
+   
 }
 
 .navigation {
-	left: 120px;
-	bottom: 150px;
-	position: relative;
+	bottom: 37rem;
+    position: relative;
+    
+	
 }
 
 
