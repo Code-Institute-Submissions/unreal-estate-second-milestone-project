@@ -65,12 +65,13 @@ h1 {
 	padding: 1rem;
 }
 
-.level {
-	text-align: center;
-}
+
 
 .level-buttons {
-	margin-top: 1.2rem;
+	margin-top: 0.8rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    
 }
 
 
@@ -89,7 +90,7 @@ canvas {
 }
 
 .navigation {
-	bottom:47rem;
+	bottom:40rem;
     position: relative;
     
     

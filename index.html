@@ -35,16 +35,15 @@
             </div>
             <div class="level">
                 <h2> Difficulty</h2>
-                <div class="form-group">
-                    <label for="sel1">Choose the level</label>
-                    <select name="levels" class="form-control" id="sel1">
-                        <option onclick="startEasyLevel()" value= "Easy Level"> Easy</option>
-                        <option onclick="startMediumLevel()" value= "Medium Level"> Medium</option>
-                        <option onclick="startHardLevel()" value= "Hard Level"> Hard</option>
-                        <option onclick="startInsaneLevel()" value="Insane Level"> Insane</option>
-                    </select>
+                <div class="level-buttons">
+                    
+                        <button  class="btn btn-warning" onclick="startEasyLevel()" value= "Easy Level" id="easyBtn"> Easy</button>
+                        <button class="btn btn-warning" onclick="startMediumLevel()" value= "Medium Level" id="mediumBtn"> Medium</button>
+                        <button class="btn btn-warning" onclick="startHardLevel()" value= "Hard Level" id="hardBtn"> Hard</button>
+                        <button class="btn btn-warning" onclick="startInsaneLevel()" value="Insane Level" id="insaneBtn"> Insane</button>
+                    
                 </div>
-                <input id="startMazeBtn" type="button" class="btn-info" value="Let's go!">
+                
             </div>
         </div>
         <!-- game -->

@@ -9,10 +9,10 @@ var canvasHeight = 570;
 
 window.onload = function () {
     startGame();
-}
+    }
+
 
 function startGame() {
-    console.log("did anything");
     myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
     myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
@@ -177,17 +177,30 @@ function clearmove() {
 
 function startEasyLevel() {
     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
-
+    myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
+    myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
+    myGameArea.start();
 }
 function startMediumLevel() {
     myBackground = new component(715, 570, "./assets/images/medium.png", 0, 0, "background");
+    myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
+    myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
+    myGameArea.start();
 }
 function startHardLevel() {
     myBackground = new component(715, 570, "./assets/images/hard.png", 0, 0, "background");
+    myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
+    myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
+    myGameArea.start();
 }
 function startInsaneLevel() {
     myBackground = new component(715, 570, "./assets/images/insane.png", 0, 0, "background");
+    myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
+    myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
+    myGameArea.start();
 }
+
+
 
 //Feedback button
 // Submit and send mail with email.js
