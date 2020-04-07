@@ -15,6 +15,7 @@ body {
 	
 	position: relative;
 	text-align: center;
+    margin-top:10%;
     
 }
 
@@ -48,14 +49,16 @@ h1 {
 
 #dashboard {
 	font-size: 0.85rem;
-	width: 30%;
+	overflow:hidden;
 	height: 75%;
 	background-color: #649B92;
 	color: rgb(32, 30, 28);
-	position: relative;
+	position: inherit;
 	box-sizing: content-box;
 	border: 0.2rem solid #68A376;
     margin-top:1rem;
+    max-width: 30%;
+    
 }
 
 .rules {
@@ -86,8 +89,9 @@ canvas {
 }
 
 .navigation {
-	bottom: 37rem;
+	bottom:47rem;
     position: relative;
+    
     
 	
 }

@@ -110,7 +110,7 @@ function canMoveTo(destX, destY, context) {
                 canMove = 0;
                 break;
             }
-            else { //the colour of the destination
+            else { 
                data[i], data[i + 1], data[i + 2]
                 canMove = 1;
                 break;
@@ -126,6 +126,9 @@ function canMoveTo(destX, destY, context) {
     return canMove;
     
 }
+///game over
+
+
 
 
 function move(dir) {
