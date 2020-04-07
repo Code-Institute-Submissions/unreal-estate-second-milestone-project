@@ -9,7 +9,7 @@ var canvasHeight = 570;
 
 window.onload = function () {
     startGame();
-    }
+}
 
 
 function startGame() {
@@ -96,40 +96,40 @@ function updateGameArea() {
 let newX;
 let newY;
 function canMoveTo(destX, destY, context) {
-    
+
     var imgData = context.getImageData(destX, destY, 40, 35);
-    
-    var data = imgData.data; 
+
+    var data = imgData.data;
     var canMove = 1;
-    
+
     if (destX >= 0 && destX <= imageWidth - 15 && destY >= 0 && destY <= imageHeight - 15) {
-        
+
         for (var i = 0; i < 4 * 40 * 35; i += 4) {
-            
+
             if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) {
                 canMove = 0;
                 break;
             }
-            
-            else { 
-               data[i], data[i + 1], data[i + 2]
+
+            else {
+                data[i], data[i + 1], data[i + 2]
                 canMove = 1;
                 break;
             }
-        
-           /* else if { 
-            (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116)
-            canMove =2;
-            break;
-            alert("Game over", response);
-                
-            }*/
+
+            /* else if { 
+             (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116)
+             canMove =2;
+             break;
+             alert("Game over", response);
+                 
+             }*/
         }
     }
     else {
         console.log("Can not move");
         canMove = 0;
-        
+
     }
     return canMove;
 
@@ -190,7 +190,7 @@ function startMediumLevel() {
 function startHardLevel() {
     myBackground = new component(715, 570, "./assets/images/hard.png", 0, 0, "background");
     myGamePiece = new component(20, 15, "./assets/images/player.png", 680, 540, "image");
-    myDestination = new component(25, 25, "./assets/images/destination.png", 0,15, "image");
+    myDestination = new component(25, 25, "./assets/images/destination.png", 0, 15, "image");
     myGameArea.start();
 }
 function startInsaneLevel() {
@@ -213,15 +213,15 @@ function sendMail(feedbackForm) {
         "from_email": feedbackForm.email.value,
         "feedback": feedbackForm.feedback.value
     })
-    .then(
-        function(response) {
-            alert("Thanks for your opinion!", response);
-            $('#myModal').modal('hide');
-        },
-        function(error) {
-            alert("Failed", error);
-            $('#myModal').modal('hide');
-        }
-    );
+        .then(
+            function (response) {
+                alert("Thanks for your opinion!", response);
+                $('#myModal').modal('hide');
+            },
+            function (error) {
+                alert("Failed", error);
+                $('#myModal').modal('hide');
+            }
+        );
     return false;
 }
