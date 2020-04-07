@@ -110,13 +110,13 @@ function canMoveTo(destX, destY, context) {
                 canMove = 0;
                 break;
             }
+            
             else { 
                data[i], data[i + 1], data[i + 2]
                 canMove = 1;
                 break;
             }
         }
-
     }
     else {
         console.log("Can not move");
@@ -124,10 +124,8 @@ function canMoveTo(destX, destY, context) {
         
     }
     return canMove;
-    
-}
-///game over
 
+}
 
 
 
