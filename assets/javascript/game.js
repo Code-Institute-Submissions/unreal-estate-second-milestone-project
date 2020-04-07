@@ -116,6 +116,14 @@ function canMoveTo(destX, destY, context) {
                 canMove = 1;
                 break;
             }
+        
+           /* else if { 
+            (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116)
+            canMove =2;
+            break;
+            alert("Game over", response);
+                
+            }*/
         }
     }
     else {
