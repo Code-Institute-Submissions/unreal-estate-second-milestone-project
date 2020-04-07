@@ -189,14 +189,14 @@ function startMediumLevel() {
 }
 function startHardLevel() {
     myBackground = new component(715, 570, "./assets/images/hard.png", 0, 0, "background");
-    myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
-    myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
+    myGamePiece = new component(20, 15, "./assets/images/player.png", 680, 540, "image");
+    myDestination = new component(25, 25, "./assets/images/destination.png", 0,15, "image");
     myGameArea.start();
 }
 function startInsaneLevel() {
     myBackground = new component(715, 570, "./assets/images/insane.png", 0, 0, "background");
-    myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
-    myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
+    myGamePiece = new component(20, 15, "./assets/images/player.png", 685, 540, "image");
+    myDestination = new component(25, 25, "./assets/images/destination.png", 0, 10, "image");
     myGameArea.start();
 }
 
