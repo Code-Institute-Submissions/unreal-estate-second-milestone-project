@@ -10,11 +10,7 @@ body {
 	font-family: 'Roboto Mono', monospace;
 }
 
-#container {
-	position: relative;
-	text-align: center;
-	
-}
+
 
 
 /***Logo***/
@@ -47,8 +43,8 @@ h1 {
 
 #dashboard {
 	font-size: 0.85rem;
-	top:10%;
-	height: 75%;
+	top:5%;
+	height: 100%;
 	background-color: #649B92;
 	color: rgb(32, 30, 28);
 	position: absolute;
@@ -56,6 +52,7 @@ h1 {
 	border: 0.2rem solid #68A376;
 	margin-top: 1rem;
 	max-width: 30%;
+    text-align: center;
 }
 
 .rules {
@@ -77,13 +74,28 @@ canvas {
 	position: relative;
 	left: 40%;
 	margin-top: 1rem;
-	border: 2px solid #649B92;
+	border: 2rem solid #649B92;
 }
 
 .navigation {
 	
-	position: relative;
-    left:40rem;
+	left: 60%;
+    position: relative;
+}
+.vertical{
+    display: flex;
+    flex-direction: column;
+    width: 5%;
+    height: 5%;
+    
+
+}
+.horizontal{
+    display: flex;
+    flex-direction: row;
+    bottom:5rem;
+    position: relative;
+
 }
 
 

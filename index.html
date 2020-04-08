@@ -47,14 +47,19 @@
 		</div>
 		<!-- game -->
 		<div class="navigation">
-			<button class="btn btn-info" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
-			<br>
-			<br>
-			<button class="btn btn-info" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
-			<button class="btn btn-info" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
+			<div class="vertical">
+            <button class="btn btn-info" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
 			<br>
 			<br>
 			<button class="btn btn-info" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>
+			</div>
+            <div class= "horizontal">
+            <button class="btn btn-info" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
+			<button class="btn btn-info" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
+			<br>
+			<br>
+            </div>
+            
 		</div>
 		<!-- footer with contact form and social media buttons -->
 		<footer>
