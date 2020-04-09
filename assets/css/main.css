@@ -78,15 +78,16 @@ canvas {
 }
 
 .navigation {
+    max-width: 140vh;
 	
-	left: 60%;
-    position: relative;
 }
 .vertical{
     display: flex;
     flex-direction: column;
-    width: 5%;
+    width: 10%;
     height: 5%;
+    margin-left: 100%;
+   
     
 
 }
@@ -95,6 +96,8 @@ canvas {
     flex-direction: row;
     bottom:5rem;
     position: relative;
+    left: 5rem;
+    
 
 }
 
