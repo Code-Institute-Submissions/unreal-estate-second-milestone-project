@@ -54,6 +54,7 @@ h1, h3 {
     text-align: center;
     color:#f1f1f1;
     border: 0.5rem solid #649B92;
+    border-radius:0.5rem;
 }
 .level-buttons {
 	margin-top: 0.8rem;
@@ -71,11 +72,11 @@ canvas {
     left: 38%;
     margin-top: 5.4rem;
     border: 1.4rem double #649B92;
+    border-radius:0.5rem;
 }
 .navigation {
    
     text-align:center;
-    
     
 }
 .vertical{
@@ -98,6 +99,8 @@ canvas {
 
 
 }
+
+
 /***Footer***/
 footer {
 	background: #919191;
