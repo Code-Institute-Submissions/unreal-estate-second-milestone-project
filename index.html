@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<!-- favicon files -->
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -18,7 +17,6 @@
 	<script src="assets/javascript/game.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
 </head>
-
 <body>  
 		<!--logo, name, levels, instructions -->
 		<div id="dashboard">
@@ -32,22 +30,10 @@
 					<br> Find the way out of the labyrinth, so he can go home.
                 </p>
 			</div>
-			<div class="level">
-				<h2> Difficulty</h2>
-				<div class="level-buttons">
-
-					<button  class="btn btn-warning" onclick="startEasyLevel()" value= "Easy Level" id="easyBtn"> Easy</button>
-					<button class="btn btn-warning" onclick="startMediumLevel()" value= "Medium Level" id="mediumBtn"> Medium</button>
-					<button class="btn btn-warning" onclick="startHardLevel()" value= "Hard Level" id="hardBtn"> Hard</button>
-					<button class="btn btn-warning" onclick="startInsaneLevel()" value="Insane Level" id="insaneBtn"> Insane</button>
-
-				</div>
-
-			</div>
-		</div>
-		<!-- game -->
-		<div class="navigation">
+            <div class="navigation">
+            <h3 class="title-nav"> Navigation </h3>
 			<div class="vertical">
+            
             <button class="btn btn-info m-2 pb-2 " onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
 			<br>
 			<br>
@@ -61,6 +47,18 @@
             </div>
             
 		</div>
+			<div class="level">
+				<h2> Difficulty</h2>
+				<div class="level-buttons">
+					<button  class="btn btn-warning" onclick="startEasyLevel()" value= "Easy Level" id="easyBtn"> Easy</button>
+					<button class="btn btn-warning" onclick="startMediumLevel()" value= "Medium Level" id="mediumBtn"> Medium</button>
+					<button class="btn btn-warning" onclick="startHardLevel()" value= "Hard Level" id="hardBtn"> Hard</button>
+					<button class="btn btn-warning" onclick="startInsaneLevel()" value="Insane Level" id="insaneBtn"> Insane</button>
+				</div>
+			</div>
+		</div>
+		<!-- game -->
+		
 		<!-- footer with contact form and social media buttons -->
 		<footer>
 			<div class="icons">
@@ -84,23 +82,18 @@
 									<label for="feedback" class="label-feedback">Feedback:</label>
 									<textarea id="feedback" name="feedback" placeholder="Write your feedback here"></textarea>
 									<button class= "btn-primary" type="submit" id="submit">Submit</button>
-
 								</form>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
-
 			<div class="credits">
 				<span> &copy; Krisztina Szabó</span>
 			</div>
         </footer>
 	
 	
-
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
