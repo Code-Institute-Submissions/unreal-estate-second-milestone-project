@@ -113,7 +113,16 @@ footer {
 .fab {
 	color: black;
 }
+.fab:hover{
+    color:black;
+    transition-duration: 0.4s;
+    }
 /******Feedback form *****/
+#feedbackBtn {
+    padding-top:0.3rem;
+
+}
+
 .modal {
 	display: none;
 }
@@ -134,6 +143,7 @@ footer {
 	width: 50%;
 	text-align: center;
 	justify-content: center;
+    
 }
 .close {
 	color: rgb(7, 8, 7);
