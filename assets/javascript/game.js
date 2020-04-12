@@ -124,10 +124,6 @@ function canMoveTo(destX, destY, context) {
         }
     }
 }
-
-
-
-
     function move(dir) {
         var newX;
         var newY;
@@ -138,25 +134,31 @@ function canMoveTo(destX, destY, context) {
                 moveCounter = moveCounter + 1;
             }
         }
+    
         if (dir === "down") {
             if (1 == canMoveTo(myGamePiece.x, myGamePiece.y + 1, myGameArea.context)) {
                 myGamePiece.speedY = 1;
                 moveCounter = moveCounter + 1;
             }
         }
-        if (dir === "left") {
-            if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
-                myGamePiece.speedX = -1;
-                moveCounter = moveCounter + 1;
-            } 
-        }
-        if (dir === "right") {
-            if (1 == canMoveTo(myGamePiece.x + 1, myGamePiece.y, myGameArea.context)) {
-                myGamePiece.speedX = 1;
-                moveCounter = moveCounter + 1;
-            }
+    
+    if (dir === "left") {
+        if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
+        myGamePiece.speedX = -1;
+        moveCounter = moveCounter + 1;
         }
     }
+       
+    if (dir === "right") {
+        if (1 == canMoveTo(myGamePiece.x + 1, myGamePiece.y, myGameArea.context)) {
+            myGamePiece.speedX = 1;
+            moveCounter = moveCounter + 1;
+        }
+    }
+}
+   
+    
+
 
     function clearmove() {
         myGamePiece.image.src = "../assets/images/player.png";
