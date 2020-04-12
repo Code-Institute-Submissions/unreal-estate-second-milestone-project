@@ -1,24 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 /***Body***/
+
 html,
 body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	font-family: 'Roboto Mono', monospace;
-    background:#FFF3FA;
+	background: #FFF3FA;
 }
+
+
 /***Logo***/
+
 #logo {
 	width: 11rem;
 	height: 10rem;
 	padding-top: 0;
 	margin: 5%;
 	position: relative;
-    align-items: center;
+	align-items: center;
 }
+
+
 /***Headings***/
-h1, h3 {
+
+h1,
+h3 {
 	padding-top: 0;
 	justify-content: center;
 	margin-top: 1rem;
@@ -27,135 +36,144 @@ h1, h3 {
 
 
 /***Dashboard***/
+
 #dashboard {
 	font-size: 0.85rem;
-	top:0;
+	top: 0;
 	background-color: #649B92;
 	color: rgb(32, 30, 28);
 	position: relative;
 	box-sizing: content-box;
 	border: 0.3rem solid #68A376;
-    border-radius: 0.5rem;
+	border-radius: 0.5rem;
 	max-width: 30%;
-    text-align: center;
-    margin-left:3%;
-    margin-bottom:2rem;
+	text-align: center;
+	margin-left: 3%;
+	margin-bottom: 2rem;
 }
+
 .rules {
 	padding: 1rem;
-    position:absolute;
-    margin-left:38%;
-    margin-bottom:1rem;
-    background:#68A376;
-    height: 2.4rem;
-    box-sizing: content-box;
-    justify-content: center;
-    width:44.5rem;
-    text-align: center;
-    color:#f1f1f1;
-    border: 0.5rem solid #649B92;
-    border-radius:0.5rem;
+	position: absolute;
+	margin-left: 38%;
+	margin-bottom: 1rem;
+	background: #68A376;
+	height: 2.4rem;
+	box-sizing: content-box;
+	justify-content: center;
+	width: 44.5rem;
+	text-align: center;
+	color: #f1f1f1;
+	border: 0.5rem solid #649B92;
+	border-radius: 0.5rem;
 }
+
 .level-buttons {
 	margin-top: 0.8rem;
 	padding-right: 1rem;
 	padding-bottom: 1rem;
-
 }
 
 
 /***Game area***/
-canvas {
 
+canvas {
 	background-color: #f1f1f1;
 	position: absolute;
-    left: 38%;
-    margin-top: 5.4rem;
-    border: 1.4rem double #649B92;
-    border-radius:0.5rem;
+	left: 38%;
+	margin-top: 5.4rem;
+	border: 1.4rem double #649B92;
+	border-radius: 0.5rem;
 }
+
 .navigation {
-   
-    text-align:center;
-    
+	text-align: center;
 }
-.vertical{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    height: 5%;
-    margin-left: 40%;
-   
-    
+
+.vertical {
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	height: 5%;
+	margin-left: 40%;
 }
-.horizontal{
-    display: flex;
-    flex-direction: row;
-    bottom: 6.5rem;
-    position: relative;
-    margin-left:30%;
-    width: 10%;
-    height: 5%;
 
-
+.horizontal {
+	display: flex;
+	flex-direction: row;
+	bottom: 6.5rem;
+	position: relative;
+	margin-left: 30%;
+	width: 10%;
+	height: 5%;
 }
 
 
 /***Footer***/
+
 footer {
 	background: #919191;
 	bottom: 0;
 	width: 100%;
 	height: 3.5rem;
 	text-align: center;
-   
 }
+
 .fab {
 	color: black;
 }
-.fab:hover{
-    color:black;
-    transition-duration: 0.4s;
-    }
-/******Feedback form *****/
-#feedbackBtn {
-    padding-top:0.3rem;
 
+.fab:hover {
+	color: black;
+	transition-duration: 0.4s;
+}
+
+
+/******Feedback form *****/
+
+#feedbackBtn {
+	padding-top: 0.3rem;
 }
 
 .modal {
 	display: none;
 }
+
 .modal-header {
 	display: flex;
 	justify-content: center;
 }
+
 .modal-body {
 	align-items: center;
 }
+
 .modal-content {
 	background-color: #68A376;
 	margin: 20% auto;
 	border: 2px solid #649B92;
 }
+
 #feedbackForm {
 	box-sizing: border-box;
 	width: 50%;
 	text-align: center;
 	justify-content: center;
-    
 }
+
 .close {
 	color: rgb(7, 8, 7);
 	display: flex;
 	align-items: flex-end;
 }
+
 .close:hover,
 .close:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
 }
+
 input[type="text"],
 textarea,
 input[type="email"],
@@ -169,6 +187,7 @@ input[type="email"],
 	margin-left: 50%;
 	resize: vertical;
 }
+
 .label-name,
 .label-email,
 .label-feedback {
@@ -178,6 +197,7 @@ input[type="email"],
 	flex-direction: row;
 	line-height: 80%;
 }
+
 #submit {
 	margin-left: 80%;
 }
