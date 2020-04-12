@@ -5,7 +5,7 @@ var imageWidth = 715;
 var imageHeight = 570;
 var canvasWidth = 715;
 var canvasHeight = 570;
-
+var moveCounter = 0;
 
 window.onload = function() {
     startGame();
@@ -110,20 +110,23 @@ function canMoveTo(destX, destY, context) {
             if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) {
                 canMove = 0;
                 break;
-            } else {
-                data[i], data[i + 1], data[i + 2]
-                canMove = 1;
-                break;
-            } else if {
-                (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116)
+            } 
+            else if (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116) {
                 canMove = 2;
                 break;
                 youWon();
             }
-
-            }
+            else {
+                (data[i], data[i + 1], data[i + 2])
+                canMove = 1;
+                break;
+            } 
         }
-    
+    }
+}
+
+
+
 
     function move(dir) {
         var newX;
@@ -132,24 +135,26 @@ function canMoveTo(destX, destY, context) {
         if (dir === "up") {
             if (1 === canMoveTo(myGamePiece.x, myGamePiece.y - 1, myGameArea.context)) {
                 myGamePiece.speedY = -1;
+                moveCounter = moveCounter + 1;
             }
         }
         if (dir === "down") {
             if (1 == canMoveTo(myGamePiece.x, myGamePiece.y + 1, myGameArea.context)) {
                 myGamePiece.speedY = 1;
+                moveCounter = moveCounter + 1;
             }
         }
         if (dir === "left") {
             console.log(canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context));
             if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
                 myGamePiece.speedX = -1;
-            } else {
-                console.log("Could not move");
-            }
+                moveCounter = moveCounter + 1;
+            } 
         }
         if (dir === "right") {
             if (1 == canMoveTo(myGamePiece.x + 1, myGamePiece.y, myGameArea.context)) {
                 myGamePiece.speedX = 1;
+                moveCounter = moveCounter + 1;
             }
         }
     }
@@ -194,7 +199,7 @@ function canMoveTo(destX, destY, context) {
     //Destination reached, game over
     //Method based on https://github.com/TheCodeDepository/PickleRick-MazeGame
     function youWon() {
-        document.getElementById('moves').innerHtml = "You moved" + moves + "steps.";
+        document.getElementById('moves').innerHtml = "You moved" + moveCounter + "steps.";
         toggleVisability("finishMessage");
         document.getElementById("okBtn").focus();
     }
