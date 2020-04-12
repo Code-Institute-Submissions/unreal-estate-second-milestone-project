@@ -145,7 +145,6 @@ function canMoveTo(destX, destY, context) {
             }
         }
         if (dir === "left") {
-            console.log(canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context));
             if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
                 myGamePiece.speedX = -1;
                 moveCounter = moveCounter + 1;
