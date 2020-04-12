@@ -111,19 +111,28 @@ function canMoveTo(destX, destY, context) {
                 canMove = 0;
                 break;
             } 
-            else if (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116) {
+            /*else if { 
+                (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116) 
                 canMove = 2;
                 break;
                 youWon();
-            }
-            else {
-                (data[i], data[i + 1], data[i + 2])
+            }*/
+            
+
+            else { 
+                data[i], data[i + 1], data[i + 2]
                 canMove = 1;
                 break;
-            } 
-        }
+            }
+
+           
+       
     }
+} 
 }
+   
+       
+
     function move(dir) {
         var newX;
         var newY;
