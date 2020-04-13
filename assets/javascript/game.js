@@ -22,7 +22,7 @@ function startGame() {
     myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
     myGameArea.start();
 }
-
+//Creating canvas with height and width 
 var myGameArea = {
     canvas: document.createElement("canvas"),
     start: function() {
@@ -41,7 +41,7 @@ var myGameArea = {
 
 
 };
-
+//Maze as a background component of the player and the destination 
 function component(width, height, color, x, y, type) {
     this.type = type;
     if (type == "image" || type == "background") {
@@ -107,7 +107,7 @@ function canMoveTo(destX, destY, context) {
 
     var data = imgData.data;
     var canMove = 1;
-
+//If the player reached the wall, it stops, if it reached the destination, victory message pops up
     if (destX >= 0 && destX <= imageWidth - 15 && destY >= 0 && destY <= imageHeight - 15) {
 
         for (var i = 0; i < 4 * 40 * 35; i += 4) {
@@ -142,6 +142,9 @@ function canMoveTo(destX, destY, context) {
 
 
 //Direction buttons and movecounter 
+//Navigation with boostrap buttons on the game area
+//If the player moves, the counter gets +1, so in the end, the player get to know how many steps he/she moved
+
 function move(dir) {
     var newX;
     var newY;
