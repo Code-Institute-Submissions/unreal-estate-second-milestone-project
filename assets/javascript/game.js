@@ -5,9 +5,11 @@ var imageWidth = 715;
 var imageHeight = 570;
 var canvasWidth = 715;
 var canvasHeight = 570;
+var moveCounter = 0;
 
 
-window.onload = function () {
+
+window.onload = function() {
     startGame();
 }
 
@@ -21,7 +23,7 @@ function startGame() {
 
 var myGameArea = {
     canvas: document.createElement("canvas"),
-    start: function () {
+    start: function() {
         this.canvas.width = 715;
         this.canvas.height = 570;
         this.canvas.style.left = 20;
@@ -31,7 +33,7 @@ var myGameArea = {
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
     },
-    clear: function () {
+    clear: function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height, this.canvas.style.left, this.canvas.style.top);
     }
 
@@ -50,7 +52,7 @@ function component(width, height, color, x, y, type) {
     this.speedY = 0;
     this.x = x;
     this.y = y;
-    this.update = function () {
+    this.update = function() {
         context = myGameArea.context;
         if (type == "image" || type == "background") {
             context.drawImage(this.image,
@@ -69,7 +71,7 @@ function component(width, height, color, x, y, type) {
         }
 
     };
-    this.newPos = function () {
+    this.newPos = function() {
         if (1 === canMoveTo(this.x + this.speedX, this.y + this.speedY, myGameArea.context)) {
             this.x += this.speedX;
             this.y += this.speedY;
@@ -95,6 +97,7 @@ function updateGameArea() {
 }
 let newX;
 let newY;
+
 function canMoveTo(destX, destY, context) {
 
     var imgData = context.getImageData(destX, destY, 40, 35);
@@ -109,14 +112,7 @@ function canMoveTo(destX, destY, context) {
             if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) {
                 canMove = 0;
                 break;
-            }
-
-            else {
-                data[i], data[i + 1], data[i + 2]
-                canMove = 1;
-                break;
-            }
-
+            } 
             /* else if { 
              (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116)
              canMove =2;
@@ -124,9 +120,15 @@ function canMoveTo(destX, destY, context) {
              alert("Game over", response);
                  
              }*/
+            else {
+                data[i], data[i + 1], data[i + 2]
+                canMove = 1;
+                break;
+            }
+
+            
         }
-    }
-    else {
+    } else {
         console.log("Can not move");
         canMove = 0;
 
@@ -144,24 +146,26 @@ function move(dir) {
     if (dir === "up") {
         if (1 === canMoveTo(myGamePiece.x, myGamePiece.y - 1, myGameArea.context)) {
             myGamePiece.speedY = -1;
+            moveCounter = moveCounter + 1;
         }
     }
     if (dir === "down") {
         if (1 == canMoveTo(myGamePiece.x, myGamePiece.y + 1, myGameArea.context)) {
             myGamePiece.speedY = 1;
+            moveCounter = moveCounter + 1;
         }
     }
     if (dir === "left") {
         console.log(canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context));
         if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
             myGamePiece.speedX = -1;
-        } else {
-            console.log("Could not move");
+            moveCounter = moveCounter + 1;
         }
     }
     if (dir === "right") {
         if (1 == canMoveTo(myGamePiece.x + 1, myGamePiece.y, myGameArea.context)) {
             myGamePiece.speedX = 1;
+            moveCounter = moveCounter + 1;
         }
     }
 }
@@ -181,25 +185,43 @@ function startEasyLevel() {
     myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
     myGameArea.start();
 }
+
 function startMediumLevel() {
     myBackground = new component(715, 570, "./assets/images/medium.png", 0, 0, "background");
     myGamePiece = new component(22, 15, "./assets/images/player.png", 680, 540, "image");
     myDestination = new component(35, 35, "./assets/images/destination.png", 0, 15, "image");
     myGameArea.start();
 }
+
 function startHardLevel() {
     myBackground = new component(715, 570, "./assets/images/hard.png", 0, 0, "background");
     myGamePiece = new component(20, 15, "./assets/images/player.png", 680, 540, "image");
     myDestination = new component(25, 25, "./assets/images/destination.png", 0, 15, "image");
     myGameArea.start();
 }
+
 function startInsaneLevel() {
     myBackground = new component(715, 570, "./assets/images/insane.png", 0, 0, "background");
     myGamePiece = new component(20, 15, "./assets/images/player.png", 685, 540, "image");
     myDestination = new component(25, 25, "./assets/images/destination.png", 0, 10, "image");
     myGameArea.start();
 }
+//Destination reached, game over
+//Method based on https://github.com/TheCodeDepository/PickleRick-MazeGame
 
+function youWon() {
+    document.getElementById('moves').innerHtml = "You moved" + moveCounter + "steps.";
+    toggleVisability("finishMessage");
+    document.getElementById("okBtn").focus();
+}
+
+function toggleVisablity(id) {
+    if (document.getElementById(id).style.visibility == "visible") {
+        document.getElementById(id).style.visibility = "hidden";
+    } else {
+        document.getElementById(id).style.visibility = "visible";
+    }
+}
 
 
 //Feedback button
@@ -209,16 +231,16 @@ function startInsaneLevel() {
 function sendMail(feedbackForm) {
     emailjs.init("user_UW97WmP3GsBepuyB8Vffd");
     emailjs.send("gmail", "unreal_estate", {
-        "from_name": feedbackForm.name.value,
-        "from_email": feedbackForm.email.value,
-        "feedback": feedbackForm.feedback.value
-    })
+            "from_name": feedbackForm.name.value,
+            "from_email": feedbackForm.email.value,
+            "feedback": feedbackForm.feedback.value
+        })
         .then(
-            function (response) {
+            function(response) {
                 alert("Thanks for your opinion!", response);
                 $('#myModal').modal('hide');
             },
-            function (error) {
+            function(error) {
                 alert("Failed", error);
                 $('#myModal').modal('hide');
             }
