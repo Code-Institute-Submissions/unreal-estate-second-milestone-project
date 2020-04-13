@@ -97,7 +97,8 @@ function updateGameArea() {
 }
 let newX;
 let newY;
-
+/***Original code from: https://www.codeproject.com/Articles/577080/Create-an-HTML-and-JavaScript-Maze-Game-with-a-ti ***/
+/*** Modified ***/
 function canMoveTo(destX, destY, context) {
 
     var imgData = context.getImageData(destX, destY, 40, 35);
