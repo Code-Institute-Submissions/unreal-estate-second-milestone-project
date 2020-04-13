@@ -12,18 +12,6 @@ body {
 }
 
 
-/***Logo***/
-
-#logo {
-	width: 11rem;
-	height: 10rem;
-	padding-top: 0;
-	margin: 5%;
-	position: relative;
-	align-items: center;
-}
-
-
 /***Headings***/
 
 h1,
@@ -36,6 +24,17 @@ h3 {
 
 
 /***Dashboard***/
+/***Logo***/
+
+#logo {
+	width: 11rem;
+	height: 10rem;
+	padding-top: 0;
+	margin: 5%;
+	position: relative;
+	align-items: center;
+}
+/*****Rules and difficulty buttons***/
 
 #dashboard {
 	font-size: 0.85rem;
@@ -75,7 +74,7 @@ h3 {
 }
 
 
-/***Game area***/
+/***Canvas, navigation***/
 
 canvas {
 	background-color: #f1f1f1;
@@ -129,7 +128,7 @@ footer {
 }
 
 
-/******Feedback form *****/
+/******Feedback form with submit button *****/
 
 #feedbackBtn {
 	padding-top: 0.3rem;

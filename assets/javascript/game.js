@@ -1,3 +1,4 @@
+//Variables
 var myGamePiece;
 var myBackground;
 var myDestination;
@@ -8,12 +9,12 @@ var canvasHeight = 570;
 var moveCounter = 0;
 
 
-
+//Load the game
 window.onload = function() {
     startGame();
 }
 
-//Structure of the components, background loop, and navigation button 'how to' basics from: https://www.w3schools.com/graphics/game_images.asp
+//Structure of the components, game area, and navigation button 'how to' basics from: https://www.w3schools.com/graphics/game_images.asp
 //Modified
 function startGame() {
     myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
@@ -140,7 +141,7 @@ function canMoveTo(destX, destY, context) {
 }
 
 
-//direction buttons and movecounter 
+//Direction buttons and movecounter 
 function move(dir) {
     var newX;
     var newY;
@@ -179,7 +180,7 @@ function clearmove() {
 }
 
 
-//select level
+//Select level, with repositioned player, and destination on each level
 
 function startEasyLevel() {
     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
