@@ -13,7 +13,8 @@ window.onload = function() {
     startGame();
 }
 
-
+//Structure of the components, background loop, and navigation button 'how to' basics from: https://www.w3schools.com/graphics/game_images.asp
+//Modified
 function startGame() {
     myGamePiece = new component(30, 25, "./assets/images/player.png", 665, 516, "image");
     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
@@ -139,11 +140,11 @@ function canMoveTo(destX, destY, context) {
 }
 
 
-
+//direction buttons and movecounter 
 function move(dir) {
     var newX;
     var newY;
-    var canMove; //direction buttons
+    var canMove; 
     if (dir === "up") {
         if (1 === canMoveTo(myGamePiece.x, myGamePiece.y - 1, myGameArea.context)) {
             myGamePiece.speedY = -1;
@@ -226,7 +227,8 @@ function toggleVisablity(id) {
 
 
 //Feedback button
-// Submit and send mail with email.js
+// Submit and send mail with EmailJs
+//https://www.emailjs.com/docs/sdk/installation/
 
 
 function sendMail(feedbackForm) {

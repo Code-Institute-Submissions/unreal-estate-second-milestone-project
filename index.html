@@ -20,13 +20,14 @@
 </head>
 
 <body>
-    <!-- game -->
+    <!-- Game -->
+        <!--Rules-->
     <div class="rules">
         <p> Help the slug to become a snail!
             <br> Find the way out of the labyrinth, so he can go home.
         </p>
     </div>
-    <!--logo, name, levels, instructions -->
+    <!--Logo, name, navigation -->
     <div id="dashboard">
         <img id="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
         <div class="row justify-content-center" id="name">
@@ -49,6 +50,7 @@
             </div>
 
         </div>
+        <!--Levels-->
         <div class="level">
             <h2> Difficulty</h2>
             <div class="level-buttons">
@@ -61,14 +63,16 @@
     </div>
 
 
-    <!-- footer with contact form and social media buttons -->
+    <!-- Footer with contact form and social media buttons -->
     <footer>
         <div class="icons">
             <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
             <button class=" far fa-envelope btn" data-toggle="modal" data-target="#myModal" id="feedbackBtn" title="Send me feedback!"></button>
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog" role="document">
-                    <!-- <div class="modal"> -->
+                    <!-- Modal -->
+                    <!--Modal pop up window basics from here:https://www.w3schools.com/howto/howto_js_popup_form.asp-->
+                    <!--Sligtly modified-->
                     <div class="modal-content">
                         <div class="modal-header">
                             <h2 class="modal-title">Give me some feedback!</h2>
@@ -93,6 +97,7 @@
             <span> &copy; Krisztina Szabó</span>
         </div>
     </footer>
+    <!--Victory message at the end of the level-->
     <div class="finish">
         <div id="finishMessage">
             <h2>Congratulations!</h2>
