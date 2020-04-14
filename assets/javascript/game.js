@@ -162,8 +162,7 @@ function move(dir) {
         }
     }
     if (dir === "left") {
-        console.log(canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context));
-        if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
+            if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
             myGamePiece.speedX = -1;
             moveCounter = moveCounter + 1;
         }
@@ -253,4 +252,20 @@ function sendMail(feedbackForm) {
             }
         );
     return false;
+}
+
+//Check if the player meets the destination
+function isTouching(myDestination, myGamePiece) {
+
+    const aRect = myDestination.getBoundingClientRect();
+
+    const bRect = myGamePiece.getBoundingClientRect(); console.log("victory");
+
+    return !(
+        ((aRect.top + aRect.height) < (bRect.top)) ||
+        (aRect.top > (bRect.top + bRect.height)) ||
+        ((aRect.left + aRect.width) < bRect.left) ||
+        (aRect.left > (bRect.left + bRect.width))
+    );
+
 }
