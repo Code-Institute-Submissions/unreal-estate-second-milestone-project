@@ -211,22 +211,7 @@ function startInsaneLevel() {
     myDestination = new component(25, 25, "./assets/images/destination.png", 0, 10, "image");
     myGameArea.start();
 }
-//Destination reached, game over
-//Method based on https://github.com/TheCodeDepository/PickleRick-MazeGame
 
-function youWon() {
-    document.getElementById('moves').innerHtml = "You moved" + moveCounter + "steps.";
-    toggleVisability("finishMessage");
-    document.getElementById("okBtn").focus();
-}
-
-function toggleVisablity(id) {
-    if (document.getElementById(id).style.visibility == "visible") {
-        document.getElementById(id).style.visibility = "hidden";
-    } else {
-        document.getElementById(id).style.visibility = "visible";
-    }
-}
 
 
 //Feedback button
@@ -253,7 +238,22 @@ function sendMail(feedbackForm) {
         );
     return false;
 }
+//Game over message game over
+//Method learnt from here: https://github.com/TheCodeDepository/PickleRick-MazeGame
 
+function youWon() {
+    document.getElementById('moves').innerHtml = "You moved" + moveCounter + "steps.";
+    toggleVisability("finishMessage");
+    document.getElementById("okBtn").focus();
+}
+
+function toggleVisablity(id) {
+    if (document.getElementById(id).style.visibility == "visible") {
+        document.getElementById(id).style.visibility = "hidden";
+    } else {
+        document.getElementById(id).style.visibility = "visible";
+    }
+}
 //Check if the player meets the destination
 function isTouching(myDestination, myGamePiece) {
 
@@ -267,6 +267,5 @@ function isTouching(myDestination, myGamePiece) {
         ((aRect.left + aRect.width) < bRect.left) ||
         (aRect.left > (bRect.left + bRect.width))
     );
-    youWon();
-
+youWon();
 }
