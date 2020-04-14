@@ -267,5 +267,6 @@ function isTouching(myDestination, myGamePiece) {
         ((aRect.left + aRect.width) < bRect.left) ||
         (aRect.left > (bRect.left + bRect.width))
     );
+    youWon();
 
 }
