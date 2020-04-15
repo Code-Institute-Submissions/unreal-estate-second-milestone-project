@@ -116,13 +116,7 @@ function canMoveTo(destX, destY, context) {
                 canMove = 0;
                 break;
             } 
-            /* else if { 
-             (data[i] === 221 && data[i + 1] === 179 && data[i + 2] === 116)
-             canMove =2;
-             break;
-             alert("Game over", response);
-                 
-             }*/
+            
             else {
                 data[i], data[i + 1], data[i + 2]
                 canMove = 1;
@@ -131,7 +125,12 @@ function canMoveTo(destX, destY, context) {
 
             
         }
-    } else {
+    } else if (isTouching(myGamePiece, myDestination)){
+        console.log("touching");
+        youWon()
+
+    }
+     else {
         console.log("Can not move");
         canMove = 0;
 
@@ -247,7 +246,7 @@ function youWon() {
     document.getElementById("okBtn").focus();
 }
 
-function toggleVisablity(id) {
+function toggleVisablity(_finishMessage) {
     if (document.getElementById(id).style.visibility == "visible") {
         document.getElementById(id).style.visibility = "hidden";
     } else {
@@ -255,20 +254,9 @@ function toggleVisablity(id) {
     }
 }
 //Check if the player meets the destination
-function isTouching(myDestination, myGamePiece) {
-
-    const aRect = myDestination.getBoundingClientRect();
-
-    const bRect = myGamePiece.getBoundingClientRect(); console.log("victory");
-
-    return !(
-        ((aRect.top + aRect.height) < (bRect.top)) ||
-        (aRect.top > (bRect.top + bRect.height)) ||
-        ((aRect.left + aRect.width) < bRect.left) ||
-        (aRect.left > (bRect.left + bRect.width))
-    );
- if (isTouching() === true) {
-     return youWon();
-
+function isTouching(a,b) {
+return (
+    a.x === b.x
+);
 }
-}
+
