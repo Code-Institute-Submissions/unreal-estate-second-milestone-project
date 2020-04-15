@@ -41,7 +41,7 @@ var myGameArea = {
 
 
 };
-//Maze as a background component of the player and the destination 
+//Maze as a background component with player and the destination 
 function component(width, height, color, x, y, type) {
     this.type = type;
     if (type == "image" || type == "background") {
@@ -241,12 +241,12 @@ function sendMail(feedbackForm) {
 //Method learnt from here: https://github.com/TheCodeDepository/PickleRick-MazeGame
 
 function youWon() {
-    document.getElementById('moves').innerHtml = "You moved" + moveCounter + "steps.";
+    document.getElementById("moves").innerHTML = "The number of your steps:"  +  moveCounter.toString() +".";
     toggleVisability("finishMessage");
     document.getElementById("okBtn").focus();
 }
 
-function toggleVisablity(id) {
+function toggleVisability(id) {
     if (document.getElementById(id).style.visibility == "visible") {
         document.getElementById(id).style.visibility = "hidden";
     } else {
