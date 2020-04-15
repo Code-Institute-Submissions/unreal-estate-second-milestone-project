@@ -204,9 +204,12 @@ input[type="email"],
 /***** Victory modal ****/
 
 #finishMessage{
-    background:#68A376;
-    width: 30%;
+    background: #68A376;
+    width: 40%;
     text-align: center;
-    border: 0.4rem solid #649B92;
-    /****visibility: hidden;****/
+    border: 0.3rem solid;
+    visibility: hidden;
+    margin-left: 50%;
+    margin-bottom: 30%;
+
 }

@@ -27,6 +27,7 @@
             <br> Find the way out of the labyrinth, so he can go home.
         </p>
     </div>
+    
     <!--Logo, name, navigation -->
     <div id="dashboard">
         <img id="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
@@ -63,9 +64,19 @@
         </div>
     </div>
 
+    <!--Victory message at the end of the level-->
+    <div class="finish">
+        <div id="finishMessage">
+            <h2>Congratulations!</h2>
+            <p> You did it! </p>
+            <p id="moves"> </p>
+            <input id="okBtn" class="btn btn-dark" type="button" onclick="toggleVisability('finishMessage')" value="Cool!" />
 
+         </div>
+    </div>
     <!-- Footer with contact form and social media buttons -->
     <footer>
+    
         <div class="icons">
             <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
             <button class=" far fa-envelope btn" data-toggle="modal" data-target="#myModal" id="feedbackBtn" title="Send me feedback!"></button>
@@ -99,16 +110,7 @@
             <span> &copy; Krisztina Szabó</span>
         </div>
     </footer>
-    <!--Victory message at the end of the level-->
-    <div class="finish">
-        <div id="finishMessage">
-            <h2>Congratulations!</h2>
-            <p> You did it! </p>
-            <p id="moves"> </p>
-            <input id="okBtn" class="btn btn-dark" type="button" onclick="toggleVisability('finishMessage')" value="Cool!" />
-
-         </div>
-    </div>
+    
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
