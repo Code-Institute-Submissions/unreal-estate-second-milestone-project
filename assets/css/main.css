@@ -202,15 +202,29 @@ input[type="email"],
 }
 
 /***** Victory modal ****/
+#finish{
+    display:block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    
+
+}
+
 
 #finishMessage{
     background: #68A376;
     width: 40%;
     text-align: center;
     border: 0.3rem solid;
-    visibility: hidden;
-    margin-left: 50%;
-    margin-bottom: 30%;
+    position: fixed; 
+     margin-left: -150px;
+    margin-bottom: 50%;
 
 }
 
