@@ -246,7 +246,7 @@ function youWon() {
     document.getElementById("okBtn").focus();
 }
 
-function toggleVisablity(_finishMessage) {
+function toggleVisablity(id) {
     if (document.getElementById(id).style.visibility == "visible") {
         document.getElementById(id).style.visibility = "hidden";
     } else {
