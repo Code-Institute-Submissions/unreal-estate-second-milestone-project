@@ -125,15 +125,13 @@ function canMoveTo(destX, destY, context) {
 
             
         }
-    } else if (isTouching(myGamePiece, myDestination)){
-        console.log("touching");
-        youWon()
+    } else if (isTouching(myGamePiece, myDestination)){ //two components meet, victory message pops up, overlay is on
+        youWon() 
         overlayOn()
 
     }
      else {
-        console.log("Can not move");
-        canMove = 0;
+        canMove = 0; //can't move
 
     }
     return canMove;
