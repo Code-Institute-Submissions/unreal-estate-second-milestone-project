@@ -128,6 +128,7 @@ function canMoveTo(destX, destY, context) {
     } else if (isTouching(myGamePiece, myDestination)){
         console.log("touching");
         youWon()
+        on()
 
     }
      else {
@@ -252,6 +253,13 @@ function toggleVisability(id) {
     } else {
         document.getElementById(id).style.visibility = "visible";
     }
+}
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
 }
 //Check if the player meets the destination
 function isTouching(a,b) {
