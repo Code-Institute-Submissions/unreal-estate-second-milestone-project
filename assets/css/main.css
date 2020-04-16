@@ -200,6 +200,20 @@ input[type="email"],
 #submit {
 	margin-left: 80%;
 }
+#submited-container{
+    display:block;
+    margin-top:40%;
+    position: absolute;
+    margin-left:40%;
+}
+#submited{ 
+display:none;
+background: #68A376;
+margin-top:50%;
+margin-left:50%;
+text-align: center;
+
+}
 
 /***** Victory modal ****/
 #finish{

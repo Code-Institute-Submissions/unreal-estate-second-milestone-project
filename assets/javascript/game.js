@@ -227,16 +227,22 @@ function sendMail(feedbackForm) {
         })
         .then(
             function(response) {
-                alert("Thanks for your opinion!", response);
+                emailSent();
                 $('#myModal').modal('hide');
             },
             function(error) {
-                alert("Failed", error);
+                alert("Something went wrong. Please contact me at andrekrisztina5@gmail.com", error);
                 $('#myModal').modal('hide');
             }
         );
     return false;
 }
+
+function emailSent(){
+   document.getElementById("submited").style.display = "block";
+    
+}
+
 //Game over message with a stepcounter in it
 //Method learnt from here: https://github.com/TheCodeDepository/PickleRick-MazeGame
 
