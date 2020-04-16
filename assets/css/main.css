@@ -203,15 +203,16 @@ input[type="email"],
 
 /***** Victory modal ****/
 #finish{
+    visibility:hidden;
     display:block;
     width: 100vw;
     height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 30%;
+    left: 50%;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.30);
+   
     
 
 }
