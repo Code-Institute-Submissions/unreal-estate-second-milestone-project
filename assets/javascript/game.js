@@ -181,6 +181,7 @@ function clearmove() {
 
 
 //Select level, with repositioned player, and destination on each level
+//When the level button is clicked, the game loads
 
 function startEasyLevel() {
     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
@@ -236,7 +237,7 @@ function sendMail(feedbackForm) {
         );
     return false;
 }
-//Game over message game over
+//Game over message with a stepcounter in it
 //Method learnt from here: https://github.com/TheCodeDepository/PickleRick-MazeGame
 
 function youWon() {
@@ -252,6 +253,9 @@ function toggleVisability(id) {
         document.getElementById(id).style.visibility = "visible";
     }
 }
+//Overlay loads when the player reached the destination, right after the youWon message
+//When you click outside the overlay or on "Cool" button, it gets inactive
+
 function overlayOn() {
   document.getElementById("overlay").style.display = "block";
 }
