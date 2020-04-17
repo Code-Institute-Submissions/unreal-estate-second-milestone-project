@@ -227,7 +227,7 @@ function sendMail(feedbackForm) {
         })
         .then(
             function(response) {
-                emailSent();
+                document.getElementById("success").style.display = "block";
                 $('#myModal').modal('hide');
             },
             function(error) {
@@ -238,10 +238,7 @@ function sendMail(feedbackForm) {
     return false;
 }
 
-function emailSent(){
-   document.getElementById("submited").style.display = "block";
-    
-}
+
 
 //Game over message with a stepcounter in it
 //Method learnt from here: https://github.com/TheCodeDepository/PickleRick-MazeGame

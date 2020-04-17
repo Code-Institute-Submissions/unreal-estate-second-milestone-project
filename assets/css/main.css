@@ -200,20 +200,24 @@ input[type="email"],
 #submit {
 	margin-left: 80%;
 }
-#submited-container{
-    display:block;
-    margin-top:40%;
-    position: absolute;
-    margin-left:40%;
-}
-#submited{ 
-display:none;
-background: #68A376;
-margin-top:50%;
-margin-left:50%;
-text-align: center;
+#success{
+    display:none;
+    position:fixed;
+    left:40%;
+    top:30%;
+    width: 40%;
+    height: 20%;
 
 }
+.success-content{
+    background: #649B92;
+    text-align: center;
+    border: 0.3rem #649B92 solid;
+    border-radius:0.2rem;
+    box-sizing: content-box;
+    
+}
+
 
 /***** Victory modal ****/
 #finish{
