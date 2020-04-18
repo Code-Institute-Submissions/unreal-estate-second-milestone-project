@@ -125,7 +125,7 @@ function canMoveTo(destX, destY, context) {
 
             
         }
-    } else if (isTouching(myGamePiece, myDestination)){ //two components meet, victory message pops up
+    } else if (isTouching(myGamePiece, myDestination)){ //two components meet, victory message pops up with movecounter
         $('#victory').modal({ show: false})
 
         $('#victory').modal('show');
