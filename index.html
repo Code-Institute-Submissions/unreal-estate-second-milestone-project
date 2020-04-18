@@ -40,14 +40,14 @@
             <h3 class="title-nav"> Navigation </h3>
             <div class="vertical">
 
-                <button class="btn btn-dark m-2 pb-2 " onmousedown="move('up')" onmouseup="clearmove()">UP</button>
+                <button class="btn btn-dark m-2 pb-2 " onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
                 <br>
                 <br>
-                <button class="btn btn-dark m-2 pb-2" onmousedown="move('down')" onmouseup="clearmove()" >DOWN</button>
+                <button class="btn btn-dark m-2 pb-2" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')" >DOWN</button>
             </div>
             <div class="horizontal">
-                <button class="btn btn-dark m-2 pb-2" onmousedown="move('left')" onmouseup="clearmove()" >LEFT</button>
-                <button class="btn btn-dark m-2 pb-2" onmousedown="move('right')" onmouseup="clearmove()">RIGHT</button>
+                <button class="btn btn-dark m-2 pb-2" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')" >LEFT</button>
+                <button class="btn btn-dark m-2 pb-2" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
                 <br>
                 <br>
             </div>
