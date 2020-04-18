@@ -6,7 +6,8 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
+    width: auto;
+    min-height: 100vh;
 	font-family: 'Roboto Mono', monospace;
 	background: #FFF3FA;
 }
@@ -57,10 +58,10 @@ h3 {
 	margin-left: 38%;
 	margin-bottom: 1rem;
 	background: #68A376;
-	height: 2.4rem;
+	height: 6%;
 	box-sizing: content-box;
 	justify-content: center;
-	width: 44.5rem;
+	width: 52.5%;
 	text-align: center;
 	color: #f1f1f1;
 	border: 0.5rem solid #649B92;
@@ -83,6 +84,7 @@ canvas {
 	margin-top: 5.4rem;
 	border: 1.4rem double #649B92;
 	border-radius: 0.5rem;
+    width: 56%;
 }
 
 .navigation {
@@ -113,7 +115,7 @@ canvas {
 footer {
 	background: #919191;
 	bottom: 0;
-	width: 100%;
+	min-width: 100%;
 	height: 3.5rem;
 	text-align: center;
 }
@@ -227,6 +229,13 @@ input[type="email"],
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) {
+   canvas{
+        height:auto;
+        width;30%;
+    }
+    footer{
+        min-width:140vh;
+    }
 	
 }
 
@@ -242,19 +251,26 @@ input[type="email"],
 
 @media only screen and (min-width: 768px) {
 	
-	
+footer{
+    min-width:105vh;
+}
 }
 
 
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: 992px) {
-	
+	footer{
+    min-width:105vh;
+}
 }
 
 
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
+    footer{
+    min-width:105vh;
+}
 	
 }
