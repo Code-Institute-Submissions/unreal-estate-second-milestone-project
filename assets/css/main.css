@@ -58,10 +58,10 @@ h3 {
 	position: absolute;
 	margin-left: 38%;
 	background: #68A376;
-	height: 3%;
+	height: 5%;
 	box-sizing: content-box;
 	justify-content: center;
-	width: 52.7%;
+	width: 52.5%;
 	text-align: center;
 	color: #f1f1f1;
 	border: 0.5rem solid #68A376;
@@ -75,7 +75,7 @@ h3 {
 .level-buttons {
 	margin-top: 0.8rem;
 	padding-right: 1rem;
-	padding-bottom: 2.6rem;
+	padding-bottom: 0.3rem;
 }
 
 
@@ -85,8 +85,8 @@ canvas {
 	background-color: #f1f1f1;
 	position: absolute;
 	left: 38%;
-	margin-top: 5.5%;
-	border: 1.4rem double #649B92;
+	margin-top: 7%;
+	border: 1.2rem double #649B92;
 	border-radius: 0.5rem;
     width: 56%;
 }
