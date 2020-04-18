@@ -28,13 +28,14 @@ h3 {
 /***Logo***/
 
 #logo {
-	width: 11rem;
-	height: 10rem;
+	width: 40%;
+	height: 30%;
 	padding-top: 0;
 	margin: 5%;
 	position: relative;
 	align-items: center;
 }
+
 /*****Rules and difficulty buttons***/
 
 #dashboard {
@@ -234,6 +235,8 @@ input[type="email"],
 
 @media only screen and (min-width: 320px) {
    
+
+
     footer{
         min-width:140vh;
     }
