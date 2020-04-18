@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Unreal Estate - Help the slug to be a snail">
     <!--style-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -65,17 +66,24 @@
     </div>
     
     <!--Victory message at the end of the level-->
-    <div id="overlay" onclick="overlayOff()">
-    <div id="finish">
-        <div id="finishMessage">
-            <h2>Congratulations!</h2>
-            <p> You did it! </p>
-            <p id="moves"> </p>
-            <input id="okBtn" class="btn btn-dark" type="button" onclick="toggleVisability('finishMessage')" value="Cool!" />
-
-         </div>
+<div class="modal" id="victory" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Congratulations!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>You did it in <span id="moves-counter"></span> moves!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+      </div>
     </div>
-    </div>
+  </div>
+</div>
     <!-- Footer with contact form and social media buttons -->
     <footer>
     
@@ -85,7 +93,7 @@
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog" role="document">
                     <!-- Modal -->
-                    <!--Modal pop up window basics from here:https://www.w3schools.com/howto/howto_js_popup_form.asp -->
+                    <!--Modal pop up window basics from here:https://getbootstrap.com/docs/4.0/components/modal/ -->
                     <!--Sligtly modified-->
                     <div class="modal-content">
                         <div class="modal-header">
@@ -113,31 +121,29 @@
         </div>
     </footer>
     
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
 <!--Form Submitted-->
 
- <div class="submitted-modal" id="success" tabindex="-1" role="dialog">
-  <div class="success-dialog" role="document">
-    <div class="success-content">
-      <div class="success-header">
-        <h4 class="success-title">Thanks for you feedback!</h4>
+ <div class="modal" id="success" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Thanks for you feedback!</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="success-body">
+      <div class="modal-body">
         <p>I will get back to you as soon as possible</p>
       </div>
-      <div class="success-footer">
+      <div class="modal-footer">
         <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>

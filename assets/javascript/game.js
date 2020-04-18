@@ -125,9 +125,12 @@ function canMoveTo(destX, destY, context) {
 
             
         }
-    } else if (isTouching(myGamePiece, myDestination)){ //two components meet, victory message pops up, overlay is on
-        youWon() 
-        overlayOn()
+    } else if (isTouching(myGamePiece, myDestination)){ //two components meet, victory message pops up
+        $('#victory').modal({ show: false})
+
+        $('#victory').modal('show');
+        document.getElementById("moves-counter").innerHTML = moveCounter.toString();
+
 
     }
      else {
@@ -227,7 +230,10 @@ function sendMail(feedbackForm) {
         })
         .then(
             function(response) {
-                document.getElementById("success").style.display = "block";
+                $('#success').modal({ show: false})
+
+                $('#success').modal('show');
+
                 $('#myModal').modal('hide');
             },
             function(error) {
@@ -240,32 +246,6 @@ function sendMail(feedbackForm) {
 
 
 
-//Game over message with a stepcounter in it
-//Method learnt from here: https://github.com/TheCodeDepository/PickleRick-MazeGame
-
-function youWon() {
-    document.getElementById("moves").innerHTML = "The number of your steps:"  +  moveCounter.toString() +".";
-    toggleVisability("finishMessage");
-    document.getElementById("okBtn").focus();
-}
-
-function toggleVisability(id) { 
-    if (document.getElementById(id).style.visibility == "visible") {
-        document.getElementById(id).style.visibility = "hidden";
-    } else {
-        document.getElementById(id).style.visibility = "visible";
-    }
-}
-//Overlay loads when the player reached the destination, right after the youWon message
-//When you click outside the overlay or on "Cool" button, it gets inactive
-
-function overlayOn() {
-  document.getElementById("overlay").style.display = "block";
-}
-
-function overlayOff() {
-  document.getElementById("overlay").style.display = "none";
-}
 //Check if the player meets the destination
 function isTouching(a,b) {
 return (
