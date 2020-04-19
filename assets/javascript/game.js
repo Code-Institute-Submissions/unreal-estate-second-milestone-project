@@ -10,18 +10,9 @@ var canvasHeight = 570;
 var WIDTH = 715;
 var HEIGHT = 570;
 
-let resizeCanvas = function(){
-    WIDTH = window.innerWidth;
-    HEIGHT = window.innerHeight;
-}
-let ratio = 16/9;
 
-if (HEIGHT< WIDTH/ratio)
-WIDTH = HEIGHT*ratio;
-else HEIGHT = WIDTH/ratio;
 
-canvasWidth = WIDTH;
-canvasHeight = HEIGHT;
+
 
 //Load the game
 window.onload = function() {
@@ -56,6 +47,30 @@ var myGameArea = {
 
 
 };
+
+//Make the canvas responsive
+let resizeCanvas = function(){
+    WIDTH = window.innerWidth;
+    HEIGHT = window.innerHeight;
+    canvasWidth = WIDTH;
+    canvasHeight = HEIGHT;
+    
+}
+resizeCanvas();
+
+window.addEventListener('resize', function(){
+resizeCanvas();
+}
+);
+
+let ratio = 16/9;
+
+if (HEIGHT< WIDTH/ratio)
+WIDTH = HEIGHT*ratio;
+else HEIGHT = WIDTH/ratio;
+
+canvasWidth = WIDTH;
+canvasHeight = HEIGHT;
 
 
 //Maze as a background component with player and the destination 
@@ -143,7 +158,7 @@ function canMoveTo(destX, destY, context) {
             
         }
     } else if (isTouching(myGamePiece, myDestination)){ //two components meet, victory message pops up with movecounter
-        $('#victory').modal({ show: false})
+        $('#victory').modal({ show: false});
 
         $('#victory').modal('show');
         document.getElementById("moves-counter").innerHTML = moveCounter.toString();
