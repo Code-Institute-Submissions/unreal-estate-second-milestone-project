@@ -2,12 +2,26 @@
 var myGamePiece;
 var myBackground;
 var myDestination;
+var moveCounter = 0;
 var imageWidth = 715;
 var imageHeight = 570;
 var canvasWidth = 715;
 var canvasHeight = 570;
-var moveCounter = 0;
+var WIDTH = 715;
+var HEIGHT = 570;
 
+let resizeCanvas = function(){
+    WIDTH = window.innerWidth;
+    HEIGHT = window.innerHeight;
+}
+let ratio = 16/9;
+
+if (HEIGHT< WIDTH/ratio)
+WIDTH = HEIGHT*ratio;
+else HEIGHT = WIDTH/ratio;
+
+canvasWidth = WIDTH;
+canvasHeight = HEIGHT;
 
 //Load the game
 window.onload = function() {
@@ -25,6 +39,7 @@ function startGame() {
 //Creating canvas with height and width 
 var myGameArea = {
     canvas: document.createElement("canvas"),
+    
     start: function() {
         this.canvas.width = 715;
         this.canvas.height = 570;
@@ -41,6 +56,8 @@ var myGameArea = {
 
 
 };
+
+
 //Maze as a background component with player and the destination 
 function component(width, height, color, x, y, type) {
     this.type = type;
