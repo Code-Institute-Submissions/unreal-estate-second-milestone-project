@@ -32,8 +32,8 @@ var myGameArea = {
     canvas: document.createElement("canvas"),
     
     start: function() {
-        this.canvas.width = 715;
-        this.canvas.height = 570;
+       this.canvas.width = 715;
+       this.canvas.height = 570;
         this.canvas.style.left = 20;
         this.canvas.style.top = 20;
         this.context = this.canvas.getContext("2d");
@@ -47,30 +47,31 @@ var myGameArea = {
 
 
 };
+myGameArea.canvas.setAttribute("id", "myCanvas"); 
 
 //Make the canvas responsive
-let resizeCanvas = function(){
-    WIDTH = window.innerWidth;
-    HEIGHT = window.innerHeight;
-    canvasWidth = WIDTH;
-    canvasHeight = HEIGHT;
+//let resizeCanvas = function(){
+  //  WIDTH = window.innerWidth;
+    //HEIGHT = window.innerHeight;
+    //canvasWidth = WIDTH;
+    //canvasHeight = HEIGHT;
     
-}
-resizeCanvas();
+//}
+//resizeCanvas();
 
-window.addEventListener('resize', function(){
-resizeCanvas();
-}
-);
+//window.addEventListener('resize', function(){
+//resizeCanvas();
+//}
+//);
 
-let ratio = 16/9;
+//let ratio = 16/9;
 
-if (HEIGHT< WIDTH/ratio)
-WIDTH = HEIGHT*ratio;
-else HEIGHT = WIDTH/ratio;
+//if (HEIGHT< WIDTH/ratio)
+//WIDTH = HEIGHT*ratio;
+//else HEIGHT = WIDTH/ratio;
 
-canvasWidth = WIDTH;
-canvasHeight = HEIGHT;
+//canvasWidth = WIDTH;
+//canvasHeight = HEIGHT;
 
 
 //Maze as a background component with player and the destination 
