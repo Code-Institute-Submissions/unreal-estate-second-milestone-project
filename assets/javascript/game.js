@@ -5,7 +5,7 @@ var myDestination;
 var moveCounter = 0;
 var imageWidth = 715;
 var imageHeight = 570;
-var canvasWidth = 715;
+var canvasidth = 715;
 var canvasHeight = 570;
 var WIDTH = 715;
 var HEIGHT = 570;
@@ -50,19 +50,19 @@ var myGameArea = {
 myGameArea.canvas.setAttribute("id", "myCanvas"); 
 
 //Make the canvas responsive
-//let resizeCanvas = function(){
-  //  WIDTH = window.innerWidth;
-    //HEIGHT = window.innerHeight;
-    //canvasWidth = WIDTH;
-    //canvasHeight = HEIGHT;
+let resizeCanvas = function(){
+ WIDTH = window.innerWidth;
+HEIGHT = window.innerHeight;
+myGameArea.width = WIDTH;
+myGameArea.height = HEIGHT;
     
-//}
-//resizeCanvas();
+}
+resizeCanvas();
 
-//window.addEventListener('resize', function(){
-//resizeCanvas();
-//}
-//);
+window.addEventListener('resize', function(){
+resizeCanvas();
+}
+);
 
 //let ratio = 16/9;
 

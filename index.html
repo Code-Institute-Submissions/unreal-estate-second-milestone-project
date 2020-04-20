@@ -39,19 +39,38 @@
     <!--Navigation buttons, vertical and horizontal positioned-->
         <div class="navigation">
             <h3 class="title-nav"> Navigation </h3>
-            <div class="vertical">
+            <div class="container">
+            <div class="row">
+            <div class="col-3">
+            </div>
+                <div class="col-6 col-offset-3">
 
-                <button class="btn btn-dark m-2 pb-2 " onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
-                <br>
-                <br>
-                <button class="btn btn-dark m-2 pb-2" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')" >DOWN</button>
-            </div>
-            <div class="horizontal">
-                <button class="btn btn-dark m-2 pb-2" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')" >LEFT</button>
-                <button class="btn btn-dark m-2 pb-2" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
-                <br>
+                <button class="btn btn-dark " style = "width:100%" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
                 <br>
             </div>
+            </div>
+            <div class="row">
+            <div class="col-6">
+            <button class="btn btn-dark m-2 pb-2" style = "width:100%" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')" >LEFT</button>
+            </div>
+            <div class="col-6">    
+            <button class="btn btn-dark m-2 pb-2" style = "width:100%" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
+               
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-6 col-offset-3">
+                <button class="btn btn-dark m-2 pb-2" style = "width:100%" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')" >DOWN</button>
+            </div>
+            </div>
+
+            
+            
+                
+            </div>
+            
 
         </div>
         <!--Difficulty - Levels-->
