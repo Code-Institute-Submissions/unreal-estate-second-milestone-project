@@ -96,7 +96,8 @@ canvas {
 	position: absolute;
     width: 56%;
     height: 98%;
-	margin-top: 10.8%;
+	margin-top: 12.8%;
+    margin-bottom:12%;
     left: 38%;
 	border: 1.2rem double #649B92;
 	border-radius: 0.5rem;
@@ -113,33 +114,16 @@ margin-top: 7%;
 	text-align: center;
 }
 
-.vertical {
-	display: flex;
-	flex-direction: column;
-	width: 20%;
-	height: 5%;
-	margin-left: 40%;
-}
-
-.horizontal {
-	display: flex;
-	flex-direction: row;
-	bottom: 6.5rem;
-	position: relative;
-	margin-left: 30%;
-	width: 10%;
-	height: 5%;
-}
 
 
 /***Footer***/
 
 footer {
 	background: #919191;
-	bottom: 0;
+	margin-bottom: 0;
 	height: 3.5rem;
 	text-align: center;
-    position:relative;
+    position:absolute;
     width:100%;
   
 }

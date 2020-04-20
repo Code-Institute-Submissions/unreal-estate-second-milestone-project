@@ -64,16 +64,6 @@ resizeCanvas();
 }
 );
 
-//let ratio = 16/9;
-
-//if (HEIGHT< WIDTH/ratio)
-//WIDTH = HEIGHT*ratio;
-//else HEIGHT = WIDTH/ratio;
-
-//canvasWidth = WIDTH;
-//canvasHeight = HEIGHT;
-
-
 //Maze as a background component with player and the destination 
 function component(width, height, color, x, y, type) {
     this.type = type;
