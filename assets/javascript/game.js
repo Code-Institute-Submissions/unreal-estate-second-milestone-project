@@ -11,9 +11,6 @@ var WIDTH = 715;
 var HEIGHT = 570;
 
 
-
-
-
 //Load the game
 window.onload = function() {
     startGame();
@@ -47,6 +44,7 @@ var myGameArea = {
 
 
 };
+//Set a myCanvas ID, so I can use CSS in styling my canvas
 myGameArea.canvas.setAttribute("id", "myCanvas"); 
 
 //Make the canvas responsive

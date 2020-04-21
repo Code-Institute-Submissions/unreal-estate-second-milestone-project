@@ -105,7 +105,7 @@ canvas {
 }
 
 #myCanvas {
-position:relative;
+position:absolute;
 margin-top: 7%;
   
 
@@ -118,12 +118,17 @@ margin-top: 7%;
 /***Footer***/
 
 footer {
-	background: #919191;
-	margin-bottom: 0;
-	height: 3.5rem;
-	text-align: center;
-    position:absolute;
-    width:100%;
+	
+  background: #919191;
+  margin-bottom: 0;
+  bottom: -3.5rem;
+  height: 3.5rem;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 100%
+ 
+}
   
 }
 
@@ -159,7 +164,7 @@ footer {
 .modal-content {
 	background-color: #68A376;
 	margin: 20% auto;
-	border: 2px solid #649B92;
+	border: 0.125rem solid #649B92;
     text-align: center;
 }
 
@@ -236,7 +241,10 @@ input[type="email"],
 /*** CSS Responsive breakpoint from https://gist.github.com/EmranAhmed/8044351
 /* Custom, iPhone Retina */
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .rules{
+       
+    }
    
 
 
