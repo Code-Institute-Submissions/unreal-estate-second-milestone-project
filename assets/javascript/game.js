@@ -50,8 +50,9 @@ var myGameArea = {
 myGameArea.canvas.setAttribute("id", "myCanvas"); 
 
 //Make the canvas responsive
+// Original code learnt from https://www.youtube.com/watch?v=1y57COMRSdA
 let resizeCanvas = function(){
- WIDTH = window.innerWidth;
+WIDTH = window.innerWidth;
 HEIGHT = window.innerHeight;
 myGameArea.width = WIDTH;
 myGameArea.height = HEIGHT;
@@ -237,7 +238,12 @@ function startInsaneLevel() {
     myGameArea.start();
 }
 
-
+//Check if the player meets the destination
+function isTouching(a,b) {
+return (
+    a.x === b.x
+);
+}
 
 //Feedback button
 // Submit and send mail with EmailJs
@@ -268,11 +274,4 @@ function sendMail(feedbackForm) {
 }
 
 
-
-//Check if the player meets the destination
-function isTouching(a,b) {
-return (
-    a.x === b.x
-);
-}
 
