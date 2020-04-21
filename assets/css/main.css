@@ -8,7 +8,7 @@ body {
    padding:0;
    height:100%;
    font-family: 'Roboto Mono', monospace;
-    background: #FFF3FA;
+   background: #FFF3FA;
 }
 
 body{
@@ -102,19 +102,18 @@ canvas {
 	border: 1.2rem double #649B92;
 	border-radius: 0.5rem;
     
-} ***/
+}
+
 #myCanvas {
 position:relative;
 margin-top: 7%;
   
 
 }
-
-.navigation {
+.navigation,
+.title-nav {
 	text-align: center;
 }
-
-
 
 /***Footer***/
 
@@ -220,16 +219,13 @@ input[type="email"],
 
 }
 
-
-
 /***** Victory modal ****/
 #victory{
     text-align: center;
     border: 0.3rem solid;
     border-radius: 1.5rem; 
-    
-
 }
+
 #victory .modal-content {
     background: #ffc107;}
 

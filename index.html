@@ -21,15 +21,13 @@
 </head>
 <div id="container">
 <body>
-
-    <!-- Game -->
-        <!--Rules-->
+<!-- Game -->
+    <!--Rules-->
     <div class="rules">
         <p> Help the slug to become a snail!
             <br> Find the way out of the labyrinth, so he can go home.
         </p>
     </div>
-    
     <!--Logo, name, navigation -->
     <div id="dashboard">
         <img id="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
@@ -43,24 +41,22 @@
             <div class="row">
             <div class="col-3">
             </div>
-                <div class="col-6 col-offset-3">
-
+            <div class="col-6 col-offset-3">
                 <button class="btn btn-dark " style = "width:100%" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
                 <br>
             </div>
             </div>
             <div class="row">
-            <div class="col-6">
-            <button class="btn btn-dark m-2 pb-2" style = "width:100%" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')" >LEFT</button>
-            </div>
+                <div class="col-6">
+                    <button class="btn btn-dark m-2 pb-2" style = "width:100%" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')" >LEFT</button>
+                </div>
             <div class="col-6">    
-            <button class="btn btn-dark m-2 pb-2" style = "width:100%" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
-            
+             <button class="btn btn-dark m-2 pb-2" style = "width:100%" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
             </div>
             </div>
             <div class="row">
-            <div class="col-3">
-            </div>
+                <div class="col-3">
+                </div>
             <div class="col-6 col-offset-3">
                 <button class="btn btn-dark m-2 pb-2" style = "width:100%" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')" >DOWN</button>
             </div>
@@ -68,7 +64,7 @@
             </div>
         </div>
         <!--Difficulty - Levels-->
-        <div class="level">
+        <div id="levels">
             <h2> Difficulty</h2>
             <div class="level-buttons">
                 <button class="btn btn-warning" onclick="startEasyLevel()" value="Easy Level" id="easyBtn"> Easy</button>
@@ -79,7 +75,7 @@
         </div>
     </div>
     
-    <!--Victory message at the end of the level-->
+<!--Victory message at the end of the level-->
 <div class="modal" id="victory" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -99,9 +95,8 @@
   </div>
 </div>
     <!-- Footer with contact form and social media buttons -->
-    <footer>
-    
-        <div class="icons">
+    <footer>    
+        <div>
             <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
             <button class=" far fa-envelope btn" data-toggle="modal" data-target="#myModal" id="feedbackBtn" title="Send me feedback!"></button>
             <div class="modal fade" id="myModal" role="dialog">
@@ -130,7 +125,7 @@
             </div>
         </div>
     <!-- Name and credits -->
-        <div class="credits">
+        <div id="credits">
             <span> &copy; Krisztina Szabó</span>
         </div>
     </footer>
