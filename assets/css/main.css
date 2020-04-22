@@ -14,14 +14,6 @@ body{
     padding:0.625rem;
     padding-bottom:3.5rem; 
 }
-/***Headings***/
-h1,
-h3 {
-	padding-top: 0;
-	justify-content: center;
-	margin-top: 1rem;
-	vertical-align: top;
-}
 
 /***Headings***/
 
@@ -31,11 +23,6 @@ h3 {
 	justify-content: center;
 	margin-top: 1rem;
 	vertical-align: top;
-}
-
-#container {
-   min-height:100%;
-   position:relative;
 }
 
 
