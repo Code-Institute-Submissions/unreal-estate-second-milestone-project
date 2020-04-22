@@ -112,9 +112,13 @@ margin-top: 7%;
 
 /***Footer***/
 
-.footer {
-  background: #919191;
-  flex-shrink: 0;
+footer {
+	background: #919191;
+	margin-bottom: 0;
+	height: 3.5rem;
+	text-align: center;
+    position:absolute;
+    width:100%;
   
 }
 
