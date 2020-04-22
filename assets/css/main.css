@@ -4,25 +4,25 @@
 
 html,
 body {
-   
+   margin:0;
+   padding:0;
    height:100%;
    font-family: 'Roboto Mono', monospace;
    background: #FFF3FA;
-   
 }
-html{
-height: 100%;
-
-}
-
 body{
-display: flex;
-flex-direction: column;
+    padding:0.625rem;
+    padding-bottom:3.5rem; 
+}
+/***Headings***/
+h1,
+h3 {
+	padding-top: 0;
+	justify-content: center;
+	margin-top: 1rem;
+	vertical-align: top;
 }
 
-.content {
-  flex: 1 0 auto;
-}
 /***Headings***/
 
 h1,
