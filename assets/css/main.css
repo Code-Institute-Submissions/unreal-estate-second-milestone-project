@@ -4,16 +4,24 @@
 
 html,
 body {
-   margin:0;
-   padding:0;
+   
    height:100%;
    font-family: 'Roboto Mono', monospace;
    background: #FFF3FA;
+   
+}
+html{
+height: 100%;
+
 }
 
 body{
-    padding:0.625rem;
-    padding-bottom:3.5rem; 
+display: flex;
+flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 /***Headings***/
 
@@ -117,13 +125,9 @@ margin-top: 7%;
 
 /***Footer***/
 
-footer {
-	background: #919191;
-	margin-bottom: 0;
-	height: 3.5rem;
-	text-align: center;
-    position:absolute;
-    width:100%;
+.footer {
+  background: #919191;
+  flex-shrink: 0;
   
 }
 

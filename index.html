@@ -19,7 +19,7 @@
     <script src="assets/javascript/game.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
 </head>
-<div id="container">
+<div id="content" style="min-height:60vh">
 <body>
 <!-- Game -->
     <!--Rules-->
@@ -74,7 +74,7 @@
             </div>
         </div>
     </div>
-    
+</div> 
 <!--Victory message at the end of the level-->
 <div class="modal" id="victory" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -94,19 +94,21 @@
     </div>
   </div>
 </div>
+
     <!-- Footer with contact form and social media buttons -->
-    <footer class="footer fixed-bottom">    
+    <footer class="footer">    
         <div>
             <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
             <button class=" far fa-envelope btn" data-toggle="modal" data-target="#myModal" id="feedbackBtn" title="Send me feedback!"></button>
             
         </div>
     <!-- Name and credits -->
-        <div>
+        <div class = "footer-copyright">
             <span> &copy; Krisztina Szabó</span>
         </div>
     </footer>
-</div>
+   
+
 <!-- Modal Feedback Form -->
 <!--Modal pop up window basics from here:https://getbootstrap.com/docs/4.0/components/modal/ -->
 <!--Sligtly modified-->
