@@ -19,9 +19,9 @@ window.onload = function() {
 //Structure of the components, game area, and navigation button 'how to' basics from: https://www.w3schools.com/graphics/game_images.asp
 //Modified
 function startGame() {
-    myGamePiece = new component(30, 25, "./assets/images/player.png",  665, 516, "image");  
-    myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
-    myDestination = new component(35, 35, "./assets/images/destination.png", 0, 25, "image");
+    myGamePiece = new component(30, 25, "assets/images/player.png",  665, 516, "image");  
+    myBackground = new component(715, 570, "assets/images/maze.png", 0, 0, "background");
+    myDestination = new component(35, 35, "assets/images/destination.png", 0, 25, "image");
     myGameArea.start();
 }
 //Creating canvas with height and width 
@@ -199,7 +199,7 @@ function move(dir) {
 }
 
 function clearmove() {
-    myGamePiece.image.src = "./assets/images/s/player.png";
+    myGamePiece.image.src = "assets/images/player.png";
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
 }
