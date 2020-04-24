@@ -1,38 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 /***Body***/
-* {
- box-sizing: border-box;
-}
-*:before,
-*:after {
- box-sizing: border-box;
-}
-html,
-
 
 html,
 body {
- 
-    position: relative;
-   height:100%;
-   font-family: 'Roboto Mono', monospace;
-   background: #FFF3FA;
-}
-body{
-    padding:0.625rem;
-    padding-bottom:56px; 
-    position: relative;
-    min-height: 100vh;
-}
-.wrapper{
- min-height: 100vh;
- overflow: hidden;
- display: block;
- position: relative;
- padding-bottom: 100px;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Roboto Mono', monospace;
+	background: #FFF3FA;
 }
 
+body {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#page-content{
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: 0;
+}
 /***Headings***/
 
 h1,
@@ -45,6 +36,8 @@ h3 {
 
 
 /***Dashboard***/
+
+
 /***Logo***/
 
 #logo {
@@ -55,6 +48,7 @@ h3 {
 	position: relative;
 	align-items: center;
 }
+
 
 /*****Rules and difficulty buttons***/
 
@@ -86,13 +80,10 @@ h3 {
 	color: #f1f1f1;
 	border: 0.5rem solid #68A376;
 	border-radius: 0.5rem;
-    text-align: center;
-    padding-bottom:1.4rem;
-    top:1.5%;
-    bottom:60rem;
-    
-    
-    
+	text-align: center;
+	padding-bottom: 1.4rem;
+	top: 1.5%;
+	bottom: 60rem;
 }
 
 .level-buttons {
@@ -107,38 +98,33 @@ h3 {
 canvas {
 	background-color: #f1f1f1;
 	position: absolute;
-    width: 56%;
-    height: 98%;
-    margin-bottom:12%;
-    left: 38%;
+	width: 56%;
+	height: 98%;
+	margin-bottom: 12%;
+	left: 38%;
 	border: 1.2rem double #649B92;
 	border-radius: 0.5rem;
-    
-    
 }
 
 #myCanvas {
-position:absolute;
-margin-top:40%;
-
-  
-
+	position: absolute;
+	margin-top: 40%;
 }
+
 .navigation,
 .title-nav {
 	text-align: center;
 }
 
+
 /***Footer***/
 
 footer {
 	background: #919191;
-	position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+	width: 100%;
+	height: 3.5rem;
     
-  
+	
 }
 
 .fab {
@@ -149,6 +135,7 @@ footer {
 	color: black;
 	transition-duration: 0.4s;
 }
+
 
 /******Feedback form with submit button *****/
 
@@ -173,7 +160,7 @@ footer {
 	background-color: #68A376;
 	margin: 20% auto;
 	border: 0.125rem solid #649B92;
-    text-align: center;
+	text-align: center;
 }
 
 #feedbackForm {
@@ -223,103 +210,72 @@ input[type="email"],
 #submit {
 	margin-left: 80%;
 }
-#success{
-    text-align: center;
-    border: 0.3rem #649B92 solid;
-    border-radius:0.2rem;
-    
-    
 
+#success {
+	text-align: center;
+	border: 0.3rem #649B92 solid;
+	border-radius: 0.2rem;
 }
 
+
 /***** Victory modal ****/
-#victory{
-    text-align: center;
-    border: 0.3rem solid;
-    border-radius: 1.5rem; 
+
+#victory {
+	text-align: center;
+	border: 0.3rem solid;
+	border-radius: 1.5rem;
 }
 
 #victory .modal-content {
-    background: #ffc107;}
-
-.btn-warning{
-    margin:0.5rem;
+	background: #ffc107;
 }
+
+.btn-warning {
+	margin: 0.5rem;
+}
+
 
 /*** CSS Responsive breakpoints
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-    
-    .rules{
-        font-size: 0.5rem;
-        width:45%;
-       
-    }
-
-    .levels,
-    .title-nav {
-        font-size:1rem;
-    }
-    .title{
-        font-size:1.5rem;
-    }
-    .nav-buttons{
-        position:center;
-    }
-    #myCanvas{
-        margin-top:5.8rem;
-        margin-bottom:2rem;
-    }
-    #dashboard{
-        padding-bottom:7rem;
-
-    }
-    
-   
-
-
-   
+	.rules {
+		font-size: 0.5rem;
+		width: 45%;
+	}
+	.levels,
+	.title-nav {
+		font-size: 1rem;
+	}
+	.title {
+		font-size: 1.5rem;
+	}
+	.nav-buttons {
+		position: center;
+	}
+	#myCanvas {
+		margin-top: 5.8rem;
+		margin-bottom: 2rem;
+	}
+	#dashboard {
+		padding-bottom: 7rem;
+	}
 }
 
+@media only screen and (min-width: 480px) (max-width: 767px) {}
 
-
-@media only screen and (min-width: 480px) (max-width: 767px) {
-	
-}
-
-
-
-@media only screen and (min-width: 768px) (max-width:991px) {
-
-
-	
-
-}
+@media only screen and (min-width: 768px) (max-width:991px) {}
 
 
 /* Medium Devices, Desktops */
 
-@media only screen and (min-width: 992px) (max-width:1199px) {
-	
-
-
-
-
-
-
-
-
-}
+@media only screen and (min-width: 992px) (max-width:1199px) {}
 
 
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
-    #myCanvas{
-        margin-top:6.5rem;
-    }
-
-
-	
+	#myCanvas {
+		margin-top: 6.5rem;
+	}
 }
