@@ -13,10 +13,10 @@ My goal was to build a simple game which relies heavily on JavasScript, so as a 
 
 ### User Stories
 
-⋅⋅* As a user, I want to play a maze game with trying, but feasible levels.
-⋅⋅* As a user, I want to know how many steps I solved the maze.
-⋅⋅* As a user, I want to easily access the navigation and the levels.
-⋅⋅* As a user, I want to send feedback to the developer of the game.
+* As a user, I want to play a maze game with trying, but feasible levels.
+* As a user, I want to know how many steps I solved the maze.
+* As a user, I want to easily access the navigation and the levels.
+* As a user, I want to send feedback to the developer of the game.
 
 
 ### Developer Goals
