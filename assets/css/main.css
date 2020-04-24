@@ -4,26 +4,28 @@
 
 html,
 body {
-	margin: 0;
-	padding: 0;
 	height: 100%;
+    margin: 0;
 	font-family: 'Roboto Mono', monospace;
 	background: #FFF3FA;
 }
 
-body {
-	height: 100%;
-	width: 100%;
-	position: relative;
+.content {
+  min-height: calc(100vh - 50px);
+
 }
 
-#page-content{
-    flex: 1 0 auto;
+.content-inside {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+.footer {
+  height: 50px;
+  margin-top: -50px;
+  background: #919191;
 }
 
-#sticky-footer {
-  flex-shrink: 0;
-}
+
 /***Headings***/
 
 h1,
@@ -119,13 +121,7 @@ canvas {
 
 /***Footer***/
 
-footer {
-	background: #919191;
-	width: 100%;
-	height: 3.5rem;
-    
-	
-}
+
 
 .fab {
 	color: black;

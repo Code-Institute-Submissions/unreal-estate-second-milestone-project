@@ -20,11 +20,12 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
 </head>
 
-<body class= "d-flex flex-column">
+<body>
 <!-- Game -->
     <!--Rules-->
-    <div id="page-content">
-    <div class="rules container text-center">
+    <div class="content">
+    <div class="content-inside">
+    <div class="rules">
         <p> Help the slug to become a snail!
             <br> Find the way out of the labyrinth, so he can go home.
         </p>
@@ -76,27 +77,14 @@
                 <button class="btn btn-warning" onclick="startInsaneLevel()" value="Insane Level" id="insaneBtn"> Insane</button>
             </div>
         </div>
+        <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
+            <button class=" far fa-envelope btn" data-toggle="modal" data-target="#myModal" id="feedbackBtn" title="Send me feedback!"></button>
+        <span> &copy; Krisztina Szabó</span>
+    </div>
+    </div>
     </div>
     
-
-
-
-
-    <!-- Footer with contact form and social media buttons -->
-    <footer id="sticky-footer" class="py-4">    
-        <div class="container text-center">
-
-            <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
-            <button class=" far fa-envelope btn" data-toggle="modal" data-target="#myModal" id="feedbackBtn" title="Send me feedback!"></button>
-            
-        
-    <!-- Name and credits -->
-        
-            <span> &copy; Krisztina Szabó</span>
-        </div>
-    </footer>
-
-
+   
 <!--Victory message at the end of the level-->
 <div class="modal" id="victory" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
