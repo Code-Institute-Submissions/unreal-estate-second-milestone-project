@@ -319,44 +319,99 @@ Tested on Moto G4, Galaxy S5 */
 .title-nav,
 .levels{
     font-size:0.9rem;
-    font-weight:bold;
+    
 }
 #dashboard {
     box-sizing: content-box;
-    right:6%;
-    
-  
+    right:6%; 
 }
 
 #myCanvas{
     top: 27.5rem;
 }
-
-
-}
-
-@media only screen and (min-width: 768px) (max-width:991px) {
-#myCanvas{
-    margin-top:10rem;
-}
-
-}
-
-
-/* Medium Devices, Desktops */
-
-@media only screen and (min-width: 992px) (max-width:1199px) {
-    .rules {
-        padding-bottom: 0.5rem;
     }
+
+/* Small screened mobiles - landscape mode */
+
+@media only screen and (min-width: 416px) and (max-width:569px) {
+
+.rules {
+    height:65%;
+    width:48%;
+
 }
 
+.title-nav,
+.levels {
+    font-size:1.3rem;
+
+}
+
+#myCanvas{
+    margin-top:11rem;
+}
+
+    }
+
+@media only screen and (min-width: 569px) and (max-width:736px) {
+    
+    .rules {
+        height:46%;
+        width: 49%;
+    }
+    .levels {
+    font-size:1.3rem;
+    }
+
+    #myCanvas{
+        top:17rem;
+    }
+
+}
+
+@media only screen and (min-width: 737px) and (max-width:811px) {
+    
+    .rules {
+        height:18%;
+        width: 50%;
+    }
+    .levels {
+    font-size:1.3rem;
+    }
+
+    #myCanvas{
+        top:17rem;
+    }
+
+}
+@media only screen and (min-width: 812px) and (max-width:960px) {
+    
+    .rules {
+        height:40%;
+        width: 49%;
+    }
+    .levels {
+    font-size:1.3rem;
+    }
+
+    #myCanvas{
+        top:17rem;
+    }
+
+}
 
 /* Large Devices, Wide Screens */
 
-@media only screen and (min-width: 1200px) {
-	#myCanvas {
-		margin-top: 6.5rem;
-	}
-
+@media only screen and (min-width: 961px){
+    .rules {
+        height:18%;
+        padding-bottom:0.5rem;
+    }
+    
+    #myCanvas{
+        top:17.5rem;
+    }
+    #dashboard{
+        padding-bottom:32%;
+    }
 }
