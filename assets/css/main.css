@@ -252,12 +252,6 @@ input[type="email"],
         padding-bottom:0.5rem;
     }
 
-    #myCanvas{
-        top:23rem;
-
-    }
-
-
     .levels,
 	.title-nav {
 		font-size: 1rem;
@@ -265,13 +259,18 @@ input[type="email"],
 	.title {
 		font-size: 1.3rem;
 	}
+    #myCanvas{
+        top:23rem;
+
+    }
 
 
 }
 
-/* Small mobile devices, tested on Moto G4, Galaxy S5 */
+/* Small mobile devices
+Tested on Moto G4, Galaxy S5 */
 
-@media only screen and (min-width: 350px) and (max-width: 410px) {
+@media only screen and (min-width: 350px) and (max-width: 374px) {
 	.rules {
 		font-size: 0.8rem;
 		width: 43%;
@@ -290,30 +289,47 @@ input[type="email"],
 	.nav-buttons {
 		box-sizing: content-box;
 	}
-	#myCanvas {
-        top:21rem;
-        
-		
-	}
+	
 	#dashboard {
 		box-sizing: content-box;
         width: 30%;
         right:7%;
         padding-bottom:1.6rem;
 	}
+    #myCanvas {
+        top:21rem;
+        
+		
+	}
     
 }
 
-@media only screen and (min-width: 411px) (max-width: 767px) {
+/* Tested on Pixel2, Pixel2 XL, Iphone 6/7/8, Iphone 6/7/8 Plus, Iphone X */
+
+@media only screen and (min-width: 374px) and (max-width: 415px) {
 .rules{
     height:45%;
+    width:45%;
+    padding-bottom:0.5rem;
+}
+.title{
+    font-size:1.9rem;
 }
 
+.title-nav,
 .levels{
-    font-size:0.5rem;
+    font-size:0.9rem;
+    font-weight:bold;
 }
-#dashboard{
-    background: red;
+#dashboard {
+    box-sizing: content-box;
+    right:6%;
+    
+  
+}
+
+#myCanvas{
+    top: 27.5rem;
 }
 
 
