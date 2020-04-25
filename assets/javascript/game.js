@@ -19,7 +19,7 @@ window.onload = function() {
 //Structure of the components, game area, and navigation button 'how to' basics from: https://www.w3schools.com/graphics/game_images.asp
 //Modified
 function startGame() {
-    myGamePiece = new component(30, 25, "assets/images/player.png",  665, 516, "image");  
+    myGamePiece = new component(30, 25, "assets/images/player.png", 665, 516, "image");
     myBackground = new component(715, 570, "assets/images/maze.png", 0, 0, "background");
     myDestination = new component(35, 35, "assets/images/destination.png", 0, 25, "image");
     myGameArea.start();
@@ -27,10 +27,10 @@ function startGame() {
 //Creating canvas with height and width 
 var myGameArea = {
     canvas: document.createElement("canvas"),
-    
+
     start: function() {
-       this.canvas.width = 715;
-       this.canvas.height = 570;
+        this.canvas.width = 715;
+        this.canvas.height = 570;
         this.canvas.style.left = 20;
         this.canvas.style.top = 20;
         this.context = this.canvas.getContext("2d");
@@ -45,23 +45,22 @@ var myGameArea = {
 
 };
 //Set a myCanvas ID, so I can use CSS in styling my canvas
-myGameArea.canvas.setAttribute("id", "myCanvas"); 
+myGameArea.canvas.setAttribute("id", "myCanvas");
 
 //Make the canvas responsive
 // Original code learnt from https://www.youtube.com/watch?v=1y57COMRSdA
-let resizeCanvas = function(){
-WIDTH = window.innerWidth;
-HEIGHT = window.innerHeight;
-myGameArea.width = WIDTH;
-myGameArea.height = HEIGHT;
-    
+let resizeCanvas = function() {
+    WIDTH = window.innerWidth;
+    HEIGHT = window.innerHeight;
+    myGameArea.width = WIDTH;
+    myGameArea.height = HEIGHT;
+
 }
 resizeCanvas();
 
-window.addEventListener('resize', function(){
-resizeCanvas();
-}
-);
+window.addEventListener('resize', function() {
+    resizeCanvas();
+});
 
 //Maze as a background component with player and the destination 
 function component(width, height, color, x, y, type) {
@@ -129,7 +128,7 @@ function canMoveTo(destX, destY, context) {
 
     var data = imgData.data;
     var canMove = 1;
-//If the player reached the wall, it stops, if it reached the destination, victory message pops up
+    //If the player reached the wall, it stops, if it reached the destination, victory message pops up
     if (destX >= 0 && destX <= imageWidth - 15 && destY >= 0 && destY <= imageHeight - 15) {
 
         for (var i = 0; i < 4 * 40 * 35; i += 4) {
@@ -137,25 +136,24 @@ function canMoveTo(destX, destY, context) {
             if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) {
                 canMove = 0;
                 break;
-            } 
-            
-            else {
+            } else {
                 data[i], data[i + 1], data[i + 2]
                 canMove = 1;
                 break;
             }
 
-            
+
         }
-    } else if (isTouching(myGamePiece, myDestination)){ //two components meet, victory message pops up with movecounter
-        $('#victory').modal({ show: false});
+    } else if (isTouching(myGamePiece, myDestination)) { //two components meet, victory message pops up with movecounter
+        $('#victory').modal({
+            show: false
+        });
 
         $('#victory').modal('show');
         document.getElementById("moves-counter").innerHTML = moveCounter.toString();
 
 
-    }
-     else {
+    } else {
         canMove = 0; //can't move
 
     }
@@ -171,7 +169,7 @@ function canMoveTo(destX, destY, context) {
 function move(dir) {
     var newX;
     var newY;
-    var canMove; 
+    var canMove;
     if (dir === "up") {
         if (1 === canMoveTo(myGamePiece.x, myGamePiece.y - 1, myGameArea.context)) {
             myGamePiece.speedY = -1;
@@ -185,7 +183,7 @@ function move(dir) {
         }
     }
     if (dir === "left") {
-            if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
+        if (1 == canMoveTo(myGamePiece.x - 1, myGamePiece.y, myGameArea.context)) {
             myGamePiece.speedX = -1;
             moveCounter = moveCounter + 1;
         }
@@ -237,10 +235,10 @@ function startInsaneLevel() {
 }
 
 //Check if the player meets the destination
-function isTouching(a,b) {
-return (
-    a.x === b.x
-);
+function isTouching(a, b) {
+    return (
+        a.x === b.x
+    );
 }
 
 //Feedback button
@@ -257,7 +255,9 @@ function sendMail(feedbackForm) {
         })
         .then(
             function(response) {
-                $('#success').modal({ show: false})
+                $('#success').modal({
+                    show: false
+                })
 
                 $('#success').modal('show');
 
@@ -270,6 +270,3 @@ function sendMail(feedbackForm) {
         );
     return false;
 }
-
-
-
