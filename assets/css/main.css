@@ -67,6 +67,7 @@ h3 {
 	margin-left: 3%;
 	margin-bottom: 2rem;
     padding-bottom:0.8rem;
+    
 }
 
 .rules {
@@ -231,12 +232,15 @@ input[type="email"],
 
 
 /*** CSS Responsive breakpoints
-/* Custom, iPhone Retina */
+/* Small mobile devices, Moto G4 */
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
 	.rules {
-		font-size: 0.5rem;
+		font-size: 0.8rem;
 		width: 45%;
+        height: 43%;
+        padding-bottom:0.1rem;
+        padding-top:0.2rem;
 	}
 	.levels,
 	.title-nav {
@@ -246,25 +250,38 @@ input[type="email"],
 		font-size: 1.5rem;
 	}
 	.nav-buttons {
-		position: center;
+		box-sizing: content-box;
 	}
 	#myCanvas {
-		margin-top: 5.8rem;
-		margin-bottom: 2rem;
+        top:21rem;
+		
 	}
 	#dashboard {
-		padding-bottom: 7rem;
+		box-sizing: content-box;
+        width: 30%;
+        right:7%;
+        padding-bottom:1.6rem;
 	}
+    
 }
 
 @media only screen and (min-width: 480px) (max-width: 767px) {}
 
-@media only screen and (min-width: 768px) (max-width:991px) {}
+@media only screen and (min-width: 768px) (max-width:991px) {
+#myCanvas{
+    margin-top:10rem;
+}
+
+}
 
 
 /* Medium Devices, Desktops */
 
-@media only screen and (min-width: 992px) (max-width:1199px) {}
+@media only screen and (min-width: 992px) (max-width:1199px) {
+    .rules {
+        padding-bottom: 0.5rem;
+    }
+}
 
 
 /* Large Devices, Wide Screens */
@@ -273,4 +290,5 @@ input[type="email"],
 	#myCanvas {
 		margin-top: 6.5rem;
 	}
+
 }
