@@ -33,7 +33,7 @@ To find out, what colors would match with the game's cheery and facetious feelin
 I also used [Eye Dropper Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) to make sure that colors on my page are consistent.
 My choiches were a green and blue to the maze, rules, and dashboard; yellow for the slug, the logo, and the level buttons, light pink to the background, and black for the walls.
 Hex values of the colors I used:
-- `#FFF3FA`
+- ![##FFF3FA](https://placehold.it/150x40#FFF3FA/FFFFFF?text=#FFF3FA)
 - `#649B92`
 - #68A376
 - #ffc107
