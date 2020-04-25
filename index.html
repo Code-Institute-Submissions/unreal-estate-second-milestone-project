@@ -1,159 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- favicon files -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <!-- page title -->
-    <title> Unreal Estate </title>
-    <!-- meta data -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Unreal Estate - Help the slug to be a snail">
-    <!--style-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/javascript/game.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-</head>
-
-<body>
-    <!-- Game -->
-    <!--Rules-->
-    <div class="rules">
-    <h6> Note: if you want to play this game on your phone or tablet, please switch to the landscape layout for the better experience. </h6>
-        <p> Help the slug to become a snail!
+   <head>
+      <!-- favicon files -->
+      <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+      <!-- page title -->
+      <title> Unreal Estate </title>
+      <!-- meta data -->
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Unreal Estate - Help the slug to be a snail">
+      <!--style-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+      <link rel="stylesheet" href="assets/css/main.css">
+      <script src="assets/javascript/game.js"></script>
+      <script  src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+   </head>
+   <body>
+      <!-- Game -->
+      <!--Rules-->
+      <div class="rules">
+         <h6> Note: if you want to play this game on your phone or tablet, please switch to the landscape layout for the better experience. </h6>
+         <p> Help the slug to become a snail!
             <br> Find the way out of the labyrinth, so he can go home.
-        </p>
-        
-    </div>
-    <!--Logo, name, navigation -->
-    <div id="dashboard" class="container">
-        <img id="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
-        <div class="row justify-content-center">
+         </p>
+      </div>
+      <!--Logo, name, navigation -->
+      <div id="dashboard" class="container">
+         <img id="logo" src="assets/images/logo_transparent.png" alt="Unreal Estate">
+         <div class="row justify-content-center">
             <h1 class="title col-12 col-md-6 col-lg-4"> Unreal Estate </h1>
-        </div>
-        <!--Navigation buttons, vertical and horizontal positioned-->
-        <div class="navigation">
+         </div>
+         <!--Navigation buttons, vertical and horizontal positioned-->
+         <div class="navigation">
             <h5> Use the up, down, left, right buttons to navigate the slug. </h5>
             <h3 class="title-nav"> Navigation </h3>
             <div class="nav-buttons container">
-                <div class="row">
-                    <div class="col-3">
-                    </div>
-                    <div class="col-6 col-offset-3">
-                        <button class="btn btn-dark " style="width:100%" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
-                        
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <button class="btn btn-dark m-2 pb-2" style="width:100%" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
-                    </div>
-                    <div class="col-6">
-                        <button class="btn btn-dark m-2 pb-2" style="width:100%" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3">
-                    </div>
-                    <div class="col-6 col-offset-3">
-                        <button class="btn btn-dark m-2 pb-2" style="width:100%" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>
-                    </div>
-                </div>
+               <div class="row">
+                  <div class="col-3">
+                  </div>
+                  <div class="col-6 col-offset-3">
+                     <button class="btn btn-dark " style="width:100%" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-6">
+                     <button class="btn btn-dark m-2 pb-2" style="width:100%" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
+                  </div>
+                  <div class="col-6">
+                     <button class="btn btn-dark m-2 pb-2" style="width:100%" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-3">
+                  </div>
+                  <div class="col-6 col-offset-3">
+                     <button class="btn btn-dark m-2 pb-2" style="width:100%" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>
+                  </div>
+               </div>
             </div>
-        </div>
-        <!--Difficulty - Levels-->
-        <div>
+         </div>
+         <!--Difficulty - Levels-->
+         <div>
             <h2 class="levels"> Difficulty</h2>
             <div class="level-buttons">
-                <button class="btn btn-warning" onclick="startEasyLevel()" value="Easy Level" id="easyBtn"> Easy</button>
-                <button class="btn btn-warning" onclick="startMediumLevel()" value="Medium Level" id="mediumBtn"> Medium</button>
-                <button class="btn btn-warning" onclick="startHardLevel()" value="Hard Level" id="hardBtn"> Hard</button>
-                <button class="btn btn-warning" onclick="startInsaneLevel()" value="Insane Level" id="insaneBtn"> Insane</button>
+               <button class="btn btn-warning" onclick="startEasyLevel()" value="Easy Level" id="easyBtn"> Easy</button>
+               <button class="btn btn-warning" onclick="startMediumLevel()" value="Medium Level" id="mediumBtn"> Medium</button>
+               <button class="btn btn-warning" onclick="startHardLevel()" value="Hard Level" id="hardBtn"> Hard</button>
+               <button class="btn btn-warning" onclick="startInsaneLevel()" value="Insane Level" id="insaneBtn"> Insane</button>
             </div>
-        </div>
-        <!--Feedback form and GitHub account-->
-        <div>
+         </div>
+         <!--Feedback form and GitHub account-->
+         <div>
             <a class="fab fa-github" title="Check out my GitHub account" href="https://github.com/krisztinatxt" target="_blank" rel="noopener"></a>
             <button class=" far fa-envelope btn" data-toggle="modal" data-target="#myModal" id="feedbackBtn" title="Send me feedback!"></button>
             <!--Copyright-->
             <br> <span> &copy; Krisztina Szabó</span>
-        </div>
-    </div>
-
-    <!--Victory message at the end of the level-->
-    <div class="modal" id="victory" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+         </div>
+      </div>
+      <!--Victory message at the end of the level-->
+      <!--Modal pop up window basics from here:https://getbootstrap.com/docs/4.0/components/modal/ -->
+      <div class="modal" id="victory" tabindex="-1" role="dialog">
+         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Congratulations!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>You did it in <span id="moves-counter"></span> moves!</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-                </div>
+               <div class="modal-header">
+                  <h5 class="modal-title">Congratulations!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <p>You did it in <span id="moves-counter"></span> moves!</p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+               </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Modal Feedback Form -->
-    <!--Modal pop up window basics from here:https://getbootstrap.com/docs/4.0/components/modal/ -->
-    <!--Sligtly modified-->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog" role="document">
+         </div>
+      </div>
+      <!-- Modal Feedback Form -->
+      <div class="modal fade" id="myModal" role="dialog">
+         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Give me some feedback!</h2>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form onsubmit="return sendMail(this);" id="feedbackForm">
-                        <label for="name" class="label-name">Name:</label>
-                        <input type="text" name="name" id="name" placeholder="Your name..." required>
-                        <label for="email" class="label-email">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="Your email address..." required>
-                        <label for="feedback" class="label-feedback">Feedback:</label>
-                        <textarea id="feedback" name="feedback" placeholder="Write your feedback here" required></textarea>
-                        <button class="btn-dark" type="submit" id="submit">Submit</button>
-                    </form>
-                </div>
+               <div class="modal-header">
+                  <h2 class="modal-title">Give me some feedback!</h2>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <form onsubmit="return sendMail(this);" id="feedbackForm">
+                     <label for="name" class="label-name">Name:</label>
+                     <input type="text" name="name" id="name" placeholder="Your name..." required>
+                     <label for="email" class="label-email">Email:</label>
+                     <input type="email" name="email" id="email" placeholder="Your email address..." required>
+                     <label for="feedback" class="label-feedback">Feedback:</label>
+                     <textarea id="feedback" name="feedback" placeholder="Write your feedback here" required></textarea>
+                     <button class="btn-dark" type="submit" id="submit">Submit</button>
+                  </form>
+               </div>
             </div>
-        </div>
-    </div>
-
-    <!--Form Submitted-->
-
-    <div class="modal" id="success" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+         </div>
+      </div>
+      <!--Form Submitted-->
+      <div class="modal" id="success" tabindex="-1" role="dialog">
+         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Thanks for you feedback!</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>I will get back to you as soon as possible</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-                </div>
+               <div class="modal-header">
+                  <h4 class="modal-title">Thanks for you feedback!</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <p>I will get back to you as soon as possible</p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+               </div>
             </div>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </body>
 </html>
