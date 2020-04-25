@@ -1,15 +1,15 @@
 # Unreal Estate: Find the way home
 ## Second Milestone Project 
-###### Code Institute / Interactive Front-End Development
+### Code Institute / Interactive Front-End Development
 [Live Page](https://krisztinatxt.github.io/unreal-estate-second-milestone-project/)
 ## Table of Contents
 
 ## UX
 ### Project Goals
-Unreal Estate is a maze game with four different levels. You mission is to help the slug to find his way home, to his shell, and become a snail.
-The name of the game is one kind of tribute to [Unreal Engine](https://en.wikipedia.org/wiki/Unreal_Engine) and a wordplay in the same time.
+Unreal Estate is a maze game with four different levels. Your mission is to help the slug to find his way home, to his shell, and become a snail.
+The name of the game is one kind of tribute to [Unreal Engine](https://en.wikipedia.org/wiki/Unreal_Engine) and wordplay at the same time.
 This game is my second milestone project at [Code Institute](https://codeinstitute.net/).
-My goal was to build a simple game which relies heavily on JavasScript, so as a beginner at interactive frontend, I can achieve and show my fluency in Javascript.
+My goal was to build a simple game that relies heavily on JavasScript, so as a beginner at Interactive Frontend, I can achieve and show my fluency in Javascript.
 
 ### User Stories
 
@@ -21,11 +21,23 @@ My goal was to build a simple game which relies heavily on JavasScript, so as a 
 
 ### Developer Goals
 
-My goal was to learn and practice JavasScript and Jquery, and in the same time build my portfolio, and create something I would use.
+My goal was to learn and practice JavasScript and Jquery, and at the same time build my portfolio, and create something I would use.
 
 ### Design
 
+With my design choices I wanted to conjure the old school game's feeling.
+Container boxes, buttons and modals have rounded corners to make the image more friendly.
+
 #### Color Scheme
+To find out, what colors would match with the game's cheery and facetious feeling, I used [ColorSpace](https://mycolor.space/).
+I also used [Eye Dropper Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) to make sure that colors on my page are consistent.
+My choiches were a green and blue to the maze, rules, and dashboard; yellow for the slug, the logo, and the level buttons, light pink to the background, and black for the walls.
+Hex values of the colors I used:
+- `#FFF3FA`
+- `#649B92`
+- #68A376
+- #ffc107
+- #f7c873
 
 #### Fonts
 
