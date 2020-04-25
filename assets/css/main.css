@@ -358,6 +358,7 @@ Tested on Moto G4, Galaxy S5 */
     .rules {
         height:46%;
         width: 49%;
+        box-sizing: content-box;
     }
     .levels {
     font-size:1.3rem;
@@ -380,7 +381,7 @@ Tested on Moto G4, Galaxy S5 */
     }
 
     #myCanvas{
-        top:17rem;
+        top:17.5rem;
     }
 
 }
@@ -400,18 +401,17 @@ Tested on Moto G4, Galaxy S5 */
 
 }
 
-/* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens 
+Tested on Ipad, Ipad Pro, laptop, laptop with touch*/
 
 @media only screen and (min-width: 961px){
     .rules {
-        height:18%;
-        padding-bottom:0.5rem;
+        height:16%;
+        padding-bottom:0.7rem;
     }
     
     #myCanvas{
-        top:17.5rem;
+        top:13.5rem;
     }
-    #dashboard{
-        padding-bottom:32%;
-    }
+    
 }
