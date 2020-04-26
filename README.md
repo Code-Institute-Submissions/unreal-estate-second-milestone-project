@@ -6,6 +6,8 @@
 
 [Live Page](https://krisztinatxt.github.io/unreal-estate-second-milestone-project/)
 
+![Logo](https://github.com/krisztinatxt/unreal-estate-second-milestone-project/blob/master/assets/images/facebook_profile_image.png "Logo")
+
 ## Table of Contents
 
 - [UX](##UX)
