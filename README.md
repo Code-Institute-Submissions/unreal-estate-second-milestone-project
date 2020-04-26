@@ -71,7 +71,6 @@ Hex values of the colors I used:
 - ![#68A376](https://placehold.it/15/68A376/000000?text=+) `#68A376`
 - ![#f7c873](https://placehold.it/15/f7c873/000000?text=+) `#f7c873`
 - ![#ffc107](https://placehold.it/15/ffc107/000000?text=+) `#ffc107`
-- ![#f7c873](https://placehold.it/15/f7c873/000000?text=+) `#f7c873`
 
 #### Fonts
 
