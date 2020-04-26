@@ -394,14 +394,32 @@ input[type="email"],
 
 
 /*** Large Devices, Wide Screens ***/
-/***Tested on Ipad, Ipad Pro, laptop, laptop with touch ***/
+/***Tested on Ipad, Ipad Pro ***/
 
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 961px) and (max-width:1285px){
 	.rules {
 		height: 16%;
 		padding-bottom: 0.7rem;
 	}
 	#myCanvas {
-		top: 13.5rem;
+		top: 21rem;
 	}
+    #dashboard{
+        padding-bottom:10rem;
+    }
+}
+
+ /***Tested on laptop, laptop with touch ***/
+ @media only screen and (min-width: 1286px){
+	.rules {
+		height: 16%;
+		padding-bottom: 0.7rem;
+	}
+	#myCanvas {
+		top: 14.5rem;
+	}
+    #dashboard{
+        padding-bottom:1.8rem;
+    }
+
 }
