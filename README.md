@@ -99,6 +99,7 @@ After a lot of research, I decided to use canvas, and draw my game and it's comp
 The canvas has three components: the maze (with four different levels), the player and the destination. 
 To avoid the player going through the walls, I set the wall's `rgba` value as an obstable. 
 When the player and the destination is touching, you can see a modal with victory message and an implemented move counter telling the player that in how many steps did they reach the destination.
+At first, I built a custom modal for diplaying victory message, but it caused a bug, because it blocked other modal's overlay, so I had to remove and change to Boostrap modal.
 
 ### Features Left to Implement
 
@@ -220,9 +221,22 @@ All text were written by me.
 - To convert the logo to a favicon, I used [Favicon](https://favicon.io/).
 - The Github and message icons are from [FontAwesome](https://fontawesome.com/).
 
-### Acknowledgements 
+### Code
 
+- I learnt a lot about structure of canvas, the components and navigation from [W3Schools](https://www.w3schools.com/graphics/game_images.asp);
+- Code for resizing canvas sourced from [this video](https://www.youtube.com/watch?v=1y57COMRSdA);
+- Code for moving my player inspired by [this article](https://www.codeproject.com/Articles/577080/Create-an-HTML-and-JavaScript-Maze-Game-with-a-ti);
+- How to implement EmailJS in a modal is from official [EmailJS docs](https://www.emailjs.com/docs/sdk/installation/);
 
+## Acknowledgements 
+
+Special thanks to:
+
+- Code Institute Tutor Team, they helped a lot during this project, they were always professionals, patient, and really helpful.
+- Tutor [Stephen](http://github.com/darilligames), who knows everything about canvas, and helped me a lot to understand how it works.
+- Slack Community to be always there when I need them.
+- Everybody who did take time to test this game, and give me feedback.
+- My mentor, [Aaron Sinnott](https://github.com/aaronsnig501) for his advices.
 
 
 
