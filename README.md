@@ -66,7 +66,7 @@ My choices were a green and blue to the maze, rules, and dashboard; yellow for t
 Hex values of the colors I used:
 
 - ![#FFF3FA](https://placehold.it/15/FFF3FA/000000?text=+) `#FFF3FA`
-- ![#faebcc](https://placehold.it/15/faebcc/000000?text=+) `#faebcc`)
+- ![#faebcc](https://placehold.it/15/faebcc/000000?text=+) `#faebcc`
 - ![#649B92](https://placehold.it/15/649B92/000000?text=+) `#649B92`
 - ![#68A376](https://placehold.it/15/68A376/000000?text=+) `#68A376`
 - ![#f7c873](https://placehold.it/15/f7c873/000000?text=+) `#f7c873`
