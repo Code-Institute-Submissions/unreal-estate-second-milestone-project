@@ -72,6 +72,7 @@ On arriving at the page, you can see three different containers.
 
 I had a lot of thinking about how to implement navigation, and I decided that instead of using WASD or navigation arrows, I create a small joystick.
 I am aware of that this solution doesn't let the user to play this game really fast, but I think that because the style of the game, and the player of it, speed is not very key.
+The boostrap offset wasn't working by itself, so I set a separate div for each button, this fixed the problem.
 The user can choose between four levels: Easy, Medium, Hard and Insane. 
 At the bottom of the dashboard you can see the copyright and two buttons.
  At the beginning these contents were in the footer of the page, but when I was working on making this site responsive, I had to realise, that the canvas blocks me from setting the footer at the bottom in the way I want.
@@ -133,15 +134,105 @@ The page is responsive, altough as I mentioned, users with small devices are adv
 
 ## Deployment
 
+This website was written in GitPod, and it's hosted using Github, deployed from the master branch (via Settings). I've saved after every important change: starting with git status, git add ., git commit -m"" and in the end pushing the git to the Github repository. After every commitment, when you refresh the repository, you can see the changes. The main (landing) page of the website is named index.html.
+
+## How to deploy the site
+
+- Login to GitHub.
+- From the list of the repositories, select the [Unreal Estate - Second Milestone Project](https://github.com/krisztinatxt/unreal-estate-second-milestone-project).
+- From the menu, click on the Settings (you can find under the name of the repository).
+- Scroll down to the Page section, select Master Branch from the dropdown menu.
+- The website is deployed, you can find the link in Page section.
+- If it's not working, or you can't see the changes you've made, wait a minute, and refresh the page.
+- Every time you commit changes, you can find the link of the deployed site at the same place.
+
+### How to deploy locally
+If you want to clone this project and run locally, you have to do the following:
+
+- Follow [this](https://github.com/krisztinatxt/unreal-estate-second-milestone-project) link to my repository on GitHub.
+- Click on the Clone or download button (right side, next to the Gitpod button).
+- Copy the clone URL.
+- In your local IDE open Git Bash.
+- Change the working directory to the location where you want the cloned directory to be made.
+- Type git clone, and paste the URL you copied from the Clone or download section.
+- Press Enter to creat your local clone.
+
 ## Technologies Used
+
+- [GitHub](https://github.com/);
+
+- [GitPod](https://gitpod.io/);
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5);
+
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript);
+
+- [Bootstrap](https://getbootstrap.com/);
+
+- [Jquery](https://jquery.com/);
+
+- [EmailJS](https://www.emailjs.com/);
+
+- [Autoprefix](https://autoprefixer.github.io/);
+
+- [FontAwesome](https://fontawesome.com/);
+
+- [GoogleFonts](https://fonts.google.com/);
+
+- [MazeGenerator](https://keesiemeijer.github.io/maze-generator/#);
+
+- [Balsamiq](https://balsamiq.com/);
+
+- [HTMLValidator](https://validator.w3.org/);
+
+- [CSSValidator](https://jigsaw.w3.org/css-validator/)
+
+- [JavaScriptValidator](https://esprima.org/demo/validate.html);
+
+- [HTMLFormatter](https://htmlformatter.com/);
+
+- [CSSBeautifier](https://www.freeformatter.com/css-beautifier.html);
+
+- [JSHint](https://jshint.com/);
+
+- [Favicon](https://www.favicon-generator.org/);
+
+- [ColorSpace](https://mycolor.space/);
+
+- [HatchFul](https://hatchful.shopify.com/);
+
+- [Pixlr](https://pixlr.com/);
+
+- [MarkDownLit](https://dlaa.me/markdownlint/);
 
 ## Credits
 
 ### Content
+All text were written by me.
 
 ### Media
 
+- Pictures for the maze was made with [MazeGenerator](https://keesiemeijer.github.io/maze-generator/#).
+- The player's and the destinations picture is from [ClipArt](http://clipart-library.com/). The slug used to be red, but to keep consistency in colors, I repainted.
+- To create a logo I used [HatchFul](https://hatchful.shopify.com/).
+- To convert the logo to a favicon, I used [Favicon](https://favicon.io/).
+- The Github and message icons are from [FontAwesome](https://fontawesome.com/).
+
 ### Acknowledgements 
+
+
+
+
+
+This site is for educational use.
+
+Krisztina Szabó
+
+Code Institute
+
+2020
 
 
 
