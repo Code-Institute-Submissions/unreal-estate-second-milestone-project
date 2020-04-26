@@ -44,7 +44,7 @@ My goal was to build a simple game that relies heavily on JavasScript, so as a b
 ### User Stories
 
 - As a user, I want to play a maze game with trying, but feasible levels.
-- As a user, I want to know how many steps I solved the maze.
+- As a user, I want to know how many steps I made in the maze.
 - As a user, I want to easily access the navigation and the levels.
 - As a user, I want to send feedback to the developer of the game.
 
@@ -54,9 +54,9 @@ My goal was to learn and practice JavasScript and Jquery, and at the same time b
 
 ### Design
 
-With my design choices, I wanted to conjure the old school game's feeling.
+With my design choices, I wanted to conjure the oldschool game's feeling.
 Container boxes, buttons, and modals have rounded corners to make the image more friendly.
-Modals and buttons are built with [Boostrap](https://getbootstrap.com/) to help the responsiveness of the page and keep a consistent image.
+Modals and buttons are built with [Boostrap](https://getbootstrap.com/) to help the responsiveness of the page and keep a persistent image.
 
 #### Color Scheme
 
@@ -74,14 +74,14 @@ Hex values of the colors I used:
 
 #### Fonts
 
-I used [Google Fonts](https://fonts.google.com/), the font I choose is Roboto Mono. as I wanted to give the game an old school and similar to the typewriter's style.
+I used [Google Fonts](https://fonts.google.com/), the font I chose is Roboto Mono. As I wanted to give the game an oldschool and similar to the typewriter's style.
 Roboto Mono is easy to read, but it looks a little bit special thanks to the serifed typeface.
 
 ### Wireframes
 
 During the planning process of this project, I created a couple of wireframes with [Balsamiq](https://balsamiq.com/), trying to imagine how the site will look on big or small devices.
-To be sure, that I can see how the canvas will have enough space on the screen, I also made wireframes for small devices in landscape mode.
-It turned out, that the landscape layout is much better because of the size of the game, so I am going to share these mockups also.
+To be sure, that I can see whether the canvas will have enough space on the screenwill have enough space on the screen, I also made wireframes for small devices in landscape mode.
+It turned out, that the landscape layout is much better because of the size of the game, so I am going to share these mockups too.
 
 - [Game Page, Victory Modal, and Feedback Form in desktop view](https://github.com/krisztinatxt/unreal-estate-second-milestone-project/tree/master/wireframes/desktop);
 
@@ -93,9 +93,9 @@ Implementation ended up being slightly different.
 
 ### Existing Features
 
-On arriving at the page, you can see three different containers.
+Upon arriving at the page, you can see three different containers.
 
-First one named as Dashboard, which contains the:
+First one named as Dashboard, contains the:
 
 - logo,
 - the name of the game,
@@ -105,40 +105,40 @@ First one named as Dashboard, which contains the:
 - two icons which let you contact the developer,
 - and copyright.
 
-I had a lot of thinking about how to implement navigation, and I decided that instead of using WASD or navigation arrows, I create a small joystick.
-I am aware that this solution doesn't let the user play this game fast, but I think that because of the style of the game, and the player of it, speed is not very key.
+I did a lot of thinking about how to implement navigation, and I decided that instead of using WASD or navigation arrows, I create a small joystick.
+I am aware that this solution doesn't let the user play this game fast, but I think that because of the style of the game, and the player of it, speed is not the key.
 The bootstrap offset wasn't working by itself, so I set a separate div for each button, this fixed the problem.
 The user can choose between four levels: Easy, Medium, Hard, and Insane.
 At the bottom of the dashboard, you can see the copyright and two buttons.
  In the beginning, these contents were in the footer of the page, but when I was working on making this site responsive, I had to realize, that the canvas blocks me from setting the footer at the bottom in the way I want.
 The only way it worked was setting the footer's position to `fixed`, but that would block part of my content on small devices. I consulted with tutors, hoping that we can solve the problem together, but we realized that this is a shortcoming of the canvas.
 Therefore the footer is not considered important in the case of the game, I removed, and I moved it's contents to the bottom of the dashboard.
-When the user clicks on the GitHub icon, it leads to my GitHub repositories, while when he/she hits the small envelope, a modal pop up.
-This modal is for sending feedback to the developer: the user has to type his/her name, email address, and feedback (all of the fields are required) and hit the submit button.
-If the feedback got submitted, the modal disappears, and another modal pops up, telling the user, that the feedback was successfully submitted.
-In the case that for some reason, the feedback can't be submitted, an alert window turns up, where you can see an error message, asking the user to send an email to the address below.
+When the user clicks on the GitHub icon, it leads to my GitHub repositories, while hitting the small envelope, a modal will pop up.
+This modal is for sending feedback to the developer: the user has to type their name, e-mail address, feedback. All of the fields are required, then hit the submit button.
+If the feedback is submitted, the modal disappears, and another modal pops up, telling the user that the feedback was successfully submitted.
+In the case that for some reason the feedback can't be submitted, an alert window turns up, where you can see an error message, asking the user to send an email to the address below.
 
-The second container is named as rules.
+The second container is named as Rules.
 
 It starts with a note for mobile and tablet users to switch their devices to landscape mode for a better experience.
-I worked a lot to make the game fully responsive, but I had to realize, that working with canvas doesn't let me give the same user experience for every device.
-Fortunately, I asked the tutor team about this problem, and they made me realize, that this is normal, and the only way this is considered as a bad practice is not giving an alert to my users, because then they get frustrated and just leave the page.
+I worked a lot on making the game fully responsive, but I had to realize, that working with canvas doesn't let me give the same user experience for every device.
+Fortunately, I asked the tutor team about this problem, and they assured me, that this is normal, and the only way this is considered as a bad practice is not giving an alert to my users, because then they get frustrated and just leave the page.
 Therefore I added a small note, and it seems to "work": in the testing phase I asked my friends to send me pictures when they are playing, and all of the mobile screenshots were in landscape position.
 
 The third container is the game itself.
 
 When I started working on this game, I was new to `JavasScript`, I didn't know where to start, so you can see a lot of experimentation in my first `commits`.
-At the very beginning, I tried to understand how a maze game works, I tried to make existing games work, and break down to pieces, to see how do I want to build my game.
-After a lot of research, I decided to use canvas, and draw my game and it's components on that.
+At the very beginning, I struggled to understand how a maze game works, I tried to make existing games work, by breaking them down to pieces, to see how do I want to build my game.
+After a lot of research, I decided to use canvas and draw my game and it's components on that.
 The canvas has three components: the maze (with four different levels), the player, and the destination.
 To avoid the player going through the walls, I set the wall's `rgba` value as an obstacle.
 When the player and the destination are touching, you can see a modal with a victory message and an implemented move counter telling the player that in how many steps did they reach the destination.
-At first, I built a custom modal for displaying the victory message, but it caused a bug because it blocked other modal's overlay, so I had to remove and change to Bootstrap modal.
+At first, I built a custom modal for displaying the victory message, but it caused a bug because it blocked other modal's overlay, so I had to remove that and change to Bootstrap modal.
 
 ### Features Left to Implement
 
-1. I mentioned before the way I avoid my player going through the walls. Currently, this function is not as perfect as I want: when the edge of the walls is not sharp, the slug can "enter" the wall, although he can never go through them.
-As I know, in this case, this is the best solution because I am using a picture as the maze, but in the future, I would like to learn to how to generate different levels using Javascript, so then I can easily tell me, player, where to stop.
+1. I mentioned before the way I avoid my player going through the walls. Currently, this function is not as perfect as I wanted: when the edges of the walls are not sharp, the slug can "enter" the wall, although he can never go through them.
+As I know, in this case, this is the best solution because I am using a picture as the maze, but in the future, I would like to learn how to generate different levels using Javascript, so then I can easily tell my player, where to stop.
 
 2. I am planning to add a high score modal to the game, so when the player comes back, they can see what was the highest score they achieved.
 
@@ -158,19 +158,19 @@ After trying to fix this for a while, I had to admit, that I am obliged to ignor
 
 - There are 21 functions in this file.
 
-- Function with the largest signature take 6 arguments, while the median is 0.
+- Function with the largest signature takes 6 arguments, while the median is 0.
 
 - Largest function has 19 statements in it, while the median is 4.
 
 - The most complex function has a cyclomatic complexity value of 9 while the median is 1.
 
 I manually tested all of the functions using different browsers and devices: all buttons work, maze images load, submit form sends me the email, GitHub profile opens in a new window, navigation works on each level, victory modal pops up in time, move counter is well implemented.
-Besides my test, I asked friends and family to play the game as much as they can, and tell me their opinion to help me what can I improve with.
+Besides my test, I asked friends and family to play the game as much as they can, and tell me their opinion to help me how can I improve it.
 The page is responsive, although as I mentioned, users with small devices are advised to switch to landscape mode for better user experience.
 
 ## Deployment
 
-This website was written in GitPod, and it's hosted using Github, deployed from the master branch (via Settings). I've saved after every important change: starting with git status, git add ., git commit -m"" and in the end pushing the git to the Github repository. After every commitment, when you refresh the repository, you can see the changes. The main (landing) page of the website is named index.html.
+This website was written in GitPod, and is hosted using Github, deployed from the master branch (via Settings). I've saved after every important change: starting with git status, git add ., git commit -m"" and in the end pushing the git to the Github repository. After every commitment, when you refresh the repository, you can see the changes. The main (landing) page of the website is named index.html.
 
 ### How to deploy the site
 
@@ -269,11 +269,11 @@ All text was written by me.
 
 Special thanks to:
 
-- Code Institute Tutor Team, they helped a lot during this project, they were always professionals, patient, and helpful.
-- Tutor [Stephen](http://github.com/darilligames), who knows everything about canvas, and helped me a lot to understand how it works.
+- Code Institute Tutor Team, they helped a lot during this project, they were always professional, patient, and helpful.
+- Tutor [Stephen](http://github.com/darilligames), who knows everything about canvas, helped me a lot to understand how it works.
 - Slack Community to be always there when I need them.
-- Everybody who did take time to test this game, and give me feedback.
-- My mentor, [Aaron Sinnott](https://github.com/aaronsnig501) for his advice.
+- Everybody who did take time to test this game, and gave me feedback.
+- My mentor, [Aaron Sinnott](https://github.com/aaronsnig501) for his advices.
 
 This site is for educational use.
 
