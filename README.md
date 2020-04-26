@@ -9,7 +9,7 @@
 ## Table of Contents
 
 - [UX](##UX)
-- [Project Goals](##Project-Goals)
+- [Project Goals](###Project-Goals)
 - [User Stories](###User-Stories)
 - [Developer Goals](###Developer-Goals)
 - [Design](###Design)
