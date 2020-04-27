@@ -375,7 +375,7 @@ input[type="email"],
 		font-size: 1.3rem;
 	}
 	#myCanvas {
-		top: 17.5rem;
+		top: 18rem;
 	}
 }
 
@@ -416,10 +416,10 @@ input[type="email"],
 		padding-bottom: 0.7rem;
 	}
 	#myCanvas {
-		top: 15rem;
+		top: 16rem;
 	}
     #dashboard{
-        padding-bottom:2.3rem;
+        padding-bottom:4%;
     }
 
 }
