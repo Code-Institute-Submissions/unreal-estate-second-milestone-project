@@ -1,4 +1,4 @@
-//Variables
+//Variables with gamecomponents
 var myGamePiece;
 var myBackground;
 var myDestination;
@@ -18,6 +18,7 @@ window.onload = function() {
 
 //Structure of the components, game area, and navigation button 'how to' basics from: https://www.w3schools.com/graphics/game_images.asp
 //Modified
+//startGame loads the maze, the player and the destination on canvas
 function startGame() {
     myGamePiece = new component(30, 25, "assets/images/player.png", 665, 516, "image");
     myBackground = new component(715, 570, "assets/images/maze.png", 0, 0, "background");
@@ -49,6 +50,7 @@ myGameArea.canvas.setAttribute("id", "myCanvas");
 
 //Make the canvas responsive
 // Original code learnt from https://www.youtube.com/watch?v=1y57COMRSdA
+//resizeCanvas changes the canvas and it's components widht and height when you resize the window
 let resizeCanvas = function() {
     WIDTH = window.innerWidth;
     HEIGHT = window.innerHeight;
@@ -63,6 +65,7 @@ window.addEventListener('resize', function() {
 });
 
 //Maze as a background component with player and the destination 
+//Draw the components on the canvas
 function component(width, height, color, x, y, type) {
     this.type = type;
     if (type == "image" || type == "background") {
@@ -120,8 +123,10 @@ function updateGameArea() {
 }
 let newX;
 let newY;
-/***Original code from: https://www.codeproject.com/Articles/577080/Create-an-HTML-and-JavaScript-Maze-Game-with-a-ti ***/
-/*** Modified ***/
+//Original code from: https://www.codeproject.com/Articles/577080/Create-an-HTML-and-JavaScript-Maze-Game-with-a-ti ***/
+// Modified ***/
+//canMoveto checks if the player hits the wall, or he can move.
+//Player can't move if he reached the wall, wall is defined with it's rgba values
 function canMoveTo(destX, destY, context) {
 
     var imgData = context.getImageData(destX, destY, 40, 35);
@@ -148,13 +153,13 @@ function canMoveTo(destX, destY, context) {
         $('#victory').modal({
             show: false
         });
-
+        //Convert the steps to string to make the movecounter work
         $('#victory').modal('show');
         document.getElementById("moves-counter").innerHTML = moveCounter.toString();
 
 
     } else {
-        canMove = 0; //can't move
+        canMove = 0; //The player can't move anymore
 
     }
     return canMove;
@@ -164,6 +169,7 @@ function canMoveTo(destX, destY, context) {
 
 //Direction buttons and movecounter 
 //Navigation with boostrap buttons on the game area
+//Movements realised by navigation buttons
 //If the player moves, the counter gets +1, so in the end, the player get to know how many steps he/she moved
 
 function move(dir) {
@@ -204,7 +210,7 @@ function clearmove() {
 
 
 //Select level, with repositioned player, and destination on each level
-//When the level button is clicked, the game loads
+//When the level button is clicked, the game loads with it's components
 
 function startEasyLevel() {
     myBackground = new component(715, 570, "./assets/images/maze.png", 0, 0, "background");
@@ -235,6 +241,7 @@ function startInsaneLevel() {
 }
 
 //Check if the player meets the destination
+//The player meets the destination when the x axis is the same
 function isTouching(a, b) {
     return (
         a.x === b.x
@@ -242,6 +249,7 @@ function isTouching(a, b) {
 }
 
 //Feedback button
+//Feedback modal built with Boostrap
 // Submit and send mail with EmailJs
 //https://www.emailjs.com/docs/sdk/installation/
 
@@ -253,7 +261,7 @@ function sendMail(feedbackForm) {
             "from_email": feedbackForm.email.value,
             "feedback": feedbackForm.feedback.value
         })
-        .then(
+        .then( //when the feedback is submitted, a success message will pop up
             function(response) {
                 $('#success').modal({
                     show: false
@@ -263,7 +271,7 @@ function sendMail(feedbackForm) {
 
                 $('#myModal').modal('hide');
             },
-            function(error) {
+            function(error) { //if the feedback can't be submitted, the user will get an alert message with my e-mail address
                 alert("Something went wrong. Please contact me at andrekrisztina5@gmail.com", error);
                 $('#myModal').modal('hide');
             }
