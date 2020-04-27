@@ -144,8 +144,16 @@ As I know, in this case, this is the best solution because I am using a picture 
 
 ## Testing
 
+When I open the page the canvas with maze, player and destination components loads instantly. Clicking on any of the navigation buttons moves the player. Buttons layout is the way I imagined, helping the user to easily identified the buttons they are looking for.
+When I click on difficulty buttons, the page loads the selected level with player and destination positioned in the right place.
+FontAwesome icons are well displayed and when I `hover`, I can see the description of the function. Clicking on the GitHub icon leads to my GitHub profile. The link opens in a new tab using `target:"_blank"` and `rel="noopener"` attribute.
+The small envelope icon opens a Boostrap modal. The modal contains a form, with three `required` fields, a submit and a close button. After I filled the data, I hit the Submit button, and another modal will pop up with a success message.
+Rules are clear and easy to read.
+The canvas has all the three components (maze, player, destination), and when the player reaches the destination, a victory modal will appear telling the user how many steps were required in solving the maze.
+Besides my test, I asked friends and family to play the game as much as they can, and tell me their opinion to help me how I can improve it.
+The page is responsive, although as I mentioned, users with small devices are advised to switch to landscape mode for better user experience.
 Jasmine testing didn't seem essential for this particular project as I can test all of the functions manually.
-I also used a validator to check potential errors.
+I also used validators to check potential errors.
 
 [HTML Validaton](https://validator.w3.org/): I have one type of error saying that: `Attribute ontouchstart not allowed on element button at this point.`
 After trying to fix this for a while, I had to admit, that I am obliged to ignore this message because without `ontouchstart` my navigation is out of order.
@@ -163,10 +171,6 @@ After trying to fix this for a while, I had to admit, that I am obliged to ignor
 - Largest function has 19 statements in it, while the median is 4.
 
 - The most complex function has a cyclomatic complexity value of 9 while the median is 1.
-
-I manually tested all of the functions using different browsers and devices: all buttons work, maze images load, submit form sends me the email, GitHub profile opens in a new window, navigation works on each level, victory modal pops up in time, move counter is well implemented.
-Besides my test, I asked friends and family to play the game as much as they can, and tell me their opinion to help me how can I improve it.
-The page is responsive, although as I mentioned, users with small devices are advised to switch to landscape mode for better user experience.
 
 ## Deployment
 
